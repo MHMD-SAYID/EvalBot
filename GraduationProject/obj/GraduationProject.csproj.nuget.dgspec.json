@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\GraduationProject.csproj": {}
+    "C:\\Users\\moham\\source\\repos\\GraduationProject\\GraduationProject\\GraduationProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\GraduationProject.csproj": {
+    "C:\\Users\\moham\\source\\repos\\GraduationProject\\GraduationProject\\GraduationProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\GraduationProject.csproj",
+        "projectUniqueName": "C:\\Users\\moham\\source\\repos\\GraduationProject\\GraduationProject\\GraduationProject.csproj",
         "projectName": "GraduationProject",
-        "projectPath": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\GraduationProject.csproj",
-        "packagesPath": "C:\\Users\\malko\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\",
+        "projectPath": "C:\\Users\\moham\\source\\repos\\GraduationProject\\GraduationProject\\GraduationProject.csproj",
+        "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\moham\\source\\repos\\GraduationProject\\GraduationProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\malko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\moham\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -74,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
