@@ -7,6 +7,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System;
 using GraduationProject.Models.GraduationProject.Models;
+using GraduationProject.Service;
+using GraduationProject.Container;
 
 namespace GraduationProject
 {
@@ -21,6 +23,8 @@ namespace GraduationProject
             builder.Services.AddControllers().ConfigureApiBehaviorOptions(
                 options =>
                     options.SuppressModelStateInvalidFilter = true);
+            builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+            builder.Services.AddTransient<IEmailService, EmailService>();
             builder.Services.AddDbContext<AppDbContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("constr"));

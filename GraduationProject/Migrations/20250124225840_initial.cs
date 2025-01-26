@@ -341,7 +341,7 @@ namespace GraduationProject.Migrations
                         column: x => x.trackId,
                         principalTable: "Track",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateIndex(

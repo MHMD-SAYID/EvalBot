@@ -177,3 +177,8 @@ C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net8.0
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net8.0\GraduationProject.pdb
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net8.0\GraduationProject.genruntimeconfig.cache
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net8.0\ref\GraduationProject.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net8.0\MailKit.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net8.0\MimeKit.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
