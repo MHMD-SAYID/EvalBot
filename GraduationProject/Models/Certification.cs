@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GraduationProject.Entites
+namespace GraduationProject.Models
 {
     public class Certification
     {

@@ -1,6 +1,6 @@
-﻿using GraduationProject.Entites;
+﻿
 
-namespace GraduationProject.Entites
+namespace GraduationProject.Models
 {
     public class Experience
     {

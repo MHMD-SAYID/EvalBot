@@ -1,4 +1,4 @@
-﻿namespace GraduationProject.Entites
+﻿namespace GraduationProject.Models
 {
     public class Skills
     {

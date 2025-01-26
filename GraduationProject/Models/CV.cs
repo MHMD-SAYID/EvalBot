@@ -1,7 +1,7 @@
-﻿using GraduationProject.Models;
+﻿
 
 
-namespace GraduationProject.Entites
+namespace GraduationProject.Models
 {
 
     public class CV

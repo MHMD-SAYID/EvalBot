@@ -1,6 +1,6 @@
 ﻿using GraduationProject.DTO;
 using GraduationProject.Models;
-using GraduationProject.Service;
+
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -17,14 +17,13 @@ namespace GraduationProject.Controllers
     {
 
         private readonly UserManager<ApplicationUser> userManager;
-        private readonly IUserService userService;
-        public AccountController(IUserService service)
-        {
-            this.userService = service;
-        }
+        
+       
         public AccountController(UserManager<ApplicationUser> UserManager)
         {
             userManager = UserManager;
+            
+
         }
         [HttpPost("Register")]
         public async Task<IActionResult> Register(RegisterDTO UserFromRequest)
@@ -51,12 +50,7 @@ namespace GraduationProject.Controllers
 
             return BadRequest(ModelState);
         }
-        [HttpPost("userregisteration")]
-        public async Task<IActionResult> UserRegisteration(RegisterDTO userRegister)
-        {
-            var data = await this.userService.UserRegisteration(userRegister);
-            return Ok(data);
-        }
+       
         [HttpPost("Login")]
         public async Task<IActionResult> Login(LogInDTO UserFromRequest)
         {

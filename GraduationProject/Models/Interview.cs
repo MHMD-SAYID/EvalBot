@@ -1,12 +1,6 @@
-﻿using GraduationProject.Models;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace GraduationProject.Entites
+namespace GraduationProject.Models
 {
     public class Interview
     {
@@ -22,4 +16,4 @@ namespace GraduationProject.Entites
         public ICollection<Q_A> q_a { get; set; } = new List<Q_A>();
         public Level level { get; set; }
     }
-}
+    }
