@@ -4,9 +4,9 @@ namespace GraduationProject.Models
 {
     public class ApplicationUser:IdentityUser
     {
-        public string IDCard { get; set; }
+        public string? IDCard { get; set; }
         public Gender gender { get; set; }
-        public string LinkedIn { get; set; }
+        public string? LinkedIn { get; set; }
         // in db -->DATETIMEOFFSET ---> 2024-12-18 13:30:00.1234567 +03:00
         public DateTimeOffset CreatedAt { get; set; }
         //public int CVId { get; set; }

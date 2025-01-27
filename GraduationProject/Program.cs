@@ -64,6 +64,11 @@ namespace GraduationProject
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddAuthentication().AddFacebook(facebookOptions =>
+            {
+                facebookOptions.ClientId = "1258656208578467";
+                facebookOptions.ClientSecret = "3579ace1b113519ce21ff8ab66868c4e";
+            });
 
             var app = builder.Build();
 

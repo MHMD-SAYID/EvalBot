@@ -57,7 +57,7 @@ namespace GraduationProject.Controllers
 
             if (ModelState.IsValid)
             {
-                ApplicationUser UserFromDb = await userManager.FindByNameAsync(UserFromRequest.Email);
+                ApplicationUser UserFromDb = await userManager.FindByEmailAsync(UserFromRequest.Email);
                 bool found =
                     await userManager.CheckPasswordAsync(UserFromDb, UserFromRequest.Password);
                 if (found)
@@ -94,7 +94,7 @@ namespace GraduationProject.Controllers
                     );
 
                 }
-                ModelState.AddModelError("UserName", "user name or password invalid");
+                ModelState.AddModelError("Email", "Email or password invalid");
             }
 
             return BadRequest(ModelState);

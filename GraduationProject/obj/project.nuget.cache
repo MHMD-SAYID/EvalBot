@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YYKBDZRGmYk=",
+  "dgSpecHash": "aVcRfg7KZe4=",
   "success": true,
   "projectFilePath": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\GraduationProject.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\malko\\.nuget\\packages\\bouncycastle.cryptography\\2.5.0\\bouncycastle.cryptography.2.5.0.nupkg.sha512",
     "C:\\Users\\malko\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\malko\\.nuget\\packages\\mailkit\\4.9.0\\mailkit.4.9.0.nupkg.sha512",
+    "C:\\Users\\malko\\.nuget\\packages\\microsoft.aspnetcore.authentication.facebook\\8.0.12\\microsoft.aspnetcore.authentication.facebook.8.0.12.nupkg.sha512",
     "C:\\Users\\malko\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.12\\microsoft.aspnetcore.authentication.jwtbearer.8.0.12.nupkg.sha512",
     "C:\\Users\\malko\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.12\\microsoft.aspnetcore.cryptography.internal.8.0.12.nupkg.sha512",
     "C:\\Users\\malko\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.12\\microsoft.aspnetcore.cryptography.keyderivation.8.0.12.nupkg.sha512",
