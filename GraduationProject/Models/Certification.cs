@@ -10,9 +10,9 @@ namespace GraduationProject.Models
     {
         public int Id { get; set; }
         public int CVId { get; set; }
-        public DateTimeOffset DateEarned { get; set; }
+        public DateTime DateEarned { get; set; }
         public string Name { get; set; }
-        public string Organizaion { get; set; }
+        public string OrganizaionName { get; set; }
         public CV Cv { get; set; }
 
 
