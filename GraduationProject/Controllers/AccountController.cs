@@ -6,8 +6,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Net.Mail;
+using System.Net;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.WebUtilities;
 
 namespace GraduationProject.Controllers
 {
@@ -15,14 +19,14 @@ namespace GraduationProject.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-
+        private IEmailSender _emailSender;
         private readonly UserManager<ApplicationUser> userManager;
         
        
-        public AccountController(UserManager<ApplicationUser> UserManager)
+        public AccountController(UserManager<ApplicationUser> UserManager,IEmailSender emailSender)
         {
             userManager = UserManager;
-            
+            _emailSender = emailSender;
 
         }
         [HttpPost("Register")]
@@ -101,6 +105,100 @@ namespace GraduationProject.Controllers
 
 
         }
-    }
+        [HttpPost("ForgetPassword")]
+        public async Task<IActionResult> ForgetPassword(ForgetPasswordDTO UserFromRequest)
+        {
+            if (ModelState.IsValid)
+            {
+                // Check if the user exists in the database
+                ApplicationUser UserFromDb = await userManager.FindByEmailAsync(UserFromRequest.Email!);
+                if (UserFromDb != null)
+                {
+                    // Generate password reset token
+                    string token = await userManager.GeneratePasswordResetTokenAsync(UserFromDb);//builtIn function
+                    var param = new Dictionary<string, string?>
+                    {
 
+                        { "token",token},
+                        {"email",UserFromRequest.Email  }
+
+                    };
+
+                    var callback = QueryHelpers.AddQueryString(UserFromRequest.ClientUri!, param);
+                    //var message = new Message([UserFromDb.Email], "Reset password token", callback, null);
+                    await _emailSender.SendEmailAsync(UserFromDb.Email, "Reset password token", callback);
+                    return Ok();
+                }
+            }
+            return BadRequest(ModelState);
+        }
+        private async Task<bool> SendResetPasswordEmail(string email, string resetLink)
+        {
+            try
+            {
+                var fromAddress = new MailAddress("leaguetrollacc7@gmail.com", "EvalBot Support");
+                var toAddress = new MailAddress(email);
+                const string subject = "Password Reset Request";
+                string body = $"Please reset your password by clicking <a href='{resetLink}'>here</a>.";
+
+                var smtp = new SmtpClient
+                {
+                    Host = "smtp.gmail.com", // Your SMTP server
+                    Port = 587, // Port for SMTP
+                    EnableSsl = true,
+                    DeliveryMethod = SmtpDeliveryMethod.Network,
+                    UseDefaultCredentials = false,
+                    Credentials = new NetworkCredential("leaguetrollacc7@gmail.com", "42211615mhmd")
+                };
+
+                using (var message = new MailMessage(fromAddress, toAddress)
+                {
+                    Subject = subject,
+                    Body = body,
+                    IsBodyHtml = true
+                })
+                {
+                    await smtp.SendMailAsync(message);
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (e.g., using a logging framework)
+                Console.WriteLine($"Error sending email: {ex.Message}");
+                return false;
+            }
+        }
+        [HttpPost("ResetPassword")]
+        public async Task<IActionResult> ResetPassword(ResetPasswordDTO model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await userManager.FindByEmailAsync(model.Email);
+                if (user != null)
+                {
+                    var result = await userManager.ResetPasswordAsync(user, model.Token, model.NewPassword);
+                    if (result.Succeeded)
+                    {
+                        return Ok("Password has been reset successfully.");
+                    }
+                    else
+                    {
+                        foreach (var error in result.Errors)
+                        {
+                            ModelState.AddModelError(string.Empty, error.Description);
+                        }
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("Email", "User not found.");
+                }
+            }
+            return BadRequest(ModelState);
+        }
+        
+
+    }
 }

@@ -171,6 +171,27 @@ namespace GraduationProject.Migrations
                     b.ToTable("Certification");
                 });
 
+            modelBuilder.Entity("GraduationProject.Models.Company", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Companies");
+                });
+
             modelBuilder.Entity("GraduationProject.Models.Experience", b =>
                 {
                     b.Property<int>("Id")
@@ -262,6 +283,9 @@ namespace GraduationProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("CompanyId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -278,6 +302,8 @@ namespace GraduationProject.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CompanyId");
 
                     b.ToTable("Job");
                 });
@@ -591,6 +617,13 @@ namespace GraduationProject.Migrations
                     b.Navigation("track");
                 });
 
+            modelBuilder.Entity("GraduationProject.Models.Job", b =>
+                {
+                    b.HasOne("GraduationProject.Models.Company", null)
+                        .WithMany("Jobs")
+                        .HasForeignKey("CompanyId");
+                });
+
             modelBuilder.Entity("GraduationProject.Models.Q_A", b =>
                 {
                     b.HasOne("GraduationProject.Models.Interview", "Interview")
@@ -697,6 +730,11 @@ namespace GraduationProject.Migrations
                     b.Navigation("projects");
 
                     b.Navigation("skills");
+                });
+
+            modelBuilder.Entity("GraduationProject.Models.Company", b =>
+                {
+                    b.Navigation("Jobs");
                 });
 
             modelBuilder.Entity("GraduationProject.Models.Interview", b =>

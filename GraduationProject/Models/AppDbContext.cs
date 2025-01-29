@@ -14,6 +14,7 @@ namespace GraduationProject.Models
             public DbSet<Skills> Skills { get; set; }
             public DbSet<Track> Track { get; set; }
             public DbSet<Experience> Experience { get; set; }
+            public DbSet<Company> Companies { get; set; }
 
             public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
             {

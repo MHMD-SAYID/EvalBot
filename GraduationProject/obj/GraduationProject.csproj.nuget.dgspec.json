@@ -50,10 +50,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "MailKit": {
-              "target": "Package",
-              "version": "[4.9.0, )"
-            },
             "Microsoft.AspNetCore.Authentication.Facebook": {
               "target": "Package",
               "version": "[8.0.12, )"
@@ -75,14 +71,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.1, )"
-            },
-            "MimeKit": {
-              "target": "Package",
-              "version": "[4.9.0, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
