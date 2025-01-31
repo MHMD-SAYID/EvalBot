@@ -14,6 +14,8 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
 using GraduationProject.Models;
+using Microsoft.AspNetCore.Authorization;
+using Google.Apis.Auth;
 
 namespace GraduationProject.Controllers
 {
@@ -310,5 +312,24 @@ namespace GraduationProject.Controllers
         }
 
 
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> Test([FromRoute]string token)
+        {
+            try
+            {
+                var GoogleUser = await GoogleJsonWebSignature.ValidateAsync(token, new GoogleJsonWebSignature.ValidationSettings() 
+                {
+                Audience=new[] {" 213357481232 - 9be6522hdm2u4pu3947lqgip5cna7v1j.apps.googleusercontent.com" }
+
+                });
+                //regiseter googleuser
+                var userinfo = new UserLoginInfo("Google", GoogleUser.Subject, "Google");
+               await _userManager.AddLoginAsync(new ApplicationUser(), userinfo);
+                //login 
+                _userManager.FindByLoginAsync("Google", GoogleUser.Subject);
+                return Ok();
+            }
+        }
     }
 }
