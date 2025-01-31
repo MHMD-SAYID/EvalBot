@@ -6,6 +6,7 @@ namespace GraduationProject.Models
     {
         public string? IDCard { get; set; }
         public Gender gender { get; set; }
+        public DateTime DateOfBirth { get; set; }
         public string? LinkedIn { get; set; }
         // in db -->DATETIMEOFFSET ---> 2024-12-18 13:30:00.1234567 +03:00
         public DateTimeOffset CreatedAt { get; set; }

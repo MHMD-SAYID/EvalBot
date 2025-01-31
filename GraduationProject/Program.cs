@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System;
-using GraduationProject.Models.GraduationProject.Models;
+using GraduationProject.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
+using GraduationProject.Services;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace GraduationProject
 {
@@ -31,6 +33,9 @@ namespace GraduationProject
             });
             var emailConfig = builder.Configuration
                 .GetSection("EmailConfiguration").Get<EmailConfiguration>();
+
+            builder.Services.AddSingleton(emailConfig);
+            builder.Services.AddTransient<IEmailSender, EmailSender>(); // Fix this
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
                 options.Tokens.PasswordResetTokenProvider = TokenOptions.DefaultProvider; // Configure PasswordResetTokenProvider here

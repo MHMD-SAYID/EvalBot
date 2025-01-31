@@ -1,19 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
 namespace GraduationProject.Models.Config
 {
-    public class CompanyConfiguration : IEntityTypeConfiguration<Company>
+    public class OtpEntryConfiguration : IEntityTypeConfiguration<OtpEntry>
     {
 
 
-        public void Configure(EntityTypeBuilder<Company> builder)
+        public void Configure(EntityTypeBuilder<OtpEntry> builder)
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id)
@@ -21,7 +16,7 @@ namespace GraduationProject.Models.Config
                 .IsRequired();
 
 
-            builder.ToTable("Company");
+            builder.ToTable("OtpEntries");
 
 
         }

@@ -12,6 +12,8 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.EntityFrameworkCore;
+using GraduationProject.Models;
 
 namespace GraduationProject.Controllers
 {
@@ -20,13 +22,15 @@ namespace GraduationProject.Controllers
     public class AccountController : ControllerBase
     {
         private IEmailSender _emailSender;
-        private readonly UserManager<ApplicationUser> userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly AppDbContext _context;
         
-       
-        public AccountController(UserManager<ApplicationUser> UserManager,IEmailSender emailSender)
+
+        public AccountController(UserManager<ApplicationUser> UserManager,IEmailSender emailSender, AppDbContext context)
         {
-            userManager = UserManager;
+            _userManager = UserManager;
             _emailSender = emailSender;
+            _context = context;
 
         }
         [HttpPost("Register")]
@@ -37,8 +41,9 @@ namespace GraduationProject.Controllers
                 ApplicationUser user = new ApplicationUser();
                 user.UserName = UserFromRequest.UserName;
                 user.Email = UserFromRequest.Email;
+            
                 IdentityResult result =
-                    await userManager.CreateAsync(user, UserFromRequest.Password);
+                    await _userManager.CreateAsync(user,UserFromRequest.Password);
                 if (result.Succeeded)
                 {
                     return Created();
@@ -54,23 +59,47 @@ namespace GraduationProject.Controllers
 
             return BadRequest(ModelState);
         }
-       
-        [HttpPost("Login")]
+        //[HttpPost("CreateAccount")]
+        //public async Task<IActionResult> CreateAccount(RegisterDTO UserFromRequest)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        ApplicationUser user = new ApplicationUser();
+        //        user.UserName = UserFromRequest.UserName;
+        //        user.PhoneNumber = UserFromRequest.PhoneNumber;
+        //        if (UserFromRequest.Gender == 0)
+        //        {
+        //            user.gender = Gender.Male;
+
+        //        }
+        //        else user.gender = Gender.Female;
+        //        user.DateOfBirth = UserFromRequest.DateOfBirth;
+
+        //        IdentityResult result =
+        //            await _userManager.CreateAsync(user, UserFromRequest.Password);
+        //        if (result.Succeeded)
+        //        {
+        //            return Created();
+        //        }
+        //    }
+        //    return BadRequest(ModelState);
+        //}
+            [HttpPost("Login")]
         public async Task<IActionResult> Login(LogInDTO UserFromRequest)
         {
 
             if (ModelState.IsValid)
             {
-                ApplicationUser UserFromDb = await userManager.FindByEmailAsync(UserFromRequest.Email);
+                ApplicationUser UserFromDb = await _userManager.FindByEmailAsync(UserFromRequest.Email);
                 bool found =
-                    await userManager.CheckPasswordAsync(UserFromDb, UserFromRequest.Password);
+                    await _userManager.CheckPasswordAsync(UserFromDb, UserFromRequest.Password);
                 if (found)
                 {
                     List<Claim> UserClaims = new List<Claim>();
 
                     UserClaims.Add(new Claim(ClaimTypes.NameIdentifier, UserFromDb.Id));
                     UserClaims.Add(new Claim(ClaimTypes.Name, UserFromDb.Email));
-                    var userRoles = await userManager.GetRolesAsync(UserFromDb);
+                    var userRoles = await _userManager.GetRolesAsync(UserFromDb);
                     foreach (var role in userRoles)
                     {
                         UserClaims.Add(new Claim(ClaimTypes.Role, role));
@@ -111,11 +140,15 @@ namespace GraduationProject.Controllers
             if (ModelState.IsValid)
             {
                 // Check if the user exists in the database
-                ApplicationUser UserFromDb = await userManager.FindByEmailAsync(UserFromRequest.Email!);
-                if (UserFromDb != null)
+                ApplicationUser UserFromDb = await _userManager.FindByEmailAsync(UserFromRequest.Email);
+                if (UserFromDb == null)
+                {
+                    return BadRequest("Invalid Email");
+                }
+                if   (UserFromDb != null && !string.IsNullOrWhiteSpace(UserFromDb.Email))
                 {
                     // Generate password reset token
-                    string token = await userManager.GeneratePasswordResetTokenAsync(UserFromDb);//builtIn function
+                    string token = await _userManager.GeneratePasswordResetTokenAsync(UserFromDb);//builtIn function
                     var param = new Dictionary<string, string?>
                     {
 
@@ -175,10 +208,10 @@ namespace GraduationProject.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await userManager.FindByEmailAsync(model.Email);
+                var user = await _userManager.FindByEmailAsync(model.Email);
                 if (user != null)
                 {
-                    var result = await userManager.ResetPasswordAsync(user, model.Token, model.NewPassword);
+                    var result = await _userManager.ResetPasswordAsync(user, model.Token, model.NewPassword);
                     if (result.Succeeded)
                     {
                         return Ok("Password has been reset successfully.");
@@ -198,7 +231,84 @@ namespace GraduationProject.Controllers
             }
             return BadRequest(ModelState);
         }
-        
+
+
+
+        [HttpPost("request-otp")]
+        public async Task<IActionResult> RequestOtp([FromBody] RequestOtpDTO request)
+        {
+            if (string.IsNullOrEmpty(request.Email))
+                return BadRequest("Email is required.");
+
+            var existingUser = await _userManager.FindByEmailAsync(request.Email);
+            if (existingUser != null)
+                return BadRequest("Email is already registered.");
+
+            // Generate OTP (6-digit random number)
+            string otp = new Random().Next(100000, 999999).ToString();
+
+            // Save OTP in the database or cache (valid for 5 minutes)
+            var otpEntry = new OtpEntry
+            {
+                Email = request.Email,
+                OtpCode = otp,
+                ExpiryTime = DateTime.UtcNow.AddMinutes(5)
+            };
+
+             _context.OtpEntries.Add(otpEntry);
+            await _context.SaveChangesAsync();
+
+            // Send OTP to user's email
+            await _emailSender.SendEmailAsync(request.Email, "Your OTP Code", $"Your OTP code is {otp}");
+
+            return Ok("OTP sent to email.");
+        }
+
+        [HttpPost("verify-otp")]
+        public async Task<IActionResult> VerifyOtp([FromBody] VerifyOtpDTO request)
+        {
+            var otpEntry = await _context.OtpEntries
+                .FirstOrDefaultAsync(o => o.Email == request.Email && o.OtpCode == request.Otp);
+
+            if (otpEntry == null || otpEntry.ExpiryTime < DateTime.UtcNow)
+                return BadRequest("Invalid or expired OTP.");
+
+            return Ok("OTP verified successfully.");
+        }
+        [HttpPost("register0")]
+        public async Task<IActionResult> Register([FromBody] RegisterUserDTO request)
+        {
+            var existingUser = await _userManager.FindByEmailAsync(request.Email);
+            if (existingUser != null)
+                return BadRequest("Email is already registered.");
+
+            // Verify OTP before allowing registration
+            var otpEntry = await _context.OtpEntries
+                .FirstOrDefaultAsync(o => o.Email == request.Email && o.OtpCode == request.Otp);
+
+            if (otpEntry == null || otpEntry.ExpiryTime < DateTime.UtcNow)
+                return BadRequest("Invalid or expired OTP.");
+
+            var user = new ApplicationUser
+            {
+                UserName = request.Email,
+                Email = request.Email,
+                PhoneNumber = request.PhoneNumber,
+                gender = request.Gender,
+                DateOfBirth = request.DateOfBirth
+            };
+
+            var result = await _userManager.CreateAsync(user, request.Password);
+            if (!result.Succeeded)
+                return BadRequest(result.Errors);
+
+            // Remove OTP entry after successful registration
+            _context.OtpEntries.Remove(otpEntry);
+            await _context.SaveChangesAsync();
+
+            return Ok("User registered successfully.");
+        }
+
 
     }
 }

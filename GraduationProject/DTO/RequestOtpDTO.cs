@@ -1,8 +1,7 @@
 ﻿namespace GraduationProject.DTO
 {
-    public class LogInDTO
+    public class RequestOtpDTO
     {
         public string Email { get; set; }
-        public string Password { get; set; }
     }
 }

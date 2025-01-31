@@ -49,6 +49,38 @@
   },
   {
     "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "Register",
+    "RelativePath": "api/Account/register0",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.DTO.RegisterUserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "RequestOtp",
+    "RelativePath": "api/Account/request-otp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.DTO.RequestOtpDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
     "Method": "ResetPassword",
     "RelativePath": "api/Account/ResetPassword",
     "HttpMethod": "POST",
@@ -58,6 +90,22 @@
       {
         "Name": "model",
         "Type": "ResetPasswordDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "VerifyOtp",
+    "RelativePath": "api/Account/verify-otp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.DTO.VerifyOtpDTO",
         "IsRequired": true
       }
     ],
