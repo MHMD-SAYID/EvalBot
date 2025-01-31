@@ -5,10 +5,7 @@ using GraduationProject.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using System;
-using GraduationProject.Models;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
 using GraduationProject.Services;
 using Microsoft.AspNetCore.Identity.UI.Services;
 
@@ -33,7 +30,13 @@ namespace GraduationProject
             });
             var emailConfig = builder.Configuration
                 .GetSection("EmailConfiguration").Get<EmailConfiguration>();
-
+            builder.Services.AddAuthentication()
+            .AddGoogle(options =>
+            {
+                var googleAuthSection = builder.Configuration.GetSection("Authentication:Google");
+                options.ClientId = googleAuthSection["ClientId"];
+                options.ClientSecret = googleAuthSection["ClientSecret"];
+            });
             builder.Services.AddSingleton(emailConfig);
             builder.Services.AddTransient<IEmailSender, EmailSender>(); // Fix this
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
