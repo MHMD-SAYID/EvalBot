@@ -234,7 +234,7 @@ namespace GraduationProject.Service
                 }
             );
 
-            await _emailSender.SendEmailAsync(user.Email!, "✅ Survey Basket: Email Confirmation", emailBody);
+            await _emailSender.SendEmailAsync(user.Email!, "✅ EvalBot: Email Confirmation", emailBody);
         }
 
       
