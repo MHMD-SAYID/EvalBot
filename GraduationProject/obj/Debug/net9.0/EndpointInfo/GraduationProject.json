@@ -194,6 +194,20 @@
   },
   "components": {
     "schemas": {
+      "BusinessAccount": {
+        "type": "object",
+        "properties": {
+          "accountType": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountLink": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ConfirmEmailRequest": {
         "type": "object",
         "properties": {
@@ -208,6 +222,60 @@
         },
         "additionalProperties": false
       },
+      "Education": {
+        "type": "object",
+        "properties": {
+          "institution": {
+            "type": "string",
+            "nullable": true
+          },
+          "degree": {
+            "type": "string",
+            "nullable": true
+          },
+          "fieldOfStudy": {
+            "type": "string",
+            "nullable": true
+          },
+          "isUnderGraduate": {
+            "type": "boolean"
+          },
+          "startDate": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "endDate": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Experience": {
+        "type": "object",
+        "properties": {
+          "jobTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "companyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "stillWorkingThere": {
+            "type": "boolean"
+          },
+          "startDate": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "endDate": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
       "LoginRequest": {
         "type": "object",
         "properties": {
@@ -216,6 +284,24 @@
             "nullable": true
           },
           "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Project": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "link": {
             "type": "string",
             "nullable": true
           }
@@ -257,16 +343,91 @@
             "type": "string",
             "nullable": true
           },
-          "firstName": {
-            "type": "string",
-            "nullable": true
-          },
-          "lastName": {
-            "type": "string",
-            "nullable": true
-          },
           "userName": {
             "type": "string",
+            "nullable": true
+          },
+          "countryOfResidence": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailType": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "gender": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "yearsOfExperience": {
+            "type": "string",
+            "nullable": true
+          },
+          "expectedSalary": {
+            "type": "number",
+            "format": "double"
+          },
+          "nationality": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date"
+          },
+          "firstLanguage": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstLanguageLevel": {
+            "type": "string",
+            "nullable": true
+          },
+          "secondLanguage": {
+            "type": "string",
+            "nullable": true
+          },
+          "secondLanguageLevel": {
+            "type": "string",
+            "nullable": true
+          },
+          "projects": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Project"
+            },
+            "nullable": true
+          },
+          "experiences": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Experience"
+            },
+            "nullable": true
+          },
+          "educations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Education"
+            },
+            "nullable": true
+          },
+          "accounts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BusinessAccount"
+            },
             "nullable": true
           }
         },

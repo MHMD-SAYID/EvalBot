@@ -39,7 +39,6 @@ public static class DependencyInjection
 
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(connectionString));
-
             services
                 .AddSwaggerServices()
                 .AddMapsterConfig()
@@ -91,7 +90,7 @@ public static class DependencyInjection
         private static IServiceCollection AddAuthConfig(this IServiceCollection services,
             IConfiguration configuration)
         {
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+            services.AddIdentity<User, IdentityRole>()
               .AddEntityFrameworkStores<AppDbContext>()
               .AddDefaultTokenProviders();
 
@@ -114,6 +113,7 @@ public static class DependencyInjection
                   options.Password.RequireNonAlphanumeric = true;
                   options.Password.RequireUppercase = true;
                   options.Password.RequireLowercase = true;
+                  options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+ ";
                   //options.Password.RequireDigit = false;
                   //options.Password.RequireLowercase = true;
                   //options.Password.RequireNonAlphanumeric = false;
@@ -121,6 +121,7 @@ public static class DependencyInjection
                   //options.Password.RequiredLength = 8;
                   //options.Password.RequiredUniqueChars = 0;
               });
+           
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

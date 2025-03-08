@@ -1,33 +1,47 @@
 ﻿
 
-using GraduationProject.Entities;
+using GraduationProject.Contracts.Authentication;
 using GraduationProject.Helpers;
+using GraduationProject.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.WebUtilities;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.Json;
+using BusinessAccount = GraduationProject.Models.BusinessAccount;
+using Education = GraduationProject.Models.Education;
+using Experience = GraduationProject.Models.Experience;
+using Project = GraduationProject.Models.Project;
 
 namespace GraduationProject.Service
 {
     public class AuthService(
-     UserManager<ApplicationUser> userManager,
-     SignInManager<ApplicationUser> signInManager,
+     UserManager<User> userManager,
+     SignInManager<User> signInManager,
+     RoleManager<IdentityRole> roleManager,
      IJwtProvider jwtProvider,
      ILogger<AuthService> logger,
      IEmailSender emailSender,
-     IHttpContextAccessor httpContextAccessor) : IAuthService
+     IHttpContextAccessor httpContextAccessor,
+        AppDbContext context ) : IAuthService
     {
-        private readonly UserManager<ApplicationUser> _userManager = userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager = signInManager;
+        private readonly UserManager<User> _userManager = userManager;
+        private readonly SignInManager<User> _signInManager = signInManager;
         private readonly IJwtProvider _jwtProvider = jwtProvider;
         private readonly ILogger<AuthService> _logger = logger;
         private readonly IEmailSender _emailSender = emailSender;
         private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
-
+        private readonly AppDbContext _context = context;
+       
+        
         private readonly int _refreshTokenExpiryDays = 14;
+
+      
 
         public async Task<Result<AuthResponse>> GetTokenAsync(string email, string password, CancellationToken cancellationToken = default)
         {
+            
             if (await _userManager.FindByEmailAsync(email) is not { } user)
                 return Result.Failure<AuthResponse>(UserErrors.InvalidCredentials);
 
@@ -47,14 +61,14 @@ namespace GraduationProject.Service
 
                 await _userManager.UpdateAsync(user);
 
-                var response = new AuthResponse(user.Id, user.Email, user.FirstName, user.LastName, token, expiresIn, refreshToken, refreshTokenExpiration);
+                var response = new AuthResponse(user.Id, user.Email, user.UserName, token, expiresIn, refreshToken, refreshTokenExpiration);
 
                 return Result.Success(response);
             }
 
             return Result.Failure<AuthResponse>(result.IsNotAllowed ? UserErrors.EmailNotConfirmed : UserErrors.InvalidCredentials);
         }
-
+        
         //public async Task<OneOf<AuthResponse, Error>> GetTokenAsync(string email, string password, CancellationToken cancellationToken = default)
         //{
         //    var user = await _userManager.FindByEmailAsync(email);
@@ -81,6 +95,19 @@ namespace GraduationProject.Service
 
         //    return new AuthResponse(user.Id, user.Email, user.FirstName, user.LastName, token, expiresIn, refreshToken, refreshTokenExpiration);
         //}
+       public async Task CreateRoles(IServiceProvider serviceProvider)
+        {
+            var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            string[] roles = { "User", "Company" };
+
+            foreach (var role in roles)
+            {
+                if (!await roleManager.RoleExistsAsync(role))
+                {
+                    await roleManager.CreateAsync(new IdentityRole(role));
+                }
+            }
+        }
 
         public async Task<Result<AuthResponse>> GetRefreshTokenAsync(string token, string refreshToken, CancellationToken cancellationToken = default)
         {
@@ -113,7 +140,7 @@ namespace GraduationProject.Service
 
             await _userManager.UpdateAsync(user);
 
-            var response = new AuthResponse(user.Id, user.Email, user.FirstName, user.LastName, newToken, expiresIn, newRefreshToken, refreshTokenExpiration);
+            var response = new AuthResponse(user.Id, user.Email, user.UserName, newToken, expiresIn, newRefreshToken, refreshTokenExpiration);
 
             return Result.Success(response);
         }
@@ -141,20 +168,91 @@ namespace GraduationProject.Service
 
             return Result.Success();
         }
-
+        
         public async Task<Result> RegisterAsync(RegisterRequest request, CancellationToken cancellationToken = default)
         {
+            
+           
             var emailIsExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
-
             if (emailIsExists)
                 return Result.Failure(UserErrors.DuplicatedEmail);
 
-            var user = request.Adapt<ApplicationUser>();
+            var UserNameExists = await _userManager.Users.AnyAsync(x => x.UserName == request.UserName, cancellationToken);
+            if (UserNameExists)
+                return Result.Failure(UserErrors.DuplicatedUserName);
+            var user = request.Adapt<User>();
+           
+             //_userManager.AddToRoleAsync(user,"User").Wait();
+
             //user.UserName = $"{request.FirstName}_{request.LastName}".ToLower();
+            
+            user.Skills = request.Skills;
             var result = await _userManager.CreateAsync(user, request.Password);
+             // Convert list to JSON
+            
+            if (request.Projects?.Any() == true)
+            {
+                var projects = request.Projects.Select(p => new Project
+                {
+                    Name = p.name,
+                    Link = p.link,
+                    UserId = user.Id
+                }).ToList();
+
+                await _context.Projects.AddRangeAsync(projects, cancellationToken);
+                await _context.SaveChangesAsync(cancellationToken);
+            }
+            if (request.Experiences?.Any() == true)
+            {
+                var Experience = request.Experiences.Select(p => new Experience
+                {
+                    JobTitle = p.JobTitle,
+                    CompanyName = p.CompanyName,
+                    StillWorkingThere = p.StillWorkingThere,
+                    StartDate = p.StartDate,
+                    EndDate = p.EndDate,
+                    UserId = user.Id
+                }).ToList();
+
+                await _context.Experience.AddRangeAsync(Experience, cancellationToken);
+                await _context.SaveChangesAsync(cancellationToken);
+            }
+            if (request.Educations?.Any() == true)
+            {
+                var Education = request.Educations.Select(p => new Education
+                {
+                    Institution = p.Institution,
+                    Degree=p.Degree,
+                    FieldOfStudy = p.FieldOfStudy,
+                    IsUnderGraduate = p.IsUnderGraduate,
+                    StartDate=p.StartDate,
+                    EndDate=p.EndDate,
+                    UserId = user.Id
+                }).ToList();
+
+                await _context.Education.AddRangeAsync(Education, cancellationToken);
+                await _context.SaveChangesAsync(cancellationToken);
+            }
+            if (request.Accounts?.Any() == true)
+            {
+                var Accounts = request.Accounts.Select(p => new BusinessAccount
+                {
+                    Type=p.AccountType,
+                    Link=p.AccountLink,
+                    UserId = user.Id
+                }).ToList();
+
+                await _context.businessAccounts.AddRangeAsync(Accounts, cancellationToken);
+                await _context.SaveChangesAsync(cancellationToken);
+            }
+
+            //await _context.SaveChangesAsync();
+
+
 
             if (result.Succeeded)
             {
+
                 var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                 code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
 
@@ -221,15 +319,15 @@ namespace GraduationProject.Service
         {
             return Convert.ToBase64String(RandomNumberGenerator.GetBytes(64));
         }
-
-        private async Task SendConfirmationEmail(ApplicationUser user, string code)
+       
+        private async Task SendConfirmationEmail(User user, string code)
         {
             var origin = _httpContextAccessor.HttpContext?.Request.Headers.Origin;
 
             var emailBody = EmailBodyBuilder.GenerateEmailBody("EmailConfirmation",
                 templateModel: new Dictionary<string, string>
                 {
-                { "{{name}}", user.FirstName },
+                { "{{name}}", user.UserName },
                     { "{{action_url}}", $"{origin}/auth/emailConfirmation?userId={user.Id}&code={code}" }
                 }
             );
@@ -237,6 +335,19 @@ namespace GraduationProject.Service
             await _emailSender.SendEmailAsync(user.Email!, "✅ EvalBot: Email Confirmation", emailBody);
         }
 
-      
+        //public Task<Result> CreateUserRoleAsync()
+        //{
+        //    AppDbContext context;
+        //    var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+        //    var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+
+        //    if (!roleManager.RoleExists("Manager"))
+        //    {
+        //        var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+        //        role.Name = "Manager";
+        //        roleManager.Create(role);
+
+        //    }
+        //}
     }
 }

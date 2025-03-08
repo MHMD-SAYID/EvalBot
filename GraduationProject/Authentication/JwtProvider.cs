@@ -14,13 +14,12 @@ public class JwtProvider(IOptions<JwtOptions> options) : IJwtProvider
 
     private readonly JwtOptions _options = options.Value;
 
-    public (string token, int expiresIn) GenerateToken(ApplicationUser user)
+    public (string token, int expiresIn) GenerateToken(User user)
     {
         Claim[] claims = [
             new(JwtRegisteredClaimNames.Sub, user.Id),
             new(JwtRegisteredClaimNames.Email, user.Email!),
-            new(JwtRegisteredClaimNames.GivenName, user.FirstName),
-            new(JwtRegisteredClaimNames.FamilyName, user.LastName),
+            new(JwtRegisteredClaimNames.PreferredUsername, user.UserName),
             new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
         ];
 

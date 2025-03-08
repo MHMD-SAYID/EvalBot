@@ -11,20 +11,25 @@ using RegisterRequest = GraduationProject.Contracts.Authentication.RegisterReque
 
 namespace GraduationProject.Controllers
 {
-    public class AuthController(IAuthService authService, ILogger<AuthController> logger) : ControllerBase
+    public class AuthController(IAuthService authService, ILogger<AuthController> logger,AppDbContext context) : ControllerBase
     {
         private readonly IAuthService _authService = authService;
+        private readonly AppDbContext _context = context;
         private readonly ILogger<AuthController> _logger = logger;
 
         [HttpPost("LogIn")]
         public async Task<IActionResult> Login([FromBody] LoginRequest request, CancellationToken cancellationToken)
         {
-            _logger.LogInformation("Logging with email: {email} and password: {password}", request.Email, request.Password);
+            bool IsSameType = await _context.Users.AnyAsync(x => x.EmailType == request.EmailType);
+            if (IsSameType)
+            {
+                _logger.LogInformation("Logging with email: {email} and password: {password}", request.Email, request.Password);
 
             var authResult = await _authService.GetTokenAsync(request.Email, request.Password, cancellationToken);
 
             return authResult.IsSuccess ? Ok(authResult.Value) : authResult.ToProblem();
-
+            }
+            return BadRequest();
             //return authResult.Match(
             //    Ok,
             //    error => Problem(statusCode: StatusCodes.Status400BadRequest, title: error.Code, detail: error.Description)
@@ -50,7 +55,7 @@ namespace GraduationProject.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterRequest request, CancellationToken cancellationToken)
         {
-            var result = await _authService.RegisterAsync(request, cancellationToken);
+            var result = await _authService.RegisterAsync(request ,cancellationToken);
 
             return result.IsSuccess ? Ok() : result.ToProblem();
         }

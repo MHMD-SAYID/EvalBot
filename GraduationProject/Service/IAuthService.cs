@@ -7,6 +7,7 @@
         Task<Result<AuthResponse>> GetRefreshTokenAsync(string token, string refreshToken, CancellationToken cancellationToken = default);
         Task<Result> RevokeRefreshTokenAsync(string token, string refreshToken, CancellationToken cancellationToken = default);
         Task<Result> RegisterAsync(Contracts.Authentication.RegisterRequest request, CancellationToken cancellationToken = default);
+        //Task<Result> CreateUserRoleAsync();
         Task<Result> ConfirmEmailAsync(ConfirmEmailRequest request);
         Task<Result> ResendConfirmationEmailAsync(ReSendConfirmationEmail request);
     }

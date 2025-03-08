@@ -24,4 +24,6 @@ public static class UserErrors
 
     public static readonly Error DuplicatedConfirmation =
         new("User.DuplicatedConfirmation", "Email already confirmed", StatusCodes.Status400BadRequest);
+    public static readonly Error DuplicatedUserName =
+        new("User.DuplicatedUserName", "Username already exists", StatusCodes.Status409Conflict);
 }
