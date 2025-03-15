@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\ciyy33ei.3cc",
+      "PackagePath": "staticwebassets\\CV\\ciyy33ei.3cc"
+    },
+    {
+      "Id": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\gvykzgzh.t13",
+      "PackagePath": "staticwebassets\\CV\\gvykzgzh.t13"
+    },
+    {
+      "Id": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\anas04",
+      "PackagePath": "staticwebassets\\Images"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.GraduationProject.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.GraduationProject.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.GraduationProject.props",
+      "PackagePath": "build\\GraduationProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.GraduationProject.props",
+      "PackagePath": "buildMultiTargeting\\GraduationProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.GraduationProject.props",
+      "PackagePath": "buildTransitive\\GraduationProject.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,5 +1,5 @@
 ﻿
-namespace GraduationProject.Models
+namespace GraduationProject.Entities
 {
     public class Q_A
     {

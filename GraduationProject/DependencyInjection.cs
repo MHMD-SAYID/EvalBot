@@ -10,9 +10,10 @@ using Microsoft.AspNetCore.Identity;
 using GraduationProject.Services;
 using FluentValidation.AspNetCore;
 
-namespace GraduationProject { 
+namespace GraduationProject
+{
 
-public static class DependencyInjection
+    public static partial class DependencyInjection
 {
 
   
@@ -32,7 +33,8 @@ public static class DependencyInjection
                 )
             );
 
-            services.AddAuthConfig(configuration);
+        services.AddAuthConfig(configuration);
+         
 
             var connectionString = configuration.GetConnectionString("constr") ??
                 throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
@@ -45,7 +47,9 @@ public static class DependencyInjection
                 .AddFluentValidationConfig();
 
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IFileService, FileService>();
             services.AddScoped<IEmailSender, EmailService>();
+            services.AddScoped<IUserService, UserService>();
            
             //services.AddScoped<IResultService, ResultService>();
 

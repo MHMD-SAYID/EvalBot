@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace GraduationProject.Models
+namespace GraduationProject.Entities
 {
     public partial class User:IdentityUser
     {
@@ -24,5 +24,6 @@ namespace GraduationProject.Models
         public string SecondLanguageLevel { get; set; }
         //public List<UserLanguage> userLanguages { get; set; }
         public List<BusinessAccount> businessAccounts { get; set; }
+        public List<UploadedFiles> uploadedFiles { get; set; }
     }
 }

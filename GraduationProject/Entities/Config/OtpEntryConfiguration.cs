@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 
-namespace GraduationProject.Models.Config
+namespace GraduationProject.Entities.Config
 {
     public class OtpEntryConfiguration : IEntityTypeConfiguration<OtpEntry>
     {

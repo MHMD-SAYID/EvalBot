@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
-namespace GraduationProject.Models
+namespace GraduationProject.Entities
 {
     public class AppDbContext : IdentityDbContext<User>
     {
@@ -16,6 +16,7 @@ namespace GraduationProject.Models
         public DbSet<Company> Company { get; set; }
         public DbSet<OtpEntry> OtpEntries { get; set; }
         public DbSet<Job> Jobs { get; set; }
+        public DbSet<UploadedFiles> Files { get; set; }
         public DbSet<BusinessAccount> businessAccounts { get; set; }
 
 

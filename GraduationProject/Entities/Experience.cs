@@ -2,7 +2,7 @@
 
 using Microsoft.IdentityModel.Tokens;
 
-namespace GraduationProject.Models
+namespace GraduationProject.Entities
 {
     public class Experience
     {

@@ -1,4 +1,4 @@
-﻿namespace GraduationProject.Models
+﻿namespace GraduationProject.Entities
 {
     public enum Level
     {

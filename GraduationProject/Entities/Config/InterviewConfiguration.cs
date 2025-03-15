@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace GraduationProject.Models.Config
+namespace GraduationProject.Entities.Config
 {
     internal class InterviewConfiguration : IEntityTypeConfiguration<Interview>
     {

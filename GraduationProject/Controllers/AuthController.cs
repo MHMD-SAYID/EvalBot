@@ -1,10 +1,4 @@
-﻿using Google.Apis.Auth.OAuth2.Requests;
-using GraduationProject.Contracts.Authentication;
-using GraduationProject.DTO;
-using GraduationProject.Service;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity.Data;
-using Microsoft.AspNetCore.Mvc;
+﻿
 using LoginRequest = GraduationProject.Contracts.Authentication.LoginRequest;
 using RefreshTokenRequest = GraduationProject.Contracts.Authentication.RefreshTokenRequest;
 using RegisterRequest = GraduationProject.Contracts.Authentication.RegisterRequest;

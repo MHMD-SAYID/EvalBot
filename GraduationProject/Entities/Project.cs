@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace GraduationProject.Models
+namespace GraduationProject.Entities
 {
     public class Project
     {

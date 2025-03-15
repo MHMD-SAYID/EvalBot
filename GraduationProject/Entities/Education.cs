@@ -1,6 +1,6 @@
 ﻿// not finished yet
 
-namespace GraduationProject.Models
+namespace GraduationProject.Entities
 {
     public class Education
     {

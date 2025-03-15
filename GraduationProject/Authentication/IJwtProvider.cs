@@ -1,4 +1,4 @@
-﻿using GraduationProject.Models;
+﻿using GraduationProject.Entities;
 
 namespace GraduationProject.Authentication;
 

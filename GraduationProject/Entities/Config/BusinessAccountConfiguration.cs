@@ -1,4 +1,4 @@
-﻿namespace GraduationProject.Models.Config
+﻿namespace GraduationProject.Entities.Config
 {
     public class BusinessAccountConfiguration : IEntityTypeConfiguration<BusinessAccount>
     {

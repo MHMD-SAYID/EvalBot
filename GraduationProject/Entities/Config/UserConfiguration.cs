@@ -1,4 +1,4 @@
-﻿namespace GraduationProject.Models.Config
+﻿namespace GraduationProject.Entities.Config
 {
     public class UserConfiguration : IEntityTypeConfiguration<User>
     {
@@ -11,7 +11,6 @@
                 .WithOwner()
                 .HasForeignKey("UserId");
 
-
-        }
+     }
     }
 }

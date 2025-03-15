@@ -1,4 +1,4 @@
-﻿namespace GraduationProject.Models;
+﻿namespace GraduationProject.Entities;
 
 [Owned]
 public class RefreshToken

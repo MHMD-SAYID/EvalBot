@@ -10,7 +10,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 
 
-namespace GraduationProject.Models.Configg
+namespace GraduationProject.Entities.Configg
 {
     internal class Q_AConfiguration : IEntityTypeConfiguration<Q_A>
     {

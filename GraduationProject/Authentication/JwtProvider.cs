@@ -1,5 +1,5 @@
 ﻿
-using GraduationProject.Models;
+using GraduationProject.Entities;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;

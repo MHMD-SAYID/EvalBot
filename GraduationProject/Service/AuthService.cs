@@ -2,17 +2,19 @@
 
 using GraduationProject.Contracts.Authentication;
 using GraduationProject.Helpers;
-using GraduationProject.Models;
+using GraduationProject.Entities;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.WebUtilities;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
-using BusinessAccount = GraduationProject.Models.BusinessAccount;
-using Education = GraduationProject.Models.Education;
-using Experience = GraduationProject.Models.Experience;
-using Project = GraduationProject.Models.Project;
+using BusinessAccount = GraduationProject.Entities.BusinessAccount;
+using Education = GraduationProject.Entities.Education;
+using Experience = GraduationProject.Entities.Experience;
+using Project = GraduationProject.Entities.Project;
+using System.Web.Providers.Entities;
+using User = GraduationProject.Entities.User;
 
 namespace GraduationProject.Service
 {
@@ -333,6 +335,26 @@ namespace GraduationProject.Service
             );
 
             await _emailSender.SendEmailAsync(user.Email!, "✅ EvalBot: Email Confirmation", emailBody);
+        }
+
+        public async Task<Result> ResetPassword(ResetPasswordRequest request)
+        {
+            bool EmailExists=await _userManager.Users.AnyAsync(x => x.Email == request.Email);
+            if (EmailExists)
+            { 
+                var user = await _userManager.FindByEmailAsync(request.Email);
+                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+
+                _logger.LogInformation("Confirmation code: {code}", code);
+
+                await SendConfirmationEmail(user, code);
+
+                return Result.Success();
+            }
+                return Result.Failure(UserErrors.EmailNotFound);
+            
+
         }
 
         //public Task<Result> CreateUserRoleAsync()

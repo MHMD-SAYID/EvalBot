@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace GraduationProject.Models.Config
+namespace GraduationProject.Entities.Config
 {
     public class JobConfiguration: IEntityTypeConfiguration<Job>
     {
