@@ -1,8 +1,24 @@
 [
   {
+    "ContainingType": "GraduationProject.Controllers.AuthController",
+    "Method": "ConfirmEmail",
+    "RelativePath": "confirm-email",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Authentication.ConfirmEmailRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FileManager.Api.Controllers.FilesController",
     "Method": "Download",
-    "RelativePath": "api/Files/download/{id}",
+    "RelativePath": "Files/download/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -18,7 +34,7 @@
   {
     "ContainingType": "FileManager.Api.Controllers.FilesController",
     "Method": "Stream",
-    "RelativePath": "api/Files/stream/{id}",
+    "RelativePath": "Files/stream/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -34,7 +50,7 @@
   {
     "ContainingType": "FileManager.Api.Controllers.FilesController",
     "Method": "Upload",
-    "RelativePath": "api/Files/upload",
+    "RelativePath": "Files/upload",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -55,7 +71,7 @@
   {
     "ContainingType": "FileManager.Api.Controllers.FilesController",
     "Method": "UploadImage",
-    "RelativePath": "api/Files/upload-image",
+    "RelativePath": "Files/upload-image",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -76,7 +92,7 @@
   {
     "ContainingType": "FileManager.Api.Controllers.FilesController",
     "Method": "UploadMany",
-    "RelativePath": "api/Files/upload-many",
+    "RelativePath": "Files/upload-many",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -85,22 +101,6 @@
         "Name": "Files",
         "Type": "Microsoft.AspNetCore.Http.IFormFileCollection",
         "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "GraduationProject.Controllers.AuthController",
-    "Method": "ConfirmEmail",
-    "RelativePath": "confirm-email",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "GraduationProject.Contracts.Authentication.ConfirmEmailRequest",
-        "IsRequired": true
       }
     ],
     "ReturnTypes": []

@@ -2,7 +2,7 @@
 
 using GraduationProject.Services;
 namespace FileManager.Api.Controllers;
-[Route("api/[controller]")]
+[Route("[controller]")]
 [ApiController]
 public class FilesController(IFileService fileService) : ControllerBase
 {
@@ -11,9 +11,9 @@ public class FilesController(IFileService fileService) : ControllerBase
     [HttpPost("upload")]
     public async Task<IActionResult> Upload([FromForm] UploadFileRequest request, CancellationToken cancellationToken)
     {
-        var fileId = await _fileService.UploadAsync(request.File,request.userId, cancellationToken);
+        var filePath = await _fileService.UploadAsync(request.File,request.userId, cancellationToken);
 
-        return CreatedAtAction(nameof(Download), new { id = fileId }, null);
+        return Ok(filePath);
     }
 
     [HttpPost("upload-many")]

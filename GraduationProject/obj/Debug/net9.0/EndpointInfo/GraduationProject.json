@@ -191,7 +191,7 @@
         }
       }
     },
-    "/api/Files/upload": {
+    "/Files/upload": {
       "post": {
         "tags": [
           "Files"
@@ -229,7 +229,7 @@
         }
       }
     },
-    "/api/Files/upload-many": {
+    "/Files/upload-many": {
       "post": {
         "tags": [
           "Files"
@@ -264,7 +264,7 @@
         }
       }
     },
-    "/api/Files/upload-image": {
+    "/Files/upload-image": {
       "post": {
         "tags": [
           "Files"
@@ -302,7 +302,7 @@
         }
       }
     },
-    "/api/Files/download/{id}": {
+    "/Files/download/{id}": {
       "get": {
         "tags": [
           "Files"
@@ -325,7 +325,7 @@
         }
       }
     },
-    "/api/Files/stream/{id}": {
+    "/Files/stream/{id}": {
       "get": {
         "tags": [
           "Files"

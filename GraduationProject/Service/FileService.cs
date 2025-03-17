@@ -6,14 +6,24 @@ public class FileService(IWebHostEnvironment webHostEnvironment, AppDbContext co
     private readonly string _imagesPath = $"{webHostEnvironment.WebRootPath}/Images";
     private readonly AppDbContext _context = context;
 
-    public async Task<Guid> UploadAsync(IFormFile file,string userId, CancellationToken cancellationToken = default)
+    public async Task<string> UploadAsync(IFormFile file,string userId, CancellationToken cancellationToken = default)
     {
+//remove the old file if exists
+        if ( _context.Files.Any(x => x.UserId == userId))
+        {
+            var cv = await _context.Files.Where(x => x.UserId == userId).FirstOrDefaultAsync(cancellationToken);
+            System.IO.File.Delete(cv.Link);
+            _context.Remove(cv);
+        }
         var uploadedFile = await SaveFile(file, cancellationToken);
         uploadedFile.UserId = userId;
+        uploadedFile.Link = Path.Combine(_filesPath, uploadedFile.StoredFileName);
+        
         await _context.AddAsync(uploadedFile, cancellationToken);
         await _context.SaveChangesAsync(cancellationToken);
 
-        return uploadedFile.Id;
+        var path = Path.Combine(_filesPath, uploadedFile.StoredFileName);
+        return path;
     }
 
     public async Task<IEnumerable<Guid>> UploadManyAsync(IFormFileCollection files, CancellationToken cancellationToken = default)
@@ -37,7 +47,7 @@ public class FileService(IWebHostEnvironment webHostEnvironment, AppDbContext co
         string UserName = await _context.Users.Where(x => x.Id == userId).Select(x => x.UserName).FirstOrDefaultAsync(cancellationToken);
 
         var path = Path.Combine(_imagesPath, UserName);
-        // delete the image if it exists
+        // delete the image if exists
         if (System.IO.File.Exists(path))
         {
             

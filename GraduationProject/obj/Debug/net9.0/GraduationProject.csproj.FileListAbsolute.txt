@@ -1,11 +1,4 @@
-C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.csproj.AssemblyReference.cache
-C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.AssemblyInfoInputs.cache
-C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.AssemblyInfo.cs
-C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.csproj.CoreCompileInputs.cache
-C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.sourcelink.json
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\ref\GraduationProject.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\appsettings.json
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\GraduationProject.staticwebassets.runtime.json
@@ -181,6 +174,14 @@ C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.csproj.AssemblyReference.cache
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.AssemblyInfoInputs.cache
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.AssemblyInfo.cs
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.csproj.CoreCompileInputs.cache
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.sourcelink.json
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\scopedcss\bundle\GraduationProject.styles.css
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\staticwebassets.development.json
@@ -197,4 +198,3 @@ C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\refint\GraduationProject.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.pdb
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.genruntimeconfig.cache
-C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\ref\GraduationProject.dll
