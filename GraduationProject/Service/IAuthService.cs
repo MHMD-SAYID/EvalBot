@@ -10,6 +10,9 @@
         //Task<Result> CreateUserRoleAsync();
         Task<Result> ConfirmEmailAsync(ConfirmEmailRequest request);
         Task<Result> ResendConfirmationEmailAsync(ReSendConfirmationEmail request);
-        Task<Result> ResetPassword(ResetPasswordRequest request);
+
+        Task<Result> SendResetPasswordCodeAsync(string email);
+
+        Task<Result> ResetPasswordAsync(ResetPasswordRequest request);
     }
 }

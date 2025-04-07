@@ -107,6 +107,22 @@
   },
   {
     "ContainingType": "GraduationProject.Controllers.AuthController",
+    "Method": "ForgetPassword",
+    "RelativePath": "forget-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Microsoft.AspNetCore.Identity.Data.ForgotPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "LogIn",
     "HttpMethod": "POST",
@@ -164,6 +180,22 @@
       {
         "Name": "request",
         "Type": "GraduationProject.Contracts.Authentication.ReSendConfirmationEmail",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AuthController",
+    "Method": "ResetPassword",
+    "RelativePath": "reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Authentication.ResetPasswordRequest",
         "IsRequired": true
       }
     ],

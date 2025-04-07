@@ -55,6 +55,10 @@
               "target": "Package",
               "version": "[14.0.0, )"
             },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.5.1, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.11.0, )"
@@ -66,6 +70,22 @@
             "Google.Apis.Auth": {
               "target": "Package",
               "version": "[1.69.0, )"
+            },
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.8.18, )"
+            },
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.8.18, )"
+            },
+            "Hangfire.Dashboard.Basic.Authentication": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Hangfire.SqlServer": {
+              "target": "Package",
+              "version": "[1.8.18, )"
             },
             "MailKit": {
               "target": "Package",
@@ -117,6 +137,10 @@
               "target": "Package",
               "version": "[9.0.3, )"
             },
+            "Microsoft.Extensions.Caching.Hybrid": {
+              "target": "Package",
+              "version": "[9.3.0, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[9.0.3, )"
@@ -124,6 +148,10 @@
             "MimeKit": {
               "target": "Package",
               "version": "[4.11.0, )"
+            },
+            "OneOf": {
+              "target": "Package",
+              "version": "[3.0.271, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

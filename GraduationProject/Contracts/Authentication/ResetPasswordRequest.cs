@@ -1,7 +1,8 @@
-﻿namespace GraduationProject.Contracts.Authentication
-{
-    public record ResetPasswordRequest(
-        string Email
+﻿namespace GraduationProject.Contracts.Authentication;
 
-        );
-}
+public record ResetPasswordRequest
+(
+    string Email,
+    string Code,
+    string NewPassword
+);

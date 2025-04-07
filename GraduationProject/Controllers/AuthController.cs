@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.AspNetCore.Identity.Data;
 using LoginRequest = GraduationProject.Contracts.Authentication.LoginRequest;
 using RefreshTokenRequest = GraduationProject.Contracts.Authentication.RefreshTokenRequest;
 using RegisterRequest = GraduationProject.Contracts.Authentication.RegisterRequest;
@@ -66,6 +67,21 @@ namespace GraduationProject.Controllers
         public async Task<IActionResult> ResendConfirmationEmail([FromBody] ReSendConfirmationEmail request, CancellationToken cancellationToken)
         {
             var result = await _authService.ResendConfirmationEmailAsync(request);
+
+            return result.IsSuccess ? Ok() : result.ToProblem();
+        }
+        [HttpPost("forget-password")]
+        public async Task<IActionResult> ForgetPassword([FromBody] ForgotPasswordRequest request)
+        {
+            var result = await _authService.SendResetPasswordCodeAsync(request.Email);
+
+            return result.IsSuccess ? Ok() : result.ToProblem();
+        }
+
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword([FromBody] Contracts.Authentication.ResetPasswordRequest request)
+        {
+            var result = await _authService.ResetPasswordAsync(request);
 
             return result.IsSuccess ? Ok() : result.ToProblem();
         }

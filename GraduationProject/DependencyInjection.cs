@@ -1,14 +1,12 @@
 ﻿using MapsterMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using GraduationProject.Authentication;
 using System.Reflection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using GraduationProject.Settings;
 using Microsoft.AspNetCore.Identity.UI.Services;
-using Microsoft.AspNetCore.Identity;
 using GraduationProject.Services;
 using FluentValidation.AspNetCore;
+using Hangfire;
 
 namespace GraduationProject
 {
@@ -22,7 +20,7 @@ namespace GraduationProject
         {
             services.AddControllers();
 
-            //services.AddHybridCache();
+            services.AddHybridCache();
 
             services.AddCors(options =>
                 options.AddDefaultPolicy(builder =>
@@ -50,12 +48,13 @@ namespace GraduationProject
             services.AddScoped<IFileService, FileService>();
             services.AddScoped<IEmailSender, EmailService>();
             services.AddScoped<IUserService, UserService>();
-           
+
             //services.AddScoped<IResultService, ResultService>();
 
             services.AddExceptionHandler<GlobalExceptionHandler>();
             services.AddProblemDetails();
 
+            services.AddBackgroundJobsConfig(configuration);
             services.AddHttpContextAccessor();
 
             services.Configure<MailSettings>(configuration.GetSection(nameof(MailSettings)));
@@ -155,7 +154,21 @@ namespace GraduationProject
 
             return services;
         }
+        private static IServiceCollection AddBackgroundJobsConfig(this IServiceCollection services,
+        IConfiguration configuration)
+        {
+            services.AddHangfire(config => config
+                .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
+                .UseSimpleAssemblyNameTypeSerializer()
+                .UseRecommendedSerializerSettings()
+                .UseSqlServerStorage(configuration.GetConnectionString("Hnagfireconstr")));
+
+            services.AddHangfireServer();
+
+            return services;
+        }
     }
+
 }
 
         //{

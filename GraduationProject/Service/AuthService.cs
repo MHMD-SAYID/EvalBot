@@ -15,6 +15,7 @@ using Experience = GraduationProject.Entities.Experience;
 using Project = GraduationProject.Entities.Project;
 using System.Web.Providers.Entities;
 using User = GraduationProject.Entities.User;
+using Hangfire;
 
 namespace GraduationProject.Service
 {
@@ -184,9 +185,6 @@ namespace GraduationProject.Service
                 return Result.Failure(UserErrors.DuplicatedUserName);
             var user = request.Adapt<User>();
            
-             //_userManager.AddToRoleAsync(user,"User").Wait();
-
-            //user.UserName = $"{request.FirstName}_{request.LastName}".ToLower();
             
             user.Skills = request.Skills;
             var result = await _userManager.CreateAsync(user, request.Password);
@@ -324,12 +322,15 @@ namespace GraduationProject.Service
        
         private async Task SendConfirmationEmail(User user, string code)
         {
+            // request URL
             var origin = _httpContextAccessor.HttpContext?.Request.Headers.Origin;
 
             var emailBody = EmailBodyBuilder.GenerateEmailBody("EmailConfirmation",
                 templateModel: new Dictionary<string, string>
                 {
                 { "{{name}}", user.UserName },
+                //change it to your front end url
+
                     { "{{action_url}}", $"{origin}/auth/emailConfirmation?userId={user.Id}&code={code}" }
                 }
             );
@@ -337,39 +338,87 @@ namespace GraduationProject.Service
             await _emailSender.SendEmailAsync(user.Email!, "✅ EvalBot: Email Confirmation", emailBody);
         }
 
-        public async Task<Result> ResetPassword(ResetPasswordRequest request)
-        {
-            bool EmailExists=await _userManager.Users.AnyAsync(x => x.Email == request.Email);
-            if (EmailExists)
-            { 
-                var user = await _userManager.FindByEmailAsync(request.Email);
-                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+        //public async Task<Result> ResetPassword(ResetPasswordRequest request)
+        //{
+        //    bool EmailExists=await _userManager.Users.AnyAsync(x => x.Email == request.Email);
+        //    if (EmailExists)
+        //    { 
+        //        var user = await _userManager.FindByEmailAsync(request.Email);
+        //        var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+        //        code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
 
-                _logger.LogInformation("Confirmation code: {code}", code);
+        //        _logger.LogInformation("Confirmation code: {code}", code);
 
-                await SendConfirmationEmail(user, code);
+        //        await SendConfirmationEmail(user, code);
 
-                return Result.Success();
-            }
-                return Result.Failure(UserErrors.EmailNotFound);
+        //        return Result.Success();
+        //    }
+        //        return Result.Failure(UserErrors.EmailNotFound);
             
 
+        //}
+        public async Task<Result> SendResetPasswordCodeAsync(string email)
+        {
+            if (await _userManager.FindByEmailAsync(email) is not { } user)
+                return Result.Success();
+
+            if (!user.EmailConfirmed)
+                return Result.Failure(UserErrors.EmailNotConfirmed);
+
+            var code = await _userManager.GeneratePasswordResetTokenAsync(user);
+            code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+
+            _logger.LogInformation("Reset code: {code}", code);
+
+            await SendResetPasswordEmail(user, code);
+
+            return Result.Success();
         }
 
-        //public Task<Result> CreateUserRoleAsync()
-        //{
-        //    AppDbContext context;
-        //    var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
-        //    var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+        public async Task<Result> ResetPasswordAsync(ResetPasswordRequest request)
+        {
+            var user = await _userManager.FindByEmailAsync(request.Email);
 
-        //    if (!roleManager.RoleExists("Manager"))
-        //    {
-        //        var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-        //        role.Name = "Manager";
-        //        roleManager.Create(role);
+            if (user is null || !user.EmailConfirmed)
+                return Result.Failure(UserErrors.InvalidCode);
 
-        //    }
-        //}
+            IdentityResult result;
+
+            try
+            {
+                var code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(request.Code));
+                result = await _userManager.ResetPasswordAsync(user, code, request.NewPassword);
+            }
+            catch (FormatException)
+            {
+                result = IdentityResult.Failed(_userManager.ErrorDescriber.InvalidToken());
+            }
+
+            if (result.Succeeded)
+                return Result.Success();
+
+            var error = result.Errors.First();
+
+            return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status401Unauthorized));
+        }
+
+        private async Task SendResetPasswordEmail(User user, string code)
+        {
+            var origin = _httpContextAccessor.HttpContext?.Request.Headers.Origin;
+
+            var emailBody = EmailBodyBuilder.GenerateEmailBody("ForgetPassword",
+                templateModel: new Dictionary<string, string>
+                {
+                { "{{name}}", user.UserName },
+                
+                //change it to your front end url
+                { "{{action_url}}", $"{origin}/auth/forgetPassword?email={user.Email}&code={code}" }
+                }
+            );
+
+            BackgroundJob.Enqueue(() => _emailSender.SendEmailAsync(user.Email!, "✅ Survey Basket: Change Password", emailBody));
+
+            await Task.CompletedTask;
+        }
     }
 }

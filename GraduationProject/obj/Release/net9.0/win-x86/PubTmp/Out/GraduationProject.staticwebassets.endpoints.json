@@ -1,0 +1,170 @@
+{
+  "Version": 1,
+  "ManifestType": "Publish",
+  "Endpoints": [
+    {
+      "Route": "CV/kqmirdcf.r1w",
+      "AssetFile": "CV/kqmirdcf.r1w",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "58932"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vxmUY+E8RH5QYmxoth0m3pR52Zi4raiV+WSu5RVgVek=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 12:24:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vxmUY+E8RH5QYmxoth0m3pR52Zi4raiV+WSu5RVgVek="
+        }
+      ]
+    },
+    {
+      "Route": "CV/kqmirdcf.zjbh584pep.r1w",
+      "AssetFile": "CV/kqmirdcf.r1w",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "58932"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vxmUY+E8RH5QYmxoth0m3pR52Zi4raiV+WSu5RVgVek=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 12:24:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zjbh584pep"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vxmUY+E8RH5QYmxoth0m3pR52Zi4raiV+WSu5RVgVek="
+        },
+        {
+          "Name": "label",
+          "Value": "CV/kqmirdcf.r1w"
+        }
+      ]
+    },
+    {
+      "Route": "Images/anas04",
+      "AssetFile": "Images/anas04",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/nl3YFHuzxuSSEDJVbIuDmVFUlReA5lipgtH++5r5Ck=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 21:45:06 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/nl3YFHuzxuSSEDJVbIuDmVFUlReA5lipgtH++5r5Ck="
+        }
+      ]
+    },
+    {
+      "Route": "Images/anas04.2clk1jlb5q",
+      "AssetFile": "Images/anas04",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/nl3YFHuzxuSSEDJVbIuDmVFUlReA5lipgtH++5r5Ck=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 21:45:06 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2clk1jlb5q"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/nl3YFHuzxuSSEDJVbIuDmVFUlReA5lipgtH++5r5Ck="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/anas04"
+        }
+      ]
+    }
+  ]
+}

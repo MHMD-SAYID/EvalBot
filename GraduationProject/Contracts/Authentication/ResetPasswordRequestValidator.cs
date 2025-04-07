@@ -1,12 +1,23 @@
-﻿namespace GraduationProject.Contracts.Authentication
+﻿using GraduationProject.Abstractions.Consts;
+
+namespace GraduationProject.Contracts.Authentication
 {
     public class ResetPasswordRequestValidator : AbstractValidator<ResetPasswordRequest>
     {
         public ResetPasswordRequestValidator()
         {
             RuleFor(x => x.Email)
+            .NotEmpty()
+            .EmailAddress();
+
+            RuleFor(x => x.Code)
+               .NotEmpty();
+
+            RuleFor(x => x.NewPassword)
                 .NotEmpty()
-                .EmailAddress();
+                .Matches(RegexPatterns.Password)
+                .WithMessage("Password should be at least 8 digits and should contains Lowercase, NonAlphanumeric and Uppercase");
+
         }
     }
 }

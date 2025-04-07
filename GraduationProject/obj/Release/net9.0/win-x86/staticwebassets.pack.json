@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\kqmirdcf.r1w",
+      "PackagePath": "staticwebassets\\CV\\kqmirdcf.r1w"
+    },
+    {
+      "Id": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\anas04",
+      "PackagePath": "staticwebassets\\Images"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\win-x86\\staticwebassets\\msbuild.GraduationProject.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\win-x86\\staticwebassets\\msbuild.GraduationProject.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\win-x86\\staticwebassets\\msbuild.build.GraduationProject.props",
+      "PackagePath": "build\\GraduationProject.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\win-x86\\staticwebassets\\msbuild.buildMultiTargeting.GraduationProject.props",
+      "PackagePath": "buildMultiTargeting\\GraduationProject.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\win-x86\\staticwebassets\\msbuild.buildTransitive.GraduationProject.props",
+      "PackagePath": "buildTransitive\\GraduationProject.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
