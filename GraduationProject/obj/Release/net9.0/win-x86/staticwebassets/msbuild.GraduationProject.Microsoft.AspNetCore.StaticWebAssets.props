@@ -1,23 +1,5 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\.well-known\pki-validation\BA693C7F1A0AF3FE39E5F380D497B3A0.txt'))">
-      <SourceType>Package</SourceType>
-      <SourceId>GraduationProject</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/GraduationProject</BasePath>
-      <RelativePath>.well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>barbocgmmy</Fingerprint>
-      <Integrity>HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\.well-known\pki-validation\BA693C7F1A0AF3FE39E5F380D497B3A0.txt'))</OriginalItemSpec>
-    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CV\kqmirdcf.r1w'))">
       <SourceType>Package</SourceType>
       <SourceId>GraduationProject</SourceId>

@@ -225,4 +225,3 @@ C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Release\net9
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Release\net9.0\GraduationProject.pdb
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Release\net9.0\GraduationProject.genruntimeconfig.cache
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Release\net9.0\ref\GraduationProject.dll
-C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Release\net9.0\compressed\nfk4ydtwak-barbocgmmy.gz

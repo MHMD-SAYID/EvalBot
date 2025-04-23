@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\.well-known\\pki-validation\\BA693C7F1A0AF3FE39E5F380D497B3A0.txt",
-      "PackagePath": "staticwebassets\\.well-known\\pki-validation\\BA693C7F1A0AF3FE39E5F380D497B3A0.txt"
-    },
-    {
       "Id": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\kqmirdcf.r1w",
       "PackagePath": "staticwebassets\\CV\\kqmirdcf.r1w"
     },

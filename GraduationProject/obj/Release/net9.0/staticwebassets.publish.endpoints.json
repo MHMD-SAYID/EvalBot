@@ -3,13 +3,13 @@
   "ManifestType": "Publish",
   "Endpoints": [
     {
-      "Route": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.barbocgmmy.txt",
-      "AssetFile": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt.gz",
+      "Route": ".gitkeep.5ipweew5fc.txt",
+      "AssetFile": ".gitkeep.txt.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.010204081633"
+          "Quality": "1.000000000000"
         }
       ],
       "ResponseHeaders": [
@@ -27,7 +27,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "97"
+          "Value": "0"
         },
         {
           "Name": "Content-Type",
@@ -35,15 +35,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"UhXd++cRHHmIaqzdfIGYVTYCPQtUVtYQhB83N0pHxXE=\""
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw=\""
+          "Value": "W/\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:02:58 GMT"
+          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
         },
         {
           "Name": "Vary",
@@ -53,26 +53,26 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "barbocgmmy"
+          "Value": "5ipweew5fc"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw="
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
         },
         {
           "Name": "label",
-          "Value": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt"
+          "Value": ".gitkeep.txt"
         }
       ]
     },
     {
-      "Route": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.barbocgmmy.txt",
-      "AssetFile": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt.br",
+      "Route": ".gitkeep.5ipweew5fc.txt",
+      "AssetFile": ".gitkeep.txt.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "br",
-          "Quality": "0.013157894737"
+          "Quality": "0.500000000000"
         }
       ],
       "ResponseHeaders": [
@@ -90,7 +90,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "75"
+          "Value": "1"
         },
         {
           "Name": "Content-Type",
@@ -98,15 +98,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Mw3oX1zL+K0s5saVUYuepCGjrFgBMD9r82Yg/pwKOhI=\""
+          "Value": "\"QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw=\""
+          "Value": "W/\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:02:58 GMT"
+          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
         },
         {
           "Name": "Vary",
@@ -116,21 +116,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "barbocgmmy"
+          "Value": "5ipweew5fc"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw="
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
         },
         {
           "Name": "label",
-          "Value": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt"
+          "Value": ".gitkeep.txt"
         }
       ]
     },
     {
-      "Route": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.barbocgmmy.txt",
-      "AssetFile": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt",
+      "Route": ".gitkeep.5ipweew5fc.txt",
+      "AssetFile": ".gitkeep.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -143,7 +143,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "93"
+          "Value": "0"
         },
         {
           "Name": "Content-Type",
@@ -151,31 +151,31 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw=\""
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:02:58 GMT"
+          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "barbocgmmy"
+          "Value": "5ipweew5fc"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw="
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
         },
         {
           "Name": "label",
-          "Value": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt"
+          "Value": ".gitkeep.txt"
         }
       ]
     },
     {
-      "Route": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.barbocgmmy.txt.br",
-      "AssetFile": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt.br",
+      "Route": ".gitkeep.5ipweew5fc.txt.br",
+      "AssetFile": ".gitkeep.txt.br",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -192,7 +192,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "75"
+          "Value": "1"
         },
         {
           "Name": "Content-Type",
@@ -200,11 +200,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Mw3oX1zL+K0s5saVUYuepCGjrFgBMD9r82Yg/pwKOhI=\""
+          "Value": "\"QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:02:58 GMT"
+          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
         },
         {
           "Name": "Vary",
@@ -214,21 +214,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "barbocgmmy"
+          "Value": "5ipweew5fc"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Mw3oX1zL+K0s5saVUYuepCGjrFgBMD9r82Yg/pwKOhI="
+          "Value": "sha256-QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ="
         },
         {
           "Name": "label",
-          "Value": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt.br"
+          "Value": ".gitkeep.txt.br"
         }
       ]
     },
     {
-      "Route": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.barbocgmmy.txt.gz",
-      "AssetFile": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt.gz",
+      "Route": ".gitkeep.5ipweew5fc.txt.gz",
+      "AssetFile": ".gitkeep.txt.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -245,7 +245,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "97"
+          "Value": "0"
         },
         {
           "Name": "Content-Type",
@@ -253,11 +253,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"UhXd++cRHHmIaqzdfIGYVTYCPQtUVtYQhB83N0pHxXE=\""
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:02:58 GMT"
+          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
         },
         {
           "Name": "Vary",
@@ -267,26 +267,26 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "barbocgmmy"
+          "Value": "5ipweew5fc"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-UhXd++cRHHmIaqzdfIGYVTYCPQtUVtYQhB83N0pHxXE="
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
         },
         {
           "Name": "label",
-          "Value": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt.gz"
+          "Value": ".gitkeep.txt.gz"
         }
       ]
     },
     {
-      "Route": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt",
-      "AssetFile": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt.gz",
+      "Route": ".gitkeep.txt",
+      "AssetFile": ".gitkeep.txt.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.010204081633"
+          "Quality": "1.000000000000"
         }
       ],
       "ResponseHeaders": [
@@ -304,7 +304,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "97"
+          "Value": "0"
         },
         {
           "Name": "Content-Type",
@@ -312,15 +312,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"UhXd++cRHHmIaqzdfIGYVTYCPQtUVtYQhB83N0pHxXE=\""
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw=\""
+          "Value": "W/\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:02:58 GMT"
+          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
         },
         {
           "Name": "Vary",
@@ -330,18 +330,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw="
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
         }
       ]
     },
     {
-      "Route": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt",
-      "AssetFile": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt.br",
+      "Route": ".gitkeep.txt",
+      "AssetFile": ".gitkeep.txt.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "br",
-          "Quality": "0.013157894737"
+          "Quality": "0.500000000000"
         }
       ],
       "ResponseHeaders": [
@@ -359,7 +359,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "75"
+          "Value": "1"
         },
         {
           "Name": "Content-Type",
@@ -367,15 +367,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Mw3oX1zL+K0s5saVUYuepCGjrFgBMD9r82Yg/pwKOhI=\""
+          "Value": "\"QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw=\""
+          "Value": "W/\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:02:58 GMT"
+          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
         },
         {
           "Name": "Vary",
@@ -385,13 +385,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw="
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
         }
       ]
     },
     {
-      "Route": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt",
-      "AssetFile": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt",
+      "Route": ".gitkeep.txt",
+      "AssetFile": ".gitkeep.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -404,7 +404,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "93"
+          "Value": "0"
         },
         {
           "Name": "Content-Type",
@@ -412,23 +412,23 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw=\""
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:02:58 GMT"
+          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw="
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
         }
       ]
     },
     {
-      "Route": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt.br",
-      "AssetFile": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt.br",
+      "Route": ".gitkeep.txt.br",
+      "AssetFile": ".gitkeep.txt.br",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -445,7 +445,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "75"
+          "Value": "1"
         },
         {
           "Name": "Content-Type",
@@ -453,11 +453,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Mw3oX1zL+K0s5saVUYuepCGjrFgBMD9r82Yg/pwKOhI=\""
+          "Value": "\"QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:02:58 GMT"
+          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
         },
         {
           "Name": "Vary",
@@ -467,13 +467,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Mw3oX1zL+K0s5saVUYuepCGjrFgBMD9r82Yg/pwKOhI="
+          "Value": "sha256-QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ="
         }
       ]
     },
     {
-      "Route": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt.gz",
-      "AssetFile": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt.gz",
+      "Route": ".gitkeep.txt.gz",
+      "AssetFile": ".gitkeep.txt.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -490,7 +490,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "97"
+          "Value": "0"
         },
         {
           "Name": "Content-Type",
@@ -498,11 +498,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"UhXd++cRHHmIaqzdfIGYVTYCPQtUVtYQhB83N0pHxXE=\""
+          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 14:02:58 GMT"
+          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
         },
         {
           "Name": "Vary",
@@ -512,335 +512,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-UhXd++cRHHmIaqzdfIGYVTYCPQtUVtYQhB83N0pHxXE="
-        }
-      ]
-    },
-    {
-      "Route": "CV/kqmirdcf.r1w",
-      "AssetFile": "CV/kqmirdcf.r1w",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "58932"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"vxmUY+E8RH5QYmxoth0m3pR52Zi4raiV+WSu5RVgVek=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 12:24:30 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-vxmUY+E8RH5QYmxoth0m3pR52Zi4raiV+WSu5RVgVek="
-        }
-      ]
-    },
-    {
-      "Route": "CV/kqmirdcf.zjbh584pep.r1w",
-      "AssetFile": "CV/kqmirdcf.r1w",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "58932"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"vxmUY+E8RH5QYmxoth0m3pR52Zi4raiV+WSu5RVgVek=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 12:24:30 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "zjbh584pep"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-vxmUY+E8RH5QYmxoth0m3pR52Zi4raiV+WSu5RVgVek="
-        },
-        {
-          "Name": "label",
-          "Value": "CV/kqmirdcf.r1w"
-        }
-      ]
-    },
-    {
-      "Route": "CV/o5ir0b5w.gftdurgj81.uea",
-      "AssetFile": "CV/o5ir0b5w.uea",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "124113"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 12:37:18 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "gftdurgj81"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="
-        },
-        {
-          "Name": "label",
-          "Value": "CV/o5ir0b5w.uea"
-        }
-      ]
-    },
-    {
-      "Route": "CV/o5ir0b5w.uea",
-      "AssetFile": "CV/o5ir0b5w.uea",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "124113"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 12:37:18 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="
-        }
-      ]
-    },
-    {
-      "Route": "Images/anas04",
-      "AssetFile": "Images/anas04",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4836"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/nl3YFHuzxuSSEDJVbIuDmVFUlReA5lipgtH++5r5Ck=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 15 Mar 2025 21:45:06 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-/nl3YFHuzxuSSEDJVbIuDmVFUlReA5lipgtH++5r5Ck="
-        }
-      ]
-    },
-    {
-      "Route": "Images/anas04.2clk1jlb5q",
-      "AssetFile": "Images/anas04",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4836"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/nl3YFHuzxuSSEDJVbIuDmVFUlReA5lipgtH++5r5Ck=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 15 Mar 2025 21:45:06 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "2clk1jlb5q"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-/nl3YFHuzxuSSEDJVbIuDmVFUlReA5lipgtH++5r5Ck="
-        },
-        {
-          "Name": "label",
-          "Value": "Images/anas04"
-        }
-      ]
-    },
-    {
-      "Route": "Images/mhmd001",
-      "AssetFile": "Images/mhmd001",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "8751"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 12:26:41 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g="
-        }
-      ]
-    },
-    {
-      "Route": "Images/mhmd001.y6kzhiaqx1",
-      "AssetFile": "Images/mhmd001",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "8751"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 12:26:41 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "y6kzhiaqx1"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g="
-        },
-        {
-          "Name": "label",
-          "Value": "Images/mhmd001"
+          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
         }
       ]
     }

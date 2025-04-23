@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>barbocgmmy</Fingerprint>
-      <Integrity>HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw=</Integrity>
+      <Fingerprint>wg2fanpugp</Fingerprint>
+      <Integrity>wC8IHcaTklD0aALV0cEsV+9cl8HgT23rVInI+wdTfAo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\.well-known\pki-validation\BA693C7F1A0AF3FE39E5F380D497B3A0.txt'))</OriginalItemSpec>

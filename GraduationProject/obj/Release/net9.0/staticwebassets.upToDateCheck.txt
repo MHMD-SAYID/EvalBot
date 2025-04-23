@@ -1,5 +1,3 @@
-C:\Users\malko\source\repos\GraduationProject\GraduationProject\wwwroot\.well-known\pki-validation\BA693C7F1A0AF3FE39E5F380D497B3A0.txt
-wwwroot\.well-known\pki-validation\BA693C7F1A0AF3FE39E5F380D497B3A0.txt
 wwwroot\CV\kqmirdcf.r1w
 wwwroot\CV\o5ir0b5w.uea
 wwwroot\Images\anas04
