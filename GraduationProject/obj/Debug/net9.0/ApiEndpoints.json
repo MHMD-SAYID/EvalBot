@@ -1,5 +1,69 @@
 [
   {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "AddBusinessAccount",
+    "RelativePath": "Add_BusinessAccount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Users.Add.AddBusinessAccountRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "AddEducation",
+    "RelativePath": "Add_Education",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Users.Add.AddEducationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "AddExperience",
+    "RelativePath": "Add_Experience",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Users.Add.AddExperienceRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "AddProject",
+    "RelativePath": "Add_Project",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Users.Add.AddProjectRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GraduationProject.Controllers.AuthController",
     "Method": "ConfirmEmail",
     "RelativePath": "confirm-email",
@@ -10,6 +74,70 @@
       {
         "Name": "request",
         "Type": "GraduationProject.Contracts.Authentication.ConfirmEmailRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "DeleteBuinessAcount",
+    "RelativePath": "Delete_BusinessAccount",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Users.Delete.DeleteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "DeleteEducation",
+    "RelativePath": "Delete_Education",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Users.Delete.DeleteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "DeleteExperience",
+    "RelativePath": "Delete_Experience",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Users.Delete.DeleteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "DeleteProject",
+    "RelativePath": "Delete_Project",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Users.Delete.DeleteRequest",
         "IsRequired": true
       }
     ],
@@ -138,6 +266,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "Info",
+    "RelativePath": "Profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GraduationProject.Controllers.AuthController",
     "Method": "Refresh",
     "RelativePath": "refresh",
@@ -212,6 +350,22 @@
       {
         "Name": "request",
         "Type": "GraduationProject.Contracts.Authentication.RefreshTokenRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "UpdateBio",
+    "RelativePath": "Update_Bio",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Users.Update.UpdateBioRequest",
         "IsRequired": true
       }
     ],

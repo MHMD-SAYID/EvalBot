@@ -10,6 +10,10 @@
             builder.Property(x => x.Type)
                 .HasColumnType("varchar")
                 .HasMaxLength(100);
+
+            //builder.HasOne(x=>x.User)
+            //    .WithMany(x=>x.businessAccounts)
+            //    .HasForeignKey(x=>x.BusinessAccountId);
             builder.HasOne(x => x.User)
                 .WithMany(x => x.businessAccounts)
                 .HasForeignKey(x => x.UserId);

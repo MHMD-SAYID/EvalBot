@@ -1,0 +1,87 @@
+﻿using GraduationProject.Contracts.Users.Add;
+using GraduationProject.Contracts.Users.Delete;
+using GraduationProject.Contracts.Users.Update;
+using GraduationProject.Extensions;
+
+
+namespace GraduationProject.Controllers
+{
+    [ApiController]
+    public class AccountController(IUserService userService) : ControllerBase
+    {
+        private readonly IUserService _userService=userService;
+        [HttpGet("Profile")]
+        public async Task<IActionResult> Info()
+        {
+            var result = await _userService.GetProfileAsync(User.GetUserId());
+            
+            return Ok(result.Value);
+        }
+
+        [HttpPost("Update_Bio")]
+        public async Task<IActionResult> UpdateBio(UpdateBioRequest request,CancellationToken cancellationToken)
+        {
+            var result = await _userService.UpdateBio(request,cancellationToken);
+            return Ok();
+        
+        }
+        [HttpPost("Add_Experience")]
+        public async Task<IActionResult> AddExperience(AddExperienceRequest request, CancellationToken cancellationToken)
+        { 
+            
+            var result = await _userService.AddExperience(request,cancellationToken);
+            return Ok();
+        }
+        
+        [HttpPost("Add_Education")]
+        public async Task<IActionResult> AddEducation(AddEducationRequest request, CancellationToken cancellationToken)
+        { 
+            
+            var result = await _userService.AddEducation(request, cancellationToken);
+            return Ok();
+        }
+
+        [HttpPost("Add_Project")]
+        public async Task<IActionResult> AddProject(AddProjectRequest request, CancellationToken cancellationToken)
+        {
+
+            var result = await _userService.AddProject(request, cancellationToken);
+            return result.IsSuccess ? Ok() : result.ToProblem();
+
+        }
+        [HttpPost("Add_BusinessAccount")]
+        public async Task<IActionResult> AddBusinessAccount(AddBusinessAccountRequest request, CancellationToken cancellationToken)
+        {
+
+            var result = await _userService.AddBusinessAcount(request, cancellationToken);
+            return Ok();
+        }
+        [HttpDelete("Delete_Education")]
+        public async Task<IActionResult> DeleteEducation(DeleteRequest request, CancellationToken cancellationToken)
+        { 
+            var result = await _userService.DeleteEducation(request,cancellationToken);
+            return result.IsSuccess ? Ok() : result.ToProblem();
+
+        } 
+        [HttpDelete("Delete_Experience")]
+        public async Task<IActionResult> DeleteExperience(DeleteRequest request, CancellationToken cancellationToken)
+        { 
+            var result = await _userService.DeleteExperience(request,cancellationToken);
+            return result.IsSuccess ? Ok() : result.ToProblem();
+
+        } [HttpDelete("Delete_Project")]
+        public async Task<IActionResult> DeleteProject(DeleteRequest request, CancellationToken cancellationToken)
+        { 
+            var result = await _userService.DeleteProject(request,cancellationToken);
+            return result.IsSuccess ? Ok() : result.ToProblem();
+
+        } [HttpDelete("Delete_BusinessAccount")]
+        public async Task<IActionResult> DeleteBuinessAcount(DeleteRequest request, CancellationToken cancellationToken)
+        { 
+            var result = await _userService.DeleteBusinessAccountLink(request,cancellationToken);
+            return result.IsSuccess ? Ok() : result.ToProblem();
+
+        }
+
+    }
+}

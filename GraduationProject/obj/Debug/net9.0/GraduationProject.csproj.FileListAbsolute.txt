@@ -92,6 +92,7 @@ C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\System.Composition.Runtime.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\System.Composition.TypedParts.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\System.Data.SqlClient.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\System.Drawing.Common.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\System.Formats.Asn1.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
@@ -188,6 +189,11 @@ C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\win-arm64\native\sni.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\win-x64\native\sni.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\win-x86\native\sni.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\win\lib\net7.0\System.Management.dll
@@ -203,6 +209,7 @@ C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.sourcelink.json
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\scopedcss\bundle\GraduationProject.styles.css
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\compressed\nfk4ydtwak-barbocgmmy.gz
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -218,10 +225,3 @@ C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.pdb
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\GraduationProject.genruntimeconfig.cache
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\ref\GraduationProject.dll
-C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\System.Data.SqlClient.dll
-C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\win-arm64\native\sni.dll
-C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\win-x64\native\sni.dll
-C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\win-x86\native\sni.dll
-C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Debug\net9.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

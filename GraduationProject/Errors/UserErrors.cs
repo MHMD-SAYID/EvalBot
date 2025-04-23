@@ -37,4 +37,15 @@ public static class UserErrors
        new("CV.UploadedSuccessfully", "Uploaded Successfully", StatusCodes.Status200OK);
     public static readonly Error InternalServerError =
        new("CV.InternalServerError", " Internal Server Error", StatusCodes.Status500InternalServerError);
+    
+    public static readonly Error ProjectNotFound =
+    new("Project.NotFound", "The specified project could not be found.", StatusCodes.Status404NotFound);
+    public static readonly Error ExperienceNotFound =
+    new("Experience.NotFound", "The specified experience could not be found.", StatusCodes.Status404NotFound);
+    public static readonly Error EducationNotFound =
+    new("Education.NotFound", "The specified education could not be found.", StatusCodes.Status404NotFound);
+    public static readonly Error AccountNotFound =
+    new("Account.NotFound", "The specified account could not be found.", StatusCodes.Status404NotFound);
+
+
 }

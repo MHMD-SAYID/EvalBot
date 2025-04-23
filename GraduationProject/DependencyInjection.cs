@@ -171,7 +171,7 @@ namespace GraduationProject
 
 }
 
-        //{
+        //{                         
         //    public static IServiceCollection AddDependencies(this IServiceCollection services,
         //        IConfiguration configuration)
         //    {

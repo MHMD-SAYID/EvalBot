@@ -358,7 +358,8 @@ namespace GraduationProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId")
+                        .IsUnique();
 
                     b.ToTable("Files");
                 });
@@ -370,6 +371,9 @@ namespace GraduationProject.Migrations
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
+
+                    b.Property<string>("Bio")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -640,7 +644,7 @@ namespace GraduationProject.Migrations
             modelBuilder.Entity("GraduationProject.Entities.Education", b =>
                 {
                     b.HasOne("GraduationProject.Entities.User", "User")
-                        .WithMany()
+                        .WithMany("Education")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -651,7 +655,7 @@ namespace GraduationProject.Migrations
             modelBuilder.Entity("GraduationProject.Entities.Experience", b =>
                 {
                     b.HasOne("GraduationProject.Entities.User", "User")
-                        .WithMany()
+                        .WithMany("Experience")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -688,7 +692,7 @@ namespace GraduationProject.Migrations
             modelBuilder.Entity("GraduationProject.Entities.Project", b =>
                 {
                     b.HasOne("GraduationProject.Entities.User", "User")
-                        .WithMany()
+                        .WithMany("Projects")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -718,8 +722,8 @@ namespace GraduationProject.Migrations
             modelBuilder.Entity("GraduationProject.Entities.UploadedFiles", b =>
                 {
                     b.HasOne("GraduationProject.Entities.User", null)
-                        .WithMany("uploadedFiles")
-                        .HasForeignKey("UserId")
+                        .WithOne("uploadedFiles")
+                        .HasForeignKey("GraduationProject.Entities.UploadedFiles", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -847,11 +851,18 @@ namespace GraduationProject.Migrations
 
             modelBuilder.Entity("GraduationProject.Entities.User", b =>
                 {
+                    b.Navigation("Education");
+
+                    b.Navigation("Experience");
+
+                    b.Navigation("Projects");
+
                     b.Navigation("businessAccounts");
 
                     b.Navigation("interviews");
 
-                    b.Navigation("uploadedFiles");
+                    b.Navigation("uploadedFiles")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0u+/aXAvr77G2WAYMwFkl7LGCqJH0C8LfnxPYp/0BqM=",
+  "Hash": "pxUA+NCNhS/pM6Qn7PHJkvNdHkGxyYB63BGPUU9yvIw=",
   "Source": "GraduationProject",
   "BasePath": "_content/GraduationProject",
   "Mode": "Default",
@@ -16,6 +16,48 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\Release\\net9.0\\compressed\\nfk4ydtwak-barbocgmmy.gz",
+      "SourceId": "GraduationProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\Release\\net9.0\\compressed\\",
+      "BasePath": "_content/GraduationProject",
+      "RelativePath": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0#[.{fingerprint=barbocgmmy}]?.txt.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\.well-known\\pki-validation\\BA693C7F1A0AF3FE39E5F380D497B3A0.txt",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "uw5jytlc6v",
+      "Integrity": "UhXd++cRHHmIaqzdfIGYVTYCPQtUVtYQhB83N0pHxXE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\.well-known\\pki-validation\\BA693C7F1A0AF3FE39E5F380D497B3A0.txt"
+    },
+    {
+      "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\.well-known\\pki-validation\\BA693C7F1A0AF3FE39E5F380D497B3A0.txt",
+      "SourceId": "GraduationProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\",
+      "BasePath": "_content/GraduationProject",
+      "RelativePath": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "barbocgmmy",
+      "Integrity": "HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\.well-known\\pki-validation\\BA693C7F1A0AF3FE39E5F380D497B3A0.txt"
+    },
     {
       "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\kqmirdcf.r1w",
       "SourceId": "GraduationProject",
@@ -38,6 +80,27 @@
       "OriginalItemSpec": "wwwroot\\CV\\kqmirdcf.r1w"
     },
     {
+      "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\o5ir0b5w.uea",
+      "SourceId": "GraduationProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\",
+      "BasePath": "_content/GraduationProject",
+      "RelativePath": "CV/o5ir0b5w#[.{fingerprint}]?.uea",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gftdurgj81",
+      "Integrity": "PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CV\\o5ir0b5w.uea"
+    },
+    {
       "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\anas04",
       "SourceId": "GraduationProject",
       "SourceType": "Discovered",
@@ -57,9 +120,328 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\anas04"
+    },
+    {
+      "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mhmd001",
+      "SourceId": "GraduationProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\",
+      "BasePath": "_content/GraduationProject",
+      "RelativePath": "Images/mhmd001#[.{fingerprint}]?",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "y6kzhiaqx1",
+      "Integrity": "+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\mhmd001"
     }
   ],
   "Endpoints": [
+    {
+      "Route": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.barbocgmmy.txt",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\Release\\net9.0\\compressed\\nfk4ydtwak-barbocgmmy.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.010204081633"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "97"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UhXd++cRHHmIaqzdfIGYVTYCPQtUVtYQhB83N0pHxXE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 14:02:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "barbocgmmy"
+        },
+        {
+          "Name": "label",
+          "Value": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw="
+        }
+      ]
+    },
+    {
+      "Route": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.barbocgmmy.txt",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\.well-known\\pki-validation\\BA693C7F1A0AF3FE39E5F380D497B3A0.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "93"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 14:02:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "barbocgmmy"
+        },
+        {
+          "Name": "label",
+          "Value": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw="
+        }
+      ]
+    },
+    {
+      "Route": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.barbocgmmy.txt.gz",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\Release\\net9.0\\compressed\\nfk4ydtwak-barbocgmmy.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "97"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UhXd++cRHHmIaqzdfIGYVTYCPQtUVtYQhB83N0pHxXE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 14:02:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "barbocgmmy"
+        },
+        {
+          "Name": "label",
+          "Value": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UhXd++cRHHmIaqzdfIGYVTYCPQtUVtYQhB83N0pHxXE="
+        }
+      ]
+    },
+    {
+      "Route": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\Release\\net9.0\\compressed\\nfk4ydtwak-barbocgmmy.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.010204081633"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "97"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UhXd++cRHHmIaqzdfIGYVTYCPQtUVtYQhB83N0pHxXE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 14:02:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw="
+        }
+      ]
+    },
+    {
+      "Route": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\.well-known\\pki-validation\\BA693C7F1A0AF3FE39E5F380D497B3A0.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "93"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 14:02:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HVnIywUol0bZYCblbs7+WWDmCeQdeH6pIvdx3QBXKtw="
+        }
+      ]
+    },
+    {
+      "Route": ".well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt.gz",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\Release\\net9.0\\compressed\\nfk4ydtwak-barbocgmmy.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "97"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UhXd++cRHHmIaqzdfIGYVTYCPQtUVtYQhB83N0pHxXE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 14:02:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UhXd++cRHHmIaqzdfIGYVTYCPQtUVtYQhB83N0pHxXE="
+        }
+      ]
+    },
     {
       "Route": "CV/kqmirdcf.r1w",
       "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\kqmirdcf.r1w",
@@ -143,6 +525,88 @@
       ]
     },
     {
+      "Route": "CV/o5ir0b5w.gftdurgj81.uea",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\o5ir0b5w.uea",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124113"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 12:37:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gftdurgj81"
+        },
+        {
+          "Name": "label",
+          "Value": "CV/o5ir0b5w.uea"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="
+        }
+      ]
+    },
+    {
+      "Route": "CV/o5ir0b5w.uea",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\o5ir0b5w.uea",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124113"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 12:37:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="
+        }
+      ]
+    },
+    {
       "Route": "Images/anas04",
       "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\anas04",
       "Selectors": [],
@@ -221,6 +685,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-/nl3YFHuzxuSSEDJVbIuDmVFUlReA5lipgtH++5r5Ck="
+        }
+      ]
+    },
+    {
+      "Route": "Images/mhmd001",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mhmd001",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8751"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 12:26:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g="
+        }
+      ]
+    },
+    {
+      "Route": "Images/mhmd001.y6kzhiaqx1",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mhmd001",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8751"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 12:26:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y6kzhiaqx1"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/mhmd001"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g="
         }
       ]
     }
