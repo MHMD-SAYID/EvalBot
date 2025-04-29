@@ -20,7 +20,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapStaticAssets();
-
+app.UseStaticFiles();
 app.MapControllers();
 
 app.Run();

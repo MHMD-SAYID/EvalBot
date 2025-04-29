@@ -34,7 +34,7 @@ namespace GraduationProject.Migrations
                     gender = table.Column<int>(type: "int", nullable: false),
                     DateOfBirth = table.Column<DateOnly>(type: "date", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    role = table.Column<int>(type: "int", nullable: false),
+                    role = table.Column<int>(type: "int", nullable: true),
                     CountryOfResidence = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EmailType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Skills = table.Column<string>(type: "nvarchar(max)", nullable: false),

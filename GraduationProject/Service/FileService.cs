@@ -1,7 +1,11 @@
-﻿namespace GraduationProject.Services;
+﻿using Microsoft.AspNetCore.Http;
+
+namespace GraduationProject.Services;
 
 public class FileService(IWebHostEnvironment webHostEnvironment, AppDbContext context) : IFileService
 {
+   
+
     private readonly string _filesPath = $"{webHostEnvironment.WebRootPath}/CV";
     private readonly string _imagesPath = $"{webHostEnvironment.WebRootPath}/Images";
     private readonly AppDbContext _context = context;
@@ -97,11 +101,11 @@ public class FileService(IWebHostEnvironment webHostEnvironment, AppDbContext co
         {
             FileName = file.FileName,
             ContentType = file.ContentType,
-            StoredFileName = randomFileName,
+            StoredFileName = file.FileName,
             FileExtension = Path.GetExtension(file.FileName)
         };
 
-        var path = Path.Combine(_filesPath, randomFileName);
+        var path = Path.Combine(_filesPath,$"{ uploadedFile.FileName}.{uploadedFile.FileExtension}");
 
         using var stream = System.IO.File.Create(path);
         await file.CopyToAsync(stream, cancellationToken);

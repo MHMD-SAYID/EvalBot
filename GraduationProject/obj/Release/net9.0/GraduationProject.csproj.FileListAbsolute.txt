@@ -81,6 +81,15 @@ C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\Newtonsoft.Json.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\Newtonsoft.Json.Bson.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\OneOf.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\Serilog.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\Serilog.AspNetCore.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\Serilog.Extensions.Hosting.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\Serilog.Extensions.Logging.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\Serilog.Formatting.Compact.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\Serilog.Settings.Configuration.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\Serilog.Sinks.Console.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\Serilog.Sinks.Debug.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\Serilog.Sinks.File.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll

@@ -27,7 +27,7 @@ namespace GraduationProject.Service
      ILogger<AuthService> logger,
      IEmailSender emailSender,
      IHttpContextAccessor httpContextAccessor,
-        AppDbContext context ) : IAuthService
+        AppDbContext context) : IAuthService
     {
         private readonly UserManager<User> _userManager = userManager;
         private readonly SignInManager<User> _signInManager = signInManager;
@@ -36,11 +36,87 @@ namespace GraduationProject.Service
         private readonly IEmailSender _emailSender = emailSender;
         private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
         private readonly AppDbContext _context = context;
-       
-        
+
+
         private readonly int _refreshTokenExpiryDays = 14;
 
+        public async Task<Result> RegisterWepAsync(RegisterRequest request,  CancellationToken cancellationToken = default)
+        {
+
+
+            var emailIsExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
+            if (emailIsExists)
+                return Result.Failure(UserErrors.DuplicatedEmail);
+
+            var UserNameExists = await _userManager.Users.AnyAsync(x => x.UserName == request.UserName, cancellationToken);
+            if (UserNameExists)
+                return Result.Failure(UserErrors.DuplicatedUserName);
+            var user = request.Adapt<User>();
+
+
+            user.Skills = request.Skills;
+            var result = await _userManager.CreateAsync(user, request.Password);
+
+            
+
+            if (result.Succeeded)
+            {
+
+                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+
+                _logger.LogInformation("Confirmation code: {code}", code);
+
+                await SendConfirmationEmailWep(user, code);
+
+                return Result.Success();
+            }
+
+            var error = result.Errors.First();
+
+            return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
+        }
+
+
+
+
       
+        public async Task<Result> RegisterFlutterAsync(RegisterRequest request, CancellationToken cancellationToken = default)
+        {
+
+
+            var emailIsExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
+            if (emailIsExists)
+                return Result.Failure(UserErrors.DuplicatedEmail);
+
+            var UserNameExists = await _userManager.Users.AnyAsync(x => x.UserName == request.UserName, cancellationToken);
+            if (UserNameExists)
+                return Result.Failure(UserErrors.DuplicatedUserName);
+            var user = request.Adapt<User>();
+
+
+            user.Skills = request.Skills;
+            var result = await _userManager.CreateAsync(user, request.Password);
+          
+
+
+            if (result.Succeeded)
+            {
+
+                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+
+                _logger.LogInformation("Confirmation code: {code}", code);
+
+                await SendConfirmationEmailFlutter(user, code);
+
+                return Result.Success();
+            }
+
+            var error = result.Errors.First();
+
+            return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
+        }
 
         public async Task<Result<AuthResponse>> GetTokenAsync(string email, string password, CancellationToken cancellationToken = default)
         {
@@ -98,19 +174,7 @@ namespace GraduationProject.Service
 
         //    return new AuthResponse(user.Id, user.Email, user.FirstName, user.LastName, token, expiresIn, refreshToken, refreshTokenExpiration);
         //}
-       public async Task CreateRoles(IServiceProvider serviceProvider)
-        {
-            var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-            string[] roles = { "User", "Company" };
-
-            foreach (var role in roles)
-            {
-                if (!await roleManager.RoleExistsAsync(role))
-                {
-                    await roleManager.CreateAsync(new IdentityRole(role));
-                }
-            }
-        }
+   
 
         public async Task<Result<AuthResponse>> GetRefreshTokenAsync(string token, string refreshToken, CancellationToken cancellationToken = default)
         {
@@ -172,101 +236,7 @@ namespace GraduationProject.Service
             return Result.Success();
         }
         
-        public async Task<Result> RegisterAsync(RegisterRequest request, CancellationToken cancellationToken = default)
-        {
-            
-           
-            var emailIsExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
-            if (emailIsExists)
-                return Result.Failure(UserErrors.DuplicatedEmail);
-
-            var UserNameExists = await _userManager.Users.AnyAsync(x => x.UserName == request.UserName, cancellationToken);
-            if (UserNameExists)
-                return Result.Failure(UserErrors.DuplicatedUserName);
-            var user = request.Adapt<User>();
-           
-            
-            user.Skills = request.Skills;
-            var result = await _userManager.CreateAsync(user, request.Password);
-             // Convert list to JSON
-            
-            if (request.Projects?.Any() == true)
-            {
-                var projects = request.Projects.Select(p => new Project
-                {
-                    Name = p.name,
-                    Link = p.link,
-                    UserId = user.Id
-                }).ToList();
-
-                await _context.Projects.AddRangeAsync(projects, cancellationToken);
-                await _context.SaveChangesAsync(cancellationToken);
-            }
-            if (request.Experiences?.Any() == true)
-            {
-                var Experience = request.Experiences.Select(p => new Experience
-                {
-                    JobTitle = p.JobTitle,
-                    CompanyName = p.CompanyName,
-                    StillWorkingThere = p.StillWorkingThere,
-                    StartDate = p.StartDate,
-                    EndDate = p.EndDate,
-                    UserId = user.Id
-                }).ToList();
-
-                await _context.Experience.AddRangeAsync(Experience, cancellationToken);
-                await _context.SaveChangesAsync(cancellationToken);
-            }
-            if (request.Educations?.Any() == true)
-            {
-                var Education = request.Educations.Select(p => new Education
-                {
-                    Institution = p.Institution,
-                    Degree=p.Degree,
-                    FieldOfStudy = p.FieldOfStudy,
-                    IsUnderGraduate = p.IsUnderGraduate,
-                    StartDate=p.StartDate,
-                    EndDate=p.EndDate,
-                    UserId = user.Id
-                }).ToList();
-
-                await _context.Education.AddRangeAsync(Education, cancellationToken);
-                await _context.SaveChangesAsync(cancellationToken);
-            }
-            if (request.Accounts?.Any() == true)
-            {
-                var Accounts = request.Accounts.Select(p => new BusinessAccount
-                {
-                    Type=p.AccountType,
-                    Link=p.AccountLink,
-                    UserId = user.Id
-                }).ToList();
-
-                await _context.businessAccounts.AddRangeAsync(Accounts, cancellationToken);
-                await _context.SaveChangesAsync(cancellationToken);
-            }
-
-            //await _context.SaveChangesAsync();
-
-
-
-            if (result.Succeeded)
-            {
-
-                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-
-                _logger.LogInformation("Confirmation code: {code}", code);
-
-                await SendConfirmationEmail(user, code);
-
-                return Result.Success();
-            }
-
-            var error = result.Errors.First();
-
-            return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
-        }
+        
 
         public async Task<Result> ConfirmEmailAsync(ConfirmEmailRequest request)
         {
@@ -297,7 +267,7 @@ namespace GraduationProject.Service
             return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
         }
 
-        public async Task<Result> ResendConfirmationEmailAsync(ReSendConfirmationEmail request)
+        public async Task<Result> ResendConfirmationEmailWepAsync(ReSendConfirmationEmail request)
         {
             if (await _userManager.FindByEmailAsync(request.Email) is not { } user)
                 return Result.Success();
@@ -310,7 +280,24 @@ namespace GraduationProject.Service
 
             _logger.LogInformation("Confirmation code: {code}", code);
 
-            await SendConfirmationEmail(user, code);
+            await SendConfirmationEmailWep(user, code);
+
+            return Result.Success();
+        }
+        public async Task<Result> ResendConfirmationEmailFlutterAsync(ReSendConfirmationEmail request)
+        {
+            if (await _userManager.FindByEmailAsync(request.Email) is not { } user)
+                return Result.Success();
+
+            if (user.EmailConfirmed)
+                return Result.Failure(UserErrors.DuplicatedConfirmation);
+
+            var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+
+            _logger.LogInformation("Confirmation code: {code}", code);
+
+            await SendConfirmationEmailFlutter(user, code);
 
             return Result.Success();
         }
@@ -320,7 +307,24 @@ namespace GraduationProject.Service
             return Convert.ToBase64String(RandomNumberGenerator.GetBytes(64));
         }
        
-        private async Task SendConfirmationEmail(User user, string code)
+        private async Task SendConfirmationEmailWep(User user, string code)
+        {
+            // request URL
+            var origin = _httpContextAccessor.HttpContext?.Request.Headers.Origin;
+
+            var emailBody = EmailBodyBuilder.GenerateEmailBody("EmailConfirmation",
+                templateModel: new Dictionary<string, string>
+                {
+                { "{{name}}", user.UserName },
+                //change it to your front end url
+
+                    { "{{action_url}}", $"{origin}/auth/emailConfirmation?userId={user.Id}&code={code}" }
+                }
+            );
+
+            await _emailSender.SendEmailAsync(user.Email!, "✅ EvalBot: Email Confirmation", emailBody);
+        }
+        private async Task SendConfirmationEmailFlutter(User user, string code)
         {
             // request URL
             var origin = _httpContextAccessor.HttpContext?.Request.Headers.Origin;
@@ -338,26 +342,8 @@ namespace GraduationProject.Service
             await _emailSender.SendEmailAsync(user.Email!, "✅ EvalBot: Email Confirmation", emailBody);
         }
 
-        //public async Task<Result> ResetPassword(ResetPasswordRequest request)
-        //{
-        //    bool EmailExists=await _userManager.Users.AnyAsync(x => x.Email == request.Email);
-        //    if (EmailExists)
-        //    { 
-        //        var user = await _userManager.FindByEmailAsync(request.Email);
-        //        var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-        //        code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-
-        //        _logger.LogInformation("Confirmation code: {code}", code);
-
-        //        await SendConfirmationEmail(user, code);
-
-        //        return Result.Success();
-        //    }
-        //        return Result.Failure(UserErrors.EmailNotFound);
-            
-
-        //}
-        public async Task<Result> SendResetPasswordCodeAsync(string email)
+    
+        public async Task<Result> SendResetPasswordCodeFlutterAsync(string email)
         {
             if (await _userManager.FindByEmailAsync(email) is not { } user)
                 return Result.Success();
@@ -370,7 +356,24 @@ namespace GraduationProject.Service
 
             _logger.LogInformation("Reset code: {code}", code);
 
-            await SendResetPasswordEmail(user, code);
+            await SendResetPasswordEmailFlutter(user, code);
+
+            return Result.Success();
+        }
+        public async Task<Result> SendResetPasswordCodeWepAsync(string email)
+        {
+            if (await _userManager.FindByEmailAsync(email) is not { } user)
+                return Result.Success();
+
+            if (!user.EmailConfirmed)
+                return Result.Failure(UserErrors.EmailNotConfirmed);
+
+            var code = await _userManager.GeneratePasswordResetTokenAsync(user);
+            code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+
+            _logger.LogInformation("Reset code: {code}", code);
+
+            await SendResetPasswordEmailWep(user, code);
 
             return Result.Success();
         }
@@ -402,7 +405,7 @@ namespace GraduationProject.Service
             return Result.Failure(new Error(error.Code, error.Description, StatusCodes.Status401Unauthorized));
         }
 
-        private async Task SendResetPasswordEmail(User user, string code)
+        private async Task SendResetPasswordEmailFlutter(User user, string code)
         {
             var origin = _httpContextAccessor.HttpContext?.Request.Headers.Origin;
 
@@ -416,9 +419,29 @@ namespace GraduationProject.Service
                 }
             );
 
-            BackgroundJob.Enqueue(() => _emailSender.SendEmailAsync(user.Email!, "✅ Survey Basket: Change Password", emailBody));
+            BackgroundJob.Enqueue(() => _emailSender.SendEmailAsync(user.Email!, "✅ EvalBot: Change Password", emailBody));
 
             await Task.CompletedTask;
         }
+        private async Task SendResetPasswordEmailWep(User user, string code)
+        {
+            var origin = _httpContextAccessor.HttpContext?.Request.Headers.Origin;
+
+            var emailBody = EmailBodyBuilder.GenerateEmailBody("ForgetPassword",
+                templateModel: new Dictionary<string, string>
+                {
+                { "{{name}}", user.UserName },
+                
+                //change it to your front end url
+                { "{{action_url}}", $"{origin}/auth/forgetPassword?email={user.Email}&code={code}" }
+                }
+            );
+
+            BackgroundJob.Enqueue(() => _emailSender.SendEmailAsync(user.Email!, "✅ EvalBot: Change Password", emailBody));
+
+            await Task.CompletedTask;
+        }
+
+      
     }
 }

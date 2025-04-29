@@ -47,13 +47,20 @@ namespace GraduationProject.Controllers
             return result.IsSuccess ? Ok() : result.ToProblem();
         }
 
-        [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterRequest request, CancellationToken cancellationToken)
+        [HttpPost("register-wep")]
+        public async Task<IActionResult> RegisterWep([FromBody] RegisterRequest request, CancellationToken cancellationToken)
         {
-            var result = await _authService.RegisterAsync(request ,cancellationToken);
+            var result = await _authService.RegisterWepAsync(request ,cancellationToken);
 
             return result.IsSuccess ? Ok() : result.ToProblem();
         }
+        //[HttpPost("register-flutter")]
+        //public async Task<IActionResult> RegisterFlutter([FromBody] RegisterRequest request, CancellationToken cancellationToken)
+        //{
+        //    var result = await _authService.RegisterFlutterAsync(request ,cancellationToken);
+
+        //    return result.IsSuccess ? Ok() : result.ToProblem();
+        //}
 
         [HttpPost("confirm-email")]
         public async Task<IActionResult> ConfirmEmail([FromBody] ConfirmEmailRequest request, CancellationToken cancellationToken)
@@ -63,17 +70,31 @@ namespace GraduationProject.Controllers
             return result.IsSuccess ? Ok() : result.ToProblem();
         }
 
-        [HttpPost("resend-confirmation-email")]
-        public async Task<IActionResult> ResendConfirmationEmail([FromBody] ReSendConfirmationEmail request, CancellationToken cancellationToken)
+        [HttpPost("resend-confirmation-email-wep")]
+        public async Task<IActionResult> ResendConfirmationEmailwep([FromBody] ReSendConfirmationEmail request, CancellationToken cancellationToken)
         {
-            var result = await _authService.ResendConfirmationEmailAsync(request);
+            var result = await _authService.ResendConfirmationEmailWepAsync(request);
 
             return result.IsSuccess ? Ok() : result.ToProblem();
         }
-        [HttpPost("forget-password")]
-        public async Task<IActionResult> ForgetPassword([FromBody] ForgotPasswordRequest request)
+        [HttpPost("resend-confirmation-email-flutter")]
+        public async Task<IActionResult> ResendConfirmationflutterEmail([FromBody] ReSendConfirmationEmail request, CancellationToken cancellationToken)
         {
-            var result = await _authService.SendResetPasswordCodeAsync(request.Email);
+            var result = await _authService.ResendConfirmationEmailFlutterAsync(request);
+
+            return result.IsSuccess ? Ok() : result.ToProblem();
+        }
+        [HttpPost("forget-password-flutter")]
+        public async Task<IActionResult> ForgetPasswordFlutter([FromBody] ForgotPasswordRequest request)
+        {
+            var result = await _authService.SendResetPasswordCodeFlutterAsync(request.Email);
+
+            return result.IsSuccess ? Ok() : result.ToProblem();
+        } 
+        [HttpPost("forget-password-wep")]
+        public async Task<IActionResult> ForgetPasswordWep([FromBody] ForgotPasswordRequest request)
+        {
+            var result = await _authService.SendResetPasswordCodeWepAsync(request.Email);
 
             return result.IsSuccess ? Ok() : result.ToProblem();
         }

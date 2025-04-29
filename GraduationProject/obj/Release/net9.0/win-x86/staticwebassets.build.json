@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ceuvUDAxxPuoTjwPm+kPAT1iv5c5CgBlw4Zy55VdVxw=",
+  "Hash": "veUOGAog9pyJT34lfgwOow62ZPmymc1oFcqhMix/s7Y=",
   "Source": "GraduationProject",
   "BasePath": "_content/GraduationProject",
   "Mode": "Default",
@@ -16,6 +16,27 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\CV.pdf..pdf",
+      "SourceId": "GraduationProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\",
+      "BasePath": "_content/GraduationProject",
+      "RelativePath": "CV/CV.pdf.#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gftdurgj81",
+      "Integrity": "PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CV\\CV.pdf..pdf"
+    },
     {
       "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\kqmirdcf.r1w",
       "SourceId": "GraduationProject",
@@ -59,6 +80,27 @@
       "OriginalItemSpec": "wwwroot\\CV\\o5ir0b5w.uea"
     },
     {
+      "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\x5e30aof.q20",
+      "SourceId": "GraduationProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\",
+      "BasePath": "_content/GraduationProject",
+      "RelativePath": "CV/x5e30aof#[.{fingerprint}]?.q20",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gftdurgj81",
+      "Integrity": "PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CV\\x5e30aof.q20"
+    },
+    {
       "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\anas04",
       "SourceId": "GraduationProject",
       "SourceType": "Discovered",
@@ -99,9 +141,133 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\mhmd001"
+    },
+    {
+      "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mhmd003",
+      "SourceId": "GraduationProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\",
+      "BasePath": "_content/GraduationProject",
+      "RelativePath": "Images/mhmd003#[.{fingerprint}]?",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "y6kzhiaqx1",
+      "Integrity": "+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\mhmd003"
+    },
+    {
+      "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mohamed",
+      "SourceId": "GraduationProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\",
+      "BasePath": "_content/GraduationProject",
+      "RelativePath": "Images/mohamed#[.{fingerprint}]?",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "w1xkuew0cw",
+      "Integrity": "VLrCBCyxMDl4944x3APUWu2WVpv0Gv4n+T8BITrKGGA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\mohamed"
     }
   ],
   "Endpoints": [
+    {
+      "Route": "CV/CV.pdf..gftdurgj81.pdf",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\CV.pdf..pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124113"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 21:03:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gftdurgj81"
+        },
+        {
+          "Name": "label",
+          "Value": "CV/CV.pdf..pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="
+        }
+      ]
+    },
+    {
+      "Route": "CV/CV.pdf..pdf",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\CV.pdf..pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124113"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 21:03:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="
+        }
+      ]
+    },
     {
       "Route": "CV/kqmirdcf.r1w",
       "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\kqmirdcf.r1w",
@@ -253,6 +419,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Wed, 23 Apr 2025 20:34:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="
+        }
+      ]
+    },
+    {
+      "Route": "CV/x5e30aof.gftdurgj81.q20",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\x5e30aof.q20",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124113"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 13:25:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gftdurgj81"
+        },
+        {
+          "Name": "label",
+          "Value": "CV/x5e30aof.q20"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="
+        }
+      ]
+    },
+    {
+      "Route": "CV/x5e30aof.q20",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\x5e30aof.q20",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124113"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 13:25:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -427,6 +675,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g="
+        }
+      ]
+    },
+    {
+      "Route": "Images/mhmd003",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mhmd003",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8751"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 13:24:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g="
+        }
+      ]
+    },
+    {
+      "Route": "Images/mhmd003.y6kzhiaqx1",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mhmd003",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8751"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 13:24:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y6kzhiaqx1"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/mhmd003"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g="
+        }
+      ]
+    },
+    {
+      "Route": "Images/mohamed",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mohamed",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "274021"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VLrCBCyxMDl4944x3APUWu2WVpv0Gv4n+T8BITrKGGA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 21:03:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VLrCBCyxMDl4944x3APUWu2WVpv0Gv4n+T8BITrKGGA="
+        }
+      ]
+    },
+    {
+      "Route": "Images/mohamed.w1xkuew0cw",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mohamed",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "274021"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VLrCBCyxMDl4944x3APUWu2WVpv0Gv4n+T8BITrKGGA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Apr 2025 21:03:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w1xkuew0cw"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/mohamed"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VLrCBCyxMDl4944x3APUWu2WVpv0Gv4n+T8BITrKGGA="
         }
       ]
     }

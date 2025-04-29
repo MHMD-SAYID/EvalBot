@@ -3,7 +3,6 @@
     public record AddBusinessAccountRequest
     (
         string Id,
-        string Type,
-        string Link
+        List<businessAccountRegister> businessAccounts
     );
 }

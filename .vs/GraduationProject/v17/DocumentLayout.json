@@ -3,8 +3,233 @@
   "WorkspaceRootPath": "C:\\Users\\malko\\source\\repos\\GraduationProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\abstraction\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\abstraction\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\authentication\\jwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\authentication\\jwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\authentication\\jwtoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\authentication\\jwtoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\authentication\\ijwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\authentication\\ijwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\authentication\\consts\\regexpatterns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\authentication\\consts\\regexpatterns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\contracts\\authentication\\loginrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\contracts\\authentication\\loginrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\contracts\\authentication\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\contracts\\authentication\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\errors\\porfileerrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\errors\\porfileerrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\abstraction\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\abstraction\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\errors\\usererrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\errors\\usererrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\extensions\\userextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\extensions\\userextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\helpers\\emailbodybuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\helpers\\emailbodybuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\service\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\service\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malko\\AppData\\Roaming\\Microsoft\\UserSecrets\\53a5f369-6625-41b3-8e6d-0f862400a52b\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\settings\\mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\settings\\mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\settings\\filesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\settings\\filesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\contracts\\users\\update\\updatelanguagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\contracts\\users\\update\\updatelanguagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\service\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\service\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\service\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\service\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\contracts\\users\\update\\updateskillsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\contracts\\users\\update\\updateskillsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\contracts\\users\\update\\updateprojectrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\contracts\\users\\update\\updateprojectrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\contracts\\users\\update\\updateexperiencerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\contracts\\users\\update\\updateexperiencerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\contracts\\users\\update\\updateeducationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\contracts\\users\\update\\updateeducationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\contracts\\users\\update\\updatebusinessaccountrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\contracts\\users\\update\\updatebusinessaccountrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\contracts\\users\\update\\updatebiorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\contracts\\users\\update\\updatebiorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\contracts\\authentication\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\contracts\\authentication\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\entities\\config\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\entities\\config\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\entities\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\entities\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\entities\\config\\experienceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\entities\\config\\experienceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\entities\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\entities\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\contracts\\authentication\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\contracts\\authentication\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\contracts\\users\\add\\addprojectrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\contracts\\users\\add\\addprojectrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\contracts\\users\\add\\addexperiencerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\contracts\\users\\add\\addexperiencerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\contracts\\users\\add\\addeducationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\contracts\\users\\add\\addeducationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\contracts\\users\\add\\addbusinessaccountrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\contracts\\users\\add\\addbusinessaccountrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\contracts\\users\\userprofileresponse.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\contracts\\users\\userprofileresponse.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malko\\AppData\\Local\\Temp\\.vsdbgsrc\\644c1da728e47c4a869cdc58cace8824a429fe784062e5c0572431f26df2d28f\\ServiceProvider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\entities\\businessaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\entities\\businessaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malko\\AppData\\Local\\SourceServer\\291fc86ab3e27da534053c68adb1497cfbc7c4fe82b2e2fe73ef92105188f7bd\\src\\Mvc\\Mvc.Core\\src\\ApplicationModels\\ApiBehaviorApplicationModelProvider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\errors\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\errors\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\abstraction\\resultextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\abstraction\\resultextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\service\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\service\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\service\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\service\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\templates\\forgetpassword.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\templates\\forgetpassword.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\templates\\emailconfirmation.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\templates\\emailconfirmation.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\contracts\\users\\delete\\deleterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\contracts\\users\\delete\\deleterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\contracts\\authentication\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\contracts\\authentication\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|c:\\users\\malko\\source\\repos\\graduationproject\\graduationproject\\entities\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50AE748-25BA-49D6-9F35-F58FDBF1D331}|GraduationProject\\GraduationProject.csproj|solutionrelative:graduationproject\\entities\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +239,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,15 +251,756 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "JwtProvider.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Authentication\\JwtProvider.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Authentication\\JwtProvider.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Authentication\\JwtProvider.cs",
+              "RelativeToolTip": "GraduationProject\\Authentication\\JwtProvider.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAzwEEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T22:04:53.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "JwtOptions.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Authentication\\JwtOptions.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Authentication\\JwtOptions.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Authentication\\JwtOptions.cs",
+              "RelativeToolTip": "GraduationProject\\Authentication\\JwtOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T22:04:42.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IJwtProvider.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Authentication\\IJwtProvider.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Authentication\\IJwtProvider.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Authentication\\IJwtProvider.cs",
+              "RelativeToolTip": "GraduationProject\\Authentication\\IJwtProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T22:04:34.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RegexPatterns.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Authentication\\Consts\\RegexPatterns.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Authentication\\Consts\\RegexPatterns.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Authentication\\Consts\\RegexPatterns.cs",
+              "RelativeToolTip": "GraduationProject\\Authentication\\Consts\\RegexPatterns.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T22:04:11.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Authentication\\LoginRequestValidator.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Contracts\\Authentication\\LoginRequestValidator.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Authentication\\LoginRequestValidator.cs",
+              "RelativeToolTip": "GraduationProject\\Contracts\\Authentication\\LoginRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T22:03:17.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Authentication\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Contracts\\Authentication\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Authentication\\LoginRequest.cs",
+              "RelativeToolTip": "GraduationProject\\Contracts\\Authentication\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T22:02:48.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "GraduationProject\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T11:09:22.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Program.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Program.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Program.cs",
+              "RelativeToolTip": "GraduationProject\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T01:29:37.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GlobalUsings.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\GlobalUsings.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\GlobalUsings.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\GlobalUsings.cs",
+              "RelativeToolTip": "GraduationProject\\GlobalUsings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T12:28:51.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "GraduationProject\\DependencyInjection.cs",
               "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\DependencyInjection.cs",
               "RelativeToolTip": "GraduationProject\\DependencyInjection.cs",
-              "ViewState": "AgIAAIYAAAAALjMzMzMhwI8AAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAowHUAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T23:35:01.891Z",
+              "WhenOpened": "2025-04-24T12:08:19.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Result.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Abstraction\\Result.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Abstraction\\Result.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Abstraction\\Result.cs",
+              "RelativeToolTip": "GraduationProject\\Abstraction\\Result.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T11:51:22.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Service\\AuthService.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Service\\AuthService.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Service\\AuthService.cs",
+              "RelativeToolTip": "GraduationProject\\Service\\AuthService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwFIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T11:11:29.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "GraduationProject\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T14:36:08.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UserExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Extensions\\UserExtensions.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Extensions\\UserExtensions.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Extensions\\UserExtensions.cs",
+              "RelativeToolTip": "GraduationProject\\Extensions\\UserExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T21:58:26.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EmailBodyBuilder.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Helpers\\EmailBodyBuilder.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Helpers\\EmailBodyBuilder.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Helpers\\EmailBodyBuilder.cs",
+              "RelativeToolTip": "GraduationProject\\Helpers\\EmailBodyBuilder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T21:58:10.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\appsettings.json",
+              "RelativeDocumentMoniker": "GraduationProject\\appsettings.json",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\appsettings.json",
+              "RelativeToolTip": "GraduationProject\\appsettings.json",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAD0AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-23T23:44:17.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FileSettings.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Settings\\FileSettings.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Settings\\FileSettings.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Settings\\FileSettings.cs",
+              "RelativeToolTip": "GraduationProject\\Settings\\FileSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T21:55:20.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "MailSettings.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Settings\\MailSettings.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Settings\\MailSettings.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Settings\\MailSettings.cs",
+              "RelativeToolTip": "GraduationProject\\Settings\\MailSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T13:08:51.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\malko\\AppData\\Roaming\\Microsoft\\UserSecrets\\53a5f369-6625-41b3-8e6d-0f862400a52b\\secrets.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\53a5f369-6625-41b3-8e6d-0f862400a52b\\secrets.json",
+              "ToolTip": "C:\\Users\\malko\\AppData\\Roaming\\Microsoft\\UserSecrets\\53a5f369-6625-41b3-8e6d-0f862400a52b\\secrets.json",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\53a5f369-6625-41b3-8e6d-0f862400a52b\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-24T01:39:34.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Service\\UserService.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Service\\UserService.cs",
+              "RelativeToolTip": "GraduationProject\\Service\\UserService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAzwDIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T13:18:47.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserErrors.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Errors\\UserErrors.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Errors\\UserErrors.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Errors\\UserErrors.cs",
+              "RelativeToolTip": "GraduationProject\\Errors\\UserErrors.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T16:55:19.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Error.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Abstraction\\Error.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Abstraction\\Error.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Abstraction\\Error.cs",
+              "RelativeToolTip": "GraduationProject\\Abstraction\\Error.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T11:51:19.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PorfileErrors.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Errors\\PorfileErrors.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Errors\\PorfileErrors.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Errors\\PorfileErrors.cs",
+              "RelativeToolTip": "GraduationProject\\Errors\\PorfileErrors.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T11:47:48.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "UpdateLanguageRequest.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Update\\UpdateLanguageRequest.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Contracts\\Users\\Update\\UpdateLanguageRequest.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Update\\UpdateLanguageRequest.cs",
+              "RelativeToolTip": "GraduationProject\\Contracts\\Users\\Update\\UpdateLanguageRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T17:50:11.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Service\\IUserService.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Service\\IUserService.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Service\\IUserService.cs",
+              "RelativeToolTip": "GraduationProject\\Service\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T16:18:16.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "FileService.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Service\\FileService.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Service\\FileService.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Service\\FileService.cs",
+              "RelativeToolTip": "GraduationProject\\Service\\FileService.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAEwGcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T17:38:28.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Service\\IAuthService.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Service\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Service\\IAuthService.cs",
+              "RelativeToolTip": "GraduationProject\\Service\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAACtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T14:34:34.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FilesController.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Controllers\\FilesController.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Controllers\\FilesController.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Controllers\\FilesController.cs",
+              "RelativeToolTip": "GraduationProject\\Controllers\\FilesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T11:11:07.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "UpdateSkillsRequest.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Update\\UpdateSkillsRequest.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Contracts\\Users\\Update\\UpdateSkillsRequest.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Update\\UpdateSkillsRequest.cs",
+              "RelativeToolTip": "GraduationProject\\Contracts\\Users\\Update\\UpdateSkillsRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T10:51:21.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UpdateProjectRequest.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Update\\UpdateProjectRequest.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Contracts\\Users\\Update\\UpdateProjectRequest.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Update\\UpdateProjectRequest.cs",
+              "RelativeToolTip": "GraduationProject\\Contracts\\Users\\Update\\UpdateProjectRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T13:20:32.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "UpdateExperienceRequest.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Update\\UpdateExperienceRequest.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Contracts\\Users\\Update\\UpdateExperienceRequest.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Update\\UpdateExperienceRequest.cs",
+              "RelativeToolTip": "GraduationProject\\Contracts\\Users\\Update\\UpdateExperienceRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T11:29:13.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "UpdateEducationRequest.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Update\\UpdateEducationRequest.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Contracts\\Users\\Update\\UpdateEducationRequest.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Update\\UpdateEducationRequest.cs",
+              "RelativeToolTip": "GraduationProject\\Contracts\\Users\\Update\\UpdateEducationRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T13:20:33.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UpdateBusinessAccountRequest.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Update\\UpdateBusinessAccountRequest.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Contracts\\Users\\Update\\UpdateBusinessAccountRequest.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Update\\UpdateBusinessAccountRequest.cs",
+              "RelativeToolTip": "GraduationProject\\Contracts\\Users\\Update\\UpdateBusinessAccountRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T13:20:32.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "UpdateBioRequest.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Update\\UpdateBioRequest.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Contracts\\Users\\Update\\UpdateBioRequest.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Update\\UpdateBioRequest.cs",
+              "RelativeToolTip": "GraduationProject\\Contracts\\Users\\Update\\UpdateBioRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:29:08.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Authentication\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Contracts\\Authentication\\RegisterRequest.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Authentication\\RegisterRequest.cs",
+              "RelativeToolTip": "GraduationProject\\Contracts\\Authentication\\RegisterRequest.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T11:48:37.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Entities\\Config\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Entities\\Config\\UserConfiguration.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Entities\\Config\\UserConfiguration.cs",
+              "RelativeToolTip": "GraduationProject\\Entities\\Config\\UserConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T17:20:49.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Entities\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Entities\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Entities\\AppDbContext.cs",
+              "RelativeToolTip": "GraduationProject\\Entities\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T17:20:49.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ExperienceConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Entities\\Config\\ExperienceConfiguration.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Entities\\Config\\ExperienceConfiguration.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Entities\\Config\\ExperienceConfiguration.cs",
+              "RelativeToolTip": "GraduationProject\\Entities\\Config\\ExperienceConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T17:20:35.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Education.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Entities\\Education.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Entities\\Education.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Entities\\Education.cs",
+              "RelativeToolTip": "GraduationProject\\Entities\\Education.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T17:00:28.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "RegisterRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Authentication\\RegisterRequestValidator.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Contracts\\Authentication\\RegisterRequestValidator.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Authentication\\RegisterRequestValidator.cs",
+              "RelativeToolTip": "GraduationProject\\Contracts\\Authentication\\RegisterRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T16:33:30.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "AddEducationRequest.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Add\\AddEducationRequest.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Contracts\\Users\\Add\\AddEducationRequest.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Add\\AddEducationRequest.cs",
+              "RelativeToolTip": "GraduationProject\\Contracts\\Users\\Add\\AddEducationRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T15:09:51.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Entities\\User.cs",
+              "RelativeToolTip": "GraduationProject\\Entities\\User.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBYAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T11:49:20.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "AddBusinessAccountRequest.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Add\\AddBusinessAccountRequest.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Contracts\\Users\\Add\\AddBusinessAccountRequest.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Add\\AddBusinessAccountRequest.cs",
+              "RelativeToolTip": "GraduationProject\\Contracts\\Users\\Add\\AddBusinessAccountRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T15:10:15.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "AddProjectRequest.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Add\\AddProjectRequest.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Contracts\\Users\\Add\\AddProjectRequest.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Add\\AddProjectRequest.cs",
+              "RelativeToolTip": "GraduationProject\\Contracts\\Users\\Add\\AddProjectRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T15:06:11.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "AddExperienceRequest.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Add\\AddExperienceRequest.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Contracts\\Users\\Add\\AddExperienceRequest.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Add\\AddExperienceRequest.cs",
+              "RelativeToolTip": "GraduationProject\\Contracts\\Users\\Add\\AddExperienceRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T13:50:45.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "UserProfileResponse.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\UserProfileResponse.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Contracts\\Users\\UserProfileResponse.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\UserProfileResponse.cs",
+              "RelativeToolTip": "GraduationProject\\Contracts\\Users\\UserProfileResponse.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAwwBsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T15:16:51.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "ServiceProvider.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\AppData\\Local\\Temp\\.vsdbgsrc\\644c1da728e47c4a869cdc58cace8824a429fe784062e5c0572431f26df2d28f\\ServiceProvider.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\644c1da728e47c4a869cdc58cace8824a429fe784062e5c0572431f26df2d28f\\ServiceProvider.cs",
+              "ToolTip": "C:\\Users\\malko\\AppData\\Local\\Temp\\.vsdbgsrc\\644c1da728e47c4a869cdc58cace8824a429fe784062e5c0572431f26df2d28f\\ServiceProvider.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\644c1da728e47c4a869cdc58cace8824a429fe784062e5c0572431f26df2d28f\\ServiceProvider.cs [Read Only]",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAwGEAAAAEAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T16:20:15.052Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "BusinessAccount.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Entities\\BusinessAccount.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Entities\\BusinessAccount.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Entities\\BusinessAccount.cs",
+              "RelativeToolTip": "GraduationProject\\Entities\\BusinessAccount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T15:21:35.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ApiBehaviorApplicationModelProvider.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\AppData\\Local\\SourceServer\\291fc86ab3e27da534053c68adb1497cfbc7c4fe82b2e2fe73ef92105188f7bd\\src\\Mvc\\Mvc.Core\\src\\ApplicationModels\\ApiBehaviorApplicationModelProvider.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\291fc86ab3e27da534053c68adb1497cfbc7c4fe82b2e2fe73ef92105188f7bd\\src\\Mvc\\Mvc.Core\\src\\ApplicationModels\\ApiBehaviorApplicationModelProvider.cs",
+              "ToolTip": "C:\\Users\\malko\\AppData\\Local\\SourceServer\\291fc86ab3e27da534053c68adb1497cfbc7c4fe82b2e2fe73ef92105188f7bd\\src\\Mvc\\Mvc.Core\\src\\ApplicationModels\\ApiBehaviorApplicationModelProvider.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\SourceServer\\291fc86ab3e27da534053c68adb1497cfbc7c4fe82b2e2fe73ef92105188f7bd\\src\\Mvc\\Mvc.Core\\src\\ApplicationModels\\ApiBehaviorApplicationModelProvider.cs [Read Only]",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAEwGMAAAAMAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T12:11:43.113Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "ResultExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Abstraction\\ResultExtensions.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Abstraction\\ResultExtensions.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Abstraction\\ResultExtensions.cs",
+              "RelativeToolTip": "GraduationProject\\Abstraction\\ResultExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T11:51:29.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "GlobalExceptionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Errors\\GlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Errors\\GlobalExceptionHandler.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Errors\\GlobalExceptionHandler.cs",
+              "RelativeToolTip": "GraduationProject\\Errors\\GlobalExceptionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T11:51:45.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "ForgetPassword.html",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Templates\\ForgetPassword.html",
+              "RelativeDocumentMoniker": "GraduationProject\\Templates\\ForgetPassword.html",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Templates\\ForgetPassword.html",
+              "RelativeToolTip": "GraduationProject\\Templates\\ForgetPassword.html",
+              "ViewState": "AgIAABMCAAAAAAAAAIBJwBQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-26T15:26:27.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Service\\EmailService.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Service\\EmailService.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Service\\EmailService.cs",
+              "RelativeToolTip": "GraduationProject\\Service\\EmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T13:06:15.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "IFileService.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Service\\IFileService.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Service\\IFileService.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Service\\IFileService.cs",
+              "RelativeToolTip": "GraduationProject\\Service\\IFileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T16:18:20.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "EmailConfirmation.html",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Templates\\EmailConfirmation.html",
+              "RelativeDocumentMoniker": "GraduationProject\\Templates\\EmailConfirmation.html",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Templates\\EmailConfirmation.html",
+              "RelativeToolTip": "GraduationProject\\Templates\\EmailConfirmation.html",
+              "ViewState": "AgIAABgCAAAAAAAAAAAWwCACAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-26T13:29:51.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "DeleteRequest.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Delete\\DeleteRequest.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Contracts\\Users\\Delete\\DeleteRequest.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Users\\Delete\\DeleteRequest.cs",
+              "RelativeToolTip": "GraduationProject\\Contracts\\Users\\Delete\\DeleteRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T10:59:58.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "AuthResponse.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Authentication\\AuthResponse.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Contracts\\Authentication\\AuthResponse.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Contracts\\Authentication\\AuthResponse.cs",
+              "RelativeToolTip": "GraduationProject\\Contracts\\Authentication\\AuthResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T16:09:58.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "RefreshToken.cs",
+              "DocumentMoniker": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Entities\\RefreshToken.cs",
+              "RelativeDocumentMoniker": "GraduationProject\\Entities\\RefreshToken.cs",
+              "ToolTip": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\Entities\\RefreshToken.cs",
+              "RelativeToolTip": "GraduationProject\\Entities\\RefreshToken.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T11:49:15.084Z",
               "EditorCaption": ""
             }
           ]

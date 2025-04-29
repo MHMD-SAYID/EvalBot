@@ -81,6 +81,16 @@
   },
   {
     "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "DeleteAccount",
+    "RelativePath": "Delete_account",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
     "Method": "DeleteBuinessAcount",
     "RelativePath": "Delete_BusinessAccount",
     "HttpMethod": "DELETE",
@@ -235,8 +245,24 @@
   },
   {
     "ContainingType": "GraduationProject.Controllers.AuthController",
-    "Method": "ForgetPassword",
-    "RelativePath": "forget-password",
+    "Method": "ForgetPasswordFlutter",
+    "RelativePath": "forget-password-flutter",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Microsoft.AspNetCore.Identity.Data.ForgotPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AuthController",
+    "Method": "ForgetPasswordWep",
+    "RelativePath": "forget-password-wep",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -293,8 +319,8 @@
   },
   {
     "ContainingType": "GraduationProject.Controllers.AuthController",
-    "Method": "Register",
-    "RelativePath": "register",
+    "Method": "RegisterFlutter",
+    "RelativePath": "register-flutter",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -309,8 +335,40 @@
   },
   {
     "ContainingType": "GraduationProject.Controllers.AuthController",
-    "Method": "ResendConfirmationEmail",
-    "RelativePath": "resend-confirmation-email",
+    "Method": "RegisterWep",
+    "RelativePath": "register-wep",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Authentication.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AuthController",
+    "Method": "ResendConfirmationflutterEmail",
+    "RelativePath": "resend-confirmation-email-flutter",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Authentication.ReSendConfirmationEmail",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AuthController",
+    "Method": "ResendConfirmationEmailwep",
+    "RelativePath": "resend-confirmation-email-wep",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

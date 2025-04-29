@@ -3,7 +3,6 @@
     public record AddProjectRequest
     (
         string Id,
-        string name,
-        string link
+        List<projectRegister> project
     );
 }

@@ -3,395 +3,8 @@
   "ManifestType": "Publish",
   "Endpoints": [
     {
-      "Route": ".gitkeep.5ipweew5fc.txt",
-      "AssetFile": ".gitkeep.txt.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "1.000000000000"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "0"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5ipweew5fc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
-        },
-        {
-          "Name": "label",
-          "Value": ".gitkeep.txt"
-        }
-      ]
-    },
-    {
-      "Route": ".gitkeep.5ipweew5fc.txt",
-      "AssetFile": ".gitkeep.txt.br",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "br",
-          "Quality": "0.500000000000"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "br"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ=\""
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5ipweew5fc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
-        },
-        {
-          "Name": "label",
-          "Value": ".gitkeep.txt"
-        }
-      ]
-    },
-    {
-      "Route": ".gitkeep.5ipweew5fc.txt",
-      "AssetFile": ".gitkeep.txt",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "0"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5ipweew5fc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
-        },
-        {
-          "Name": "label",
-          "Value": ".gitkeep.txt"
-        }
-      ]
-    },
-    {
-      "Route": ".gitkeep.5ipweew5fc.txt.br",
-      "AssetFile": ".gitkeep.txt.br",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "br"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5ipweew5fc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ="
-        },
-        {
-          "Name": "label",
-          "Value": ".gitkeep.txt.br"
-        }
-      ]
-    },
-    {
-      "Route": ".gitkeep.5ipweew5fc.txt.gz",
-      "AssetFile": ".gitkeep.txt.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "0"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5ipweew5fc"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
-        },
-        {
-          "Name": "label",
-          "Value": ".gitkeep.txt.gz"
-        }
-      ]
-    },
-    {
-      "Route": ".gitkeep.txt",
-      "AssetFile": ".gitkeep.txt.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "1.000000000000"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "0"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
-        }
-      ]
-    },
-    {
-      "Route": ".gitkeep.txt",
-      "AssetFile": ".gitkeep.txt.br",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "br",
-          "Quality": "0.500000000000"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "br"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ=\""
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
-        }
-      ]
-    },
-    {
-      "Route": ".gitkeep.txt",
-      "AssetFile": ".gitkeep.txt",
+      "Route": "CV/kqmirdcf.r1w",
+      "AssetFile": "CV/kqmirdcf.r1w",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -404,31 +17,121 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "0"
+          "Value": "58932"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/plain"
+          "Value": "application/octet-stream"
         },
         {
           "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+          "Value": "\"vxmUY+E8RH5QYmxoth0m3pR52Zi4raiV+WSu5RVgVek=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
+          "Value": "Wed, 23 Apr 2025 20:34:17 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+          "Value": "sha256-vxmUY+E8RH5QYmxoth0m3pR52Zi4raiV+WSu5RVgVek="
         }
       ]
     },
     {
-      "Route": ".gitkeep.txt.br",
-      "AssetFile": ".gitkeep.txt.br",
+      "Route": "CV/kqmirdcf.zjbh584pep.r1w",
+      "AssetFile": "CV/kqmirdcf.r1w",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "58932"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vxmUY+E8RH5QYmxoth0m3pR52Zi4raiV+WSu5RVgVek=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 20:34:17 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zjbh584pep"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vxmUY+E8RH5QYmxoth0m3pR52Zi4raiV+WSu5RVgVek="
+        },
+        {
+          "Name": "label",
+          "Value": "CV/kqmirdcf.r1w"
+        }
+      ]
+    },
+    {
+      "Route": "CV/o5ir0b5w.gftdurgj81.uea",
+      "AssetFile": "CV/o5ir0b5w.uea",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124113"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 20:34:17 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gftdurgj81"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="
+        },
+        {
+          "Name": "label",
+          "Value": "CV/o5ir0b5w.uea"
+        }
+      ]
+    },
+    {
+      "Route": "CV/o5ir0b5w.uea",
+      "AssetFile": "CV/o5ir0b5w.uea",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -440,40 +143,77 @@
           "Value": "no-cache"
         },
         {
-          "Name": "Content-Encoding",
-          "Value": "br"
-        },
-        {
           "Name": "Content-Length",
-          "Value": "1"
+          "Value": "124113"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/plain"
+          "Value": "application/octet-stream"
         },
         {
           "Name": "ETag",
-          "Value": "\"QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ=\""
+          "Value": "\"PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
+          "Value": "Wed, 23 Apr 2025 20:34:17 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ="
+          "Value": "sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="
         }
       ]
     },
     {
-      "Route": ".gitkeep.txt.gz",
-      "AssetFile": ".gitkeep.txt.gz",
+      "Route": "CV/x5e30aof.gftdurgj81.q20",
+      "AssetFile": "CV/x5e30aof.q20",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124113"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 13:25:11 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gftdurgj81"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="
+        },
+        {
+          "Name": "label",
+          "Value": "CV/x5e30aof.q20"
+        }
+      ]
+    },
+    {
+      "Route": "CV/x5e30aof.q20",
+      "AssetFile": "CV/x5e30aof.q20",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -485,34 +225,272 @@
           "Value": "no-cache"
         },
         {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
           "Name": "Content-Length",
-          "Value": "0"
+          "Value": "124113"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/plain"
+          "Value": "application/octet-stream"
         },
         {
           "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+          "Value": "\"PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
+          "Value": "Thu, 24 Apr 2025 13:25:11 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+          "Value": "sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="
+        }
+      ]
+    },
+    {
+      "Route": "Images/anas04",
+      "AssetFile": "Images/anas04",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/nl3YFHuzxuSSEDJVbIuDmVFUlReA5lipgtH++5r5Ck=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 20:34:17 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/nl3YFHuzxuSSEDJVbIuDmVFUlReA5lipgtH++5r5Ck="
+        }
+      ]
+    },
+    {
+      "Route": "Images/anas04.2clk1jlb5q",
+      "AssetFile": "Images/anas04",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/nl3YFHuzxuSSEDJVbIuDmVFUlReA5lipgtH++5r5Ck=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 20:34:17 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2clk1jlb5q"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/nl3YFHuzxuSSEDJVbIuDmVFUlReA5lipgtH++5r5Ck="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/anas04"
+        }
+      ]
+    },
+    {
+      "Route": "Images/mhmd001",
+      "AssetFile": "Images/mhmd001",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8751"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 20:34:17 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g="
+        }
+      ]
+    },
+    {
+      "Route": "Images/mhmd001.y6kzhiaqx1",
+      "AssetFile": "Images/mhmd001",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8751"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 20:34:17 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y6kzhiaqx1"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/mhmd001"
+        }
+      ]
+    },
+    {
+      "Route": "Images/mhmd003",
+      "AssetFile": "Images/mhmd003",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8751"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 13:24:52 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g="
+        }
+      ]
+    },
+    {
+      "Route": "Images/mhmd003.y6kzhiaqx1",
+      "AssetFile": "Images/mhmd003",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8751"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 13:24:52 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y6kzhiaqx1"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/mhmd003"
         }
       ]
     }

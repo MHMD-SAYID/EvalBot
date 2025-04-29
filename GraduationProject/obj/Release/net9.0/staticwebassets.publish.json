@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YVngHS/53pvnJQ/uDt8kMVuDLT7QrWdHhSYTpEe0LWI=",
+  "Hash": "e/zYCTGAL7IZYuyImOEcf6scSqlDg9KEkwu598X76XQ=",
   "Source": "GraduationProject",
   "BasePath": "_content/GraduationProject",
   "Mode": "Default",
@@ -17,54 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\Release\\net9.0\\compressed\\ac9tkfpkdb-5ipweew5fc.gz",
-      "SourceId": "GraduationProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\Release\\net9.0\\compressed\\",
-      "BasePath": "_content/GraduationProject",
-      "RelativePath": ".gitkeep#[.{fingerprint=5ipweew5fc}]?.txt.gz",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\.gitkeep.txt",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "Fingerprint": "5ipweew5fc",
-      "Integrity": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\.gitkeep.txt"
-    },
-    {
-      "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\Release\\net9.0\\compressed\\publish\\ac9tkfpkdb-5ipweew5fc.br",
-      "SourceId": "GraduationProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\Release\\net9.0\\compressed\\publish\\",
-      "BasePath": "_content/GraduationProject",
-      "RelativePath": ".gitkeep#[.{fingerprint=5ipweew5fc}]?.txt.br",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\.gitkeep.txt",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "br",
-      "Fingerprint": "lr6gamhjtd",
-      "Integrity": "QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\.gitkeep.txt"
-    },
-    {
-      "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\.gitkeep.txt",
+      "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\kqmirdcf.r1w",
       "SourceId": "GraduationProject",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\",
       "BasePath": "_content/GraduationProject",
-      "RelativePath": ".gitkeep#[.{fingerprint}]?.txt",
+      "RelativePath": "CV/kqmirdcf#[.{fingerprint}]?.r1w",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -73,143 +31,122 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "5ipweew5fc",
-      "Integrity": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+      "Fingerprint": "zjbh584pep",
+      "Integrity": "vxmUY+E8RH5QYmxoth0m3pR52Zi4raiV+WSu5RVgVek=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\.gitkeep.txt"
+      "OriginalItemSpec": "wwwroot\\CV\\kqmirdcf.r1w"
+    },
+    {
+      "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\o5ir0b5w.uea",
+      "SourceId": "GraduationProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\",
+      "BasePath": "_content/GraduationProject",
+      "RelativePath": "CV/o5ir0b5w#[.{fingerprint}]?.uea",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gftdurgj81",
+      "Integrity": "PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CV\\o5ir0b5w.uea"
+    },
+    {
+      "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\x5e30aof.q20",
+      "SourceId": "GraduationProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\",
+      "BasePath": "_content/GraduationProject",
+      "RelativePath": "CV/x5e30aof#[.{fingerprint}]?.q20",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gftdurgj81",
+      "Integrity": "PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CV\\x5e30aof.q20"
+    },
+    {
+      "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\anas04",
+      "SourceId": "GraduationProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\",
+      "BasePath": "_content/GraduationProject",
+      "RelativePath": "Images/anas04#[.{fingerprint}]?",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2clk1jlb5q",
+      "Integrity": "/nl3YFHuzxuSSEDJVbIuDmVFUlReA5lipgtH++5r5Ck=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\anas04"
+    },
+    {
+      "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mhmd001",
+      "SourceId": "GraduationProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\",
+      "BasePath": "_content/GraduationProject",
+      "RelativePath": "Images/mhmd001#[.{fingerprint}]?",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "y6kzhiaqx1",
+      "Integrity": "+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\mhmd001"
+    },
+    {
+      "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mhmd003",
+      "SourceId": "GraduationProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\",
+      "BasePath": "_content/GraduationProject",
+      "RelativePath": "Images/mhmd003#[.{fingerprint}]?",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "y6kzhiaqx1",
+      "Integrity": "+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\mhmd003"
     }
   ],
   "Endpoints": [
     {
-      "Route": ".gitkeep.5ipweew5fc.txt",
-      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\Release\\net9.0\\compressed\\ac9tkfpkdb-5ipweew5fc.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "1.000000000000"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "0"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5ipweew5fc"
-        },
-        {
-          "Name": "label",
-          "Value": ".gitkeep.txt"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
-        }
-      ]
-    },
-    {
-      "Route": ".gitkeep.5ipweew5fc.txt",
-      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\Release\\net9.0\\compressed\\publish\\ac9tkfpkdb-5ipweew5fc.br",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "br",
-          "Quality": "0.500000000000"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "br"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5ipweew5fc"
-        },
-        {
-          "Name": "label",
-          "Value": ".gitkeep.txt"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
-        }
-      ]
-    },
-    {
-      "Route": ".gitkeep.5ipweew5fc.txt",
-      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\.gitkeep.txt",
+      "Route": "CV/kqmirdcf.r1w",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\kqmirdcf.r1w",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -218,280 +155,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "0"
+          "Value": "58932"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/plain"
+          "Value": "application/octet-stream"
         },
         {
           "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+          "Value": "\"vxmUY+E8RH5QYmxoth0m3pR52Zi4raiV+WSu5RVgVek=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5ipweew5fc"
-        },
-        {
-          "Name": "label",
-          "Value": ".gitkeep.txt"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
-        }
-      ]
-    },
-    {
-      "Route": ".gitkeep.5ipweew5fc.txt.br",
-      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\Release\\net9.0\\compressed\\publish\\ac9tkfpkdb-5ipweew5fc.br",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "br"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5ipweew5fc"
-        },
-        {
-          "Name": "label",
-          "Value": ".gitkeep.txt.br"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ="
-        }
-      ]
-    },
-    {
-      "Route": ".gitkeep.5ipweew5fc.txt.gz",
-      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\Release\\net9.0\\compressed\\ac9tkfpkdb-5ipweew5fc.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "0"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5ipweew5fc"
-        },
-        {
-          "Name": "label",
-          "Value": ".gitkeep.txt.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
-        }
-      ]
-    },
-    {
-      "Route": ".gitkeep.txt",
-      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\Release\\net9.0\\compressed\\ac9tkfpkdb-5ipweew5fc.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "1.000000000000"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "0"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
-        }
-      ]
-    },
-    {
-      "Route": ".gitkeep.txt",
-      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\Release\\net9.0\\compressed\\publish\\ac9tkfpkdb-5ipweew5fc.br",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "br",
-          "Quality": "0.500000000000"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "br"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
-        }
-      ]
-    },
-    {
-      "Route": ".gitkeep.txt",
-      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\.gitkeep.txt",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "0"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
+          "Value": "Wed, 23 Apr 2025 20:34:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -501,13 +177,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+          "Value": "sha256-vxmUY+E8RH5QYmxoth0m3pR52Zi4raiV+WSu5RVgVek="
         }
       ]
     },
     {
-      "Route": ".gitkeep.txt.br",
-      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\Release\\net9.0\\compressed\\publish\\ac9tkfpkdb-5ipweew5fc.br",
+      "Route": "CV/kqmirdcf.zjbh584pep.r1w",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\kqmirdcf.r1w",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -516,43 +192,43 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1"
+          "Value": "58932"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/plain"
+          "Value": "application/octet-stream"
         },
         {
           "Name": "ETag",
-          "Value": "\"QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ=\""
+          "Value": "\"vxmUY+E8RH5QYmxoth0m3pR52Zi4raiV+WSu5RVgVek=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
+          "Value": "Wed, 23 Apr 2025 20:34:17 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "br"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
+          "Value": "max-age=31536000, immutable"
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "zjbh584pep"
+        },
+        {
+          "Name": "label",
+          "Value": "CV/kqmirdcf.r1w"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-QbgF6nrAFOI1VumLs3RwKgg0Qmj5JImgLwiAhJOUoeQ="
+          "Value": "sha256-vxmUY+E8RH5QYmxoth0m3pR52Zi4raiV+WSu5RVgVek="
         }
       ]
     },
     {
-      "Route": ".gitkeep.txt.gz",
-      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\obj\\Release\\net9.0\\compressed\\ac9tkfpkdb-5ipweew5fc.gz",
+      "Route": "CV/o5ir0b5w.gftdurgj81.uea",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\o5ir0b5w.uea",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -561,37 +237,402 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "0"
+          "Value": "124113"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/plain"
+          "Value": "application/octet-stream"
         },
         {
           "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
+          "Value": "\"PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 23 Apr 2025 22:59:27 GMT"
+          "Value": "Wed, 23 Apr 2025 20:34:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gftdurgj81"
+        },
+        {
+          "Name": "label",
+          "Value": "CV/o5ir0b5w.uea"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="
+        }
+      ]
+    },
+    {
+      "Route": "CV/o5ir0b5w.uea",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\o5ir0b5w.uea",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124113"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 20:34:17 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+          "Value": "sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="
+        }
+      ]
+    },
+    {
+      "Route": "CV/x5e30aof.gftdurgj81.q20",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\x5e30aof.q20",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124113"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 13:25:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gftdurgj81"
+        },
+        {
+          "Name": "label",
+          "Value": "CV/x5e30aof.q20"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="
+        }
+      ]
+    },
+    {
+      "Route": "CV/x5e30aof.q20",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\x5e30aof.q20",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124113"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 13:25:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="
+        }
+      ]
+    },
+    {
+      "Route": "Images/anas04",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\anas04",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/nl3YFHuzxuSSEDJVbIuDmVFUlReA5lipgtH++5r5Ck=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 20:34:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/nl3YFHuzxuSSEDJVbIuDmVFUlReA5lipgtH++5r5Ck="
+        }
+      ]
+    },
+    {
+      "Route": "Images/anas04.2clk1jlb5q",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\anas04",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/nl3YFHuzxuSSEDJVbIuDmVFUlReA5lipgtH++5r5Ck=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 20:34:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2clk1jlb5q"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/anas04"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/nl3YFHuzxuSSEDJVbIuDmVFUlReA5lipgtH++5r5Ck="
+        }
+      ]
+    },
+    {
+      "Route": "Images/mhmd001",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mhmd001",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8751"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 20:34:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g="
+        }
+      ]
+    },
+    {
+      "Route": "Images/mhmd001.y6kzhiaqx1",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mhmd001",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8751"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 20:34:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y6kzhiaqx1"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/mhmd001"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g="
+        }
+      ]
+    },
+    {
+      "Route": "Images/mhmd003",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mhmd003",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8751"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 13:24:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g="
+        }
+      ]
+    },
+    {
+      "Route": "Images/mhmd003.y6kzhiaqx1",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mhmd003",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8751"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 13:24:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y6kzhiaqx1"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/mhmd003"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+qkKuOUAhqYIiCRP3DAc15jWmq2b0/6+hSboNH86S3g="
         }
       ]
     }

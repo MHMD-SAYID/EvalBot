@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\CV.pdf..pdf",
+      "PackagePath": "staticwebassets\\CV\\CV.pdf..pdf"
+    },
+    {
       "Id": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\kqmirdcf.r1w",
       "PackagePath": "staticwebassets\\CV\\kqmirdcf.r1w"
     },
@@ -9,11 +13,23 @@
       "PackagePath": "staticwebassets\\CV\\o5ir0b5w.uea"
     },
     {
+      "Id": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\x5e30aof.q20",
+      "PackagePath": "staticwebassets\\CV\\x5e30aof.q20"
+    },
+    {
       "Id": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\anas04",
       "PackagePath": "staticwebassets\\Images"
     },
     {
       "Id": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mhmd001",
+      "PackagePath": "staticwebassets\\Images"
+    },
+    {
+      "Id": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mhmd003",
+      "PackagePath": "staticwebassets\\Images"
+    },
+    {
+      "Id": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mohamed",
       "PackagePath": "staticwebassets\\Images"
     },
     {

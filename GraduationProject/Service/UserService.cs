@@ -1,116 +1,176 @@
-﻿using GraduationProject.Contracts.Users;
+﻿using AutoMapper;
+using GraduationProject.Contracts.Users;
 using GraduationProject.Contracts.Users.Add;
 using GraduationProject.Contracts.Users.Delete;
 using GraduationProject.Contracts.Users.Update;
 
 
+
+
 namespace GraduationProject.Service
 {
-    public class UserService(IWebHostEnvironment webHostEnvironment, UserManager<User> userManager,AppDbContext context) : IUserService
+    public class UserService(IWebHostEnvironment webHostEnvironment, IHttpContextAccessor httpContextAccessor, UserManager<User> userManager,AppDbContext context) : IUserService
     {
         private readonly AppDbContext _context=context;
         private readonly UserManager<User> _userManager=userManager;
+        private readonly IHttpContextAccessor _httpContextAccessor= httpContextAccessor;
         private readonly string _imagesPath = $"{webHostEnvironment.WebRootPath}/Images";
         private readonly string _FilePath = $"{webHostEnvironment.WebRootPath}/CV";
+     
+        public async Task<Result<UserProfileResponse>> GetProfileAsync(string userId)
+        {
 
+            var cvName = await _userManager.Users
+               .Include(u => u.uploadedFiles)
+               .Where(u => u.Id == userId)
+               .Select(u => u.uploadedFiles)
+               .Select(f => f.StoredFileName)
+               .FirstOrDefaultAsync();
+            var path = !string.IsNullOrEmpty(cvName) ? Path.Combine(_FilePath, cvName) : null;
+            var user = await _userManager.Users
+     .Where(x => x.Id == userId)
+     .Select(x => new UserProfileResponse
+     {
+         Email = x.Email,
+         UserName = x.UserName,
+         Skills = x.Skills.ToList(),
+         Projects = x.Projects != null && x.Projects.Any()
+            ? x.Projects.Select(p => new projectProfile { id = p.Id, name = p.Name, link = p.Link }).ToList()
+            : null,
+         Experience = x.Experience != null && x.Experience.Any()
+            ? x.Experience.Select(e => new experienceProfile { id = e.Id, CompanyName = e.CompanyName, JobTitle = e.JobTitle, StillWorkingThere = e.StillWorkingThere }).ToList()
+            : null,
+            Education = x.Education != null && x.Education.Any()
+            ? x.Education.Select(e => new educationProfile { id = e.Id, Degree = e.Degree, FieldOfStudy = e.FieldOfStudy, Institution = e.Institution, IsUnderGraduate = e.IsUnderGraduate }).ToList()
+            : null,
+         Accounts = x.businessAccounts != null && x.businessAccounts.Any()
+            ? x.businessAccounts.Select(b => new businessAccountProfile { id = b.Id, AccountLink = b.Link, AccountType = b.Type }).ToList()
+            : null,
+         FirstLanguage = x.FirstLanguage,
+         FirstLanguageLevel = x.FirstLanguageLevel,
+         SecondLanguage = x.SecondLanguage,
+         SecondLanguageLevel = x.SecondLanguageLevel,
+         Bio = x.Bio,
+         ProfilePicUrl = "",
+         CVUrl = path
+     })
+     .SingleAsync();
+
+            //var imageUrl = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}/Images/{user.UserName}";
+            //user.ProfilePicUrl = File.Exists(imageUrl) ? imageUrl : null;
+
+            var imagePath = Path.Combine(_imagesPath, user.UserName);
+            user.ProfilePicUrl = File.Exists(imagePath) ? imagePath : null;
+
+            return Result.Success(user);
+        }
         public async Task<Result> AddBusinessAcount(AddBusinessAccountRequest request, CancellationToken cancellationToken)
         {
-            var user = await _userManager.Users
-                .Include(x => x.businessAccounts)
-                .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
-            var account = new Entities.BusinessAccount
-            {
-                Type = request.Type,
-                Link = request.Link
-            };
-            user.businessAccounts.Add(account);
-            var result = await _userManager.UpdateAsync(user);
 
-            if (!result.Succeeded)
+            if (request.businessAccounts?.Any() != true)
+                return Result.Success();
+            var account = request.businessAccounts.Select(p => new BusinessAccount
             {
-                return Result.Failure(UserErrors.InternalServerError);
-            }
-            return Result.Success();
+                Link=p.AccountLink,
+                Type=p.AccountType,
+                UserId = request.Id
+                
+
+            }).ToList();
+            await _context.businessAccounts.AddRangeAsync(account, cancellationToken);
+            var result = await _context.SaveChangesAsync(cancellationToken);
+
+            return result > 0 ? Result.Success() : Result.Failure(PorfileErrors.AccountNotFound);
         }
-
         public async Task<Result> AddEducation(AddEducationRequest request, CancellationToken cancellationToken)
         {
-            var user = await _userManager.Users
-               .Include(x => x.Education)
-               .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
-            var education = new Entities.Education
+            if (request.education?.Any() != true)
+                return Result.Success();
+            var education = request.education.Select(p => new Education
             {
-               
-                Degree=request.Degree,
-                FieldOfStudy=request.FieldOfStudy,
-                StartDate=request.StartDate,
-                EndDate=request.EndDate,
-                Institution = request.Institution,
-                IsUnderGraduate = request.IsUnderGraduate
-       
-            };
-            user.Education.Add(education);
+                FieldOfStudy = p.FieldOfStudy,
+                Institution = p.Institution,
+                StartDate = p.StartDate,
+                Degree = p.Degree,
+                EndDate = p.EndDate,
+                UserId = request.Id
 
-            var result = await _userManager.UpdateAsync(user);
 
-            if (!result.Succeeded)
-            {
-                return Result.Failure(UserErrors.InternalServerError);
-            }
-            return Result.Success();
+            }).ToList();
+            await _context.Education.AddRangeAsync(education, cancellationToken);
+            var result = await _context.SaveChangesAsync(cancellationToken);
+
+            return result > 0 ? Result.Success() : Result.Failure(PorfileErrors.EducationNotFound);
+
         }
 
         public async Task<Result> AddExperience(AddExperienceRequest request, CancellationToken cancellationToken)
         {
-           var user= await _userManager.Users
-                .Include(x=>x.Experience)
-                .FirstOrDefaultAsync(x=>x.Id==request.Id,cancellationToken);
-            var experience = new Entities.Experience
-            {
-                CompanyName = request.CompanyName,
-                JobTitle = request.JobTitle,
-                StillWorkingThere = request.StillWorkingThere,
-                EndDate = request.EndDate,
-                StartDate = request.StartDate
-            };
-            user.Experience.Add(experience);
+            {// var user= await _userManager.Users
+             //      .Include(x=>x.Experience)
+             //      .FirstOrDefaultAsync(x=>x.Id==request.Id,cancellationToken);
+             //  var experience = new Entities.Experience
+             //  {
+             //      CompanyName = request.CompanyName,
+             //      JobTitle = request.JobTitle,
+             //      StillWorkingThere = request.StillWorkingThere,
+             //      EndDate = request.EndDate,
+             //      StartDate = request.StartDate
+             //  };
+             //  user.Experience.Add(experience);
 
-            var result =await _userManager.UpdateAsync(user);
+                //  var result =await _userManager.UpdateAsync(user);
 
-            if (!result.Succeeded)
-            {
-                return Result.Failure(UserErrors.InternalServerError);
+                //  if (!result.Succeeded)
+                //  {
+                //      return Result.Failure(UserErrors.InternalServerError);
+                //  }
+                //      return Result.Success();
             }
-            return Result.Success();
+
+            if (request.experience?.Any() != true)
+                return Result.Success();
+
+            var experience = request.experience.Select(p => new Experience
+            {
+                CompanyName = p.CompanyName,
+                JobTitle = p.JobTitle,
+                StartDate = p.StartDate,
+                EndDate = p.EndDate,
+                StillWorkingThere = p.StillWorkingThere,
+                UserId = request.Id
+            }).ToList();
+
+            await _context.Experience.AddRangeAsync(experience, cancellationToken);
+            var result = await _context.SaveChangesAsync(cancellationToken);
+
+            return result>0 ? Result.Success() : Result.Failure(PorfileErrors.ExperienceNotFound);   
+
+        
         }
+
 
         public async Task<Result> AddProject(AddProjectRequest request, CancellationToken cancellationToken)
         {
-            var user = await _userManager.Users
-               .Include(x => x.Projects)
-               .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
-            var project = new Entities.Project
+            if (request.project?.Any() != true)
+                return Result.Success();
+            var projects = request.project.Select(p => new Project
             {
-                Link=request.link,
-                Name=request.name
-            };
-            user.Projects.Add(project);
+                Link = p.Link,
+                Name = p.Name,
+                UserId = request.Id
+            }).ToList();
+            await _context.Projects.AddRangeAsync(projects, cancellationToken);
+            var result = await _context.SaveChangesAsync(cancellationToken);
 
-            var result = await _userManager.UpdateAsync(user);
-
-            if (!result.Succeeded)
-            {
-                return Result.Failure(UserErrors.InternalServerError);
-            }
-            return Result.Success();
+            return result > 0 ? Result.Success() : Result.Failure(PorfileErrors.ProjectNotFound);
         }
-        
         public async Task<Result> DeleteBusinessAccountLink(DeleteRequest request, CancellationToken cancellationToken)
         {
             var account = await _context.businessAccounts
                 .FirstOrDefaultAsync(e => e.Id == request.Id && e.UserId == request.userId, cancellationToken);
 
-            if (account is null) { return Result.Failure(UserErrors.AccountNotFound); }
+            if (account is null) { return Result.Failure(PorfileErrors.AccountNotFound); }
 
             _context.businessAccounts.Remove(account);
             await _context.SaveChangesAsync(cancellationToken);
@@ -123,7 +183,7 @@ namespace GraduationProject.Service
             var education = await _context.Education
             .FirstOrDefaultAsync(e => e.Id == request.Id && e.UserId == request.userId, cancellationToken);
 
-            if(education is null) {return Result.Failure(UserErrors.EducationNotFound); }
+            if(education is null) {return Result.Failure(PorfileErrors.EducationNotFound); }
 
             _context.Education.Remove(education);
             await _context.SaveChangesAsync(cancellationToken);
@@ -136,7 +196,7 @@ namespace GraduationProject.Service
             var experience = await _context.Experience
             .FirstOrDefaultAsync(e => e.Id == request.Id && e.UserId == request.userId, cancellationToken);
 
-            if (experience is null) { return Result.Failure(UserErrors.ExperienceNotFound); }
+            if (experience is null) { return Result.Failure(PorfileErrors.ExperienceNotFound); }
 
             _context.Experience.Remove(experience);
             await _context.SaveChangesAsync(cancellationToken);
@@ -149,7 +209,7 @@ namespace GraduationProject.Service
                 var project = await _context.Projects
                     .FirstOrDefaultAsync(e => e.Id == request.Id && e.UserId == request.userId, cancellationToken);
 
-                if (project is null) { return Result.Failure(UserErrors.ProjectNotFound); }
+                if (project is null) { return Result.Failure(PorfileErrors.ProjectNotFound); }
 
                 _context.Projects.Remove(project);
                 await _context.SaveChangesAsync(cancellationToken);
@@ -160,42 +220,7 @@ namespace GraduationProject.Service
             
         }
 
-        public  async Task<Result<UserProfileResponse>> GetProfileAsync(string userId)
-        {
-
-            var cvName = await _userManager.Users
-               .Include(u => u.uploadedFiles)
-               .Where(u => u.Id == userId)
-               .Select(u => u.uploadedFiles)
-               .Select(f => f.StoredFileName)
-               .FirstOrDefaultAsync();
-            var path = Path.Combine(_FilePath, cvName);
-            var user = await _userManager.Users
-     .Where(x => x.Id == userId)
-     .Select(x => new UserProfileResponse
-     {
-         Email = x.Email,
-         UserName = x.UserName,
-         Skills = x.Skills.ToList(),
-         Projects = x.Projects.Select(p => new project { id = p.Id, name = p.Name, link = p.Link }).ToList(),
-         FirstLanguage = x.FirstLanguage,
-         FirstLanguageLevel = x.FirstLanguageLevel,
-         SecondLanguage = x.SecondLanguage,
-         SecondLanguageLevel = x.SecondLanguageLevel,
-         Bio = x.Bio,
-         ProfilePicUrl = "",
-         Experience = x.Experience.Select(e => new experience { id = e.Id, CompanyName = e.CompanyName, JobTitle = e.JobTitle, StillWorkingThere = e.StillWorkingThere }).ToList(),
-         Education = x.Education.Select(e => new education { id = e.Id, Degree = e.Degree, FieldOfStudy = e.FieldOfStudy, Institution = e.Institution, IsUnderGraduate = e.IsUnderGraduate }).ToList(),
-         Accounts = x.businessAccounts.Select(b => new businessAccount { id = b.Id, AccountLink = b.Link, AccountType = b.Type }).ToList(),
-         CVUrl =path
-     })
-     .SingleAsync();
-           
-
-            user.ProfilePicUrl = user.ProfilePicUrl = Path.Combine(_imagesPath, user.UserName);
-
-            return Result.Success(user);
-        }
+        
 
         public async Task<Result> UpdateBio(UpdateBioRequest request,CancellationToken cancellationToken )
         {
@@ -217,5 +242,131 @@ namespace GraduationProject.Service
             
         }
 
+        public async Task<Result> DeleteAccount(string userId, CancellationToken cancellationToken)
+        {
+            var user = await _userManager.Users
+                    .FirstOrDefaultAsync(x => x.Id == userId, cancellationToken);
+
+            if (user is null)
+            {
+                return Result.Failure(PorfileErrors.AccountNotFound);
+            }
+
+            var result = await _userManager.DeleteAsync(user);
+
+            if (!result.Succeeded)
+            {
+                return Result.Failure(PorfileErrors.AccountNotFound);
+            }
+
+            return Result.Success();
+        }
+
+        public async Task<Result> UpdateSkills(UpdateSkillsRequest request, CancellationToken cancellationToken)
+        {
+            var user = await _userManager.Users.FirstOrDefaultAsync(x=>x.Id==request.userId,cancellationToken);
+            user.Skills = request.Skills;
+
+            var result =await _userManager.UpdateAsync(user);
+
+            if (!result.Succeeded)
+            { 
+                return Result.Failure(PorfileErrors.InvalidSkillsUpdate);
+            }
+            return Result.Success();
+        }
+
+        public async Task<Result> UpdateExperience(UpdateExperienceRequest request, CancellationToken cancellationToken)
+        {
+
+            var experience = await _context.Experience.FindAsync(request.id) ;
+            if (experience is null)
+            {
+                return Result.Failure(PorfileErrors.ExperienceNotFound);
+            }
+            experience.CompanyName=request.CompanyName;
+            experience.StillWorkingThere = request.StillWorkingThere;
+            experience.JobTitle=request.JobTitle;
+            experience.StartDate=request.StartDate;
+            experience.EndDate=request.EndDate;
+                 
+            var result = await _context.SaveChangesAsync();
+            return Result.Success() ;
+        }
+
+        public async Task<Result> UpdateEducation(UpdateEducationRequest request, CancellationToken cancellationToken)
+        {
+           
+            var education = await _context.Education.Where(x => x.Id == request.id).FirstOrDefaultAsync();
+            if (education is null)
+            {
+                return Result.Failure(PorfileErrors.ExperienceNotFound);
+            }
+            education.Institution = request.Institution;
+            education.FieldOfStudy = request.FieldOfStudy;
+            education.Degree = request.Degree;
+            education.StartDate = request.StartDate;
+            education.EndDate = request.EndDate;
+            education.IsUnderGraduate= request.IsUnderGraduate;
+            _context.Update(education);
+            var result = await _context.SaveChangesAsync();
+            return Result.Success();
+
+        }
+
+        public async Task<Result> UpdateProject(UpdateProjectRequest request, CancellationToken cancellationToken)
+        {
+            var project = await _context.Projects.Where(x => x.Id == request.id).FirstOrDefaultAsync();
+            if (project is null)
+            {
+                return Result.Failure(PorfileErrors.ExperienceNotFound);
+            }
+            project.Link = request.link;
+            project.Name = request.name;
+            _context.Update(project);
+            var result = await _context.SaveChangesAsync();
+            return Result.Success();
+        }
+
+        public async Task<Result> UpdateBusinessAccount(UpdateBusinessAccountRequest request, CancellationToken cancellationToken)
+        {
+            var account = await _context.businessAccounts.Where(x => x.Id == request.id).FirstOrDefaultAsync();
+            if (account is null)
+            {
+                return Result.Failure(PorfileErrors.ExperienceNotFound);
+            }
+            account.Type = request.AccountType;
+            account.Link = request.AccountLink;
+            _context.Update(account);
+            var result = await _context.SaveChangesAsync();
+            return Result.Success();
+        }
+
+        public async Task<Result> UpdateFirstLanguage(UpdateLanguageRequest request, CancellationToken cancellationToken)
+        {
+            var user =await _userManager.Users.
+                FirstOrDefaultAsync();
+            user.FirstLanguage = request.Language;
+            user.FirstLanguageLevel = request.Level;
+           var result=await _userManager.UpdateAsync(user);
+            if (!result.Succeeded)
+                return Result.Failure(PorfileErrors.InvalidLangiageUpdate);
+            return Result.Success();
+
+
+        }
+
+        public async Task<Result> UpdateSecondLanguage(UpdateLanguageRequest request, CancellationToken cancellationToken)
+        {
+            var user = await _userManager.Users.
+               FirstOrDefaultAsync();
+            user.SecondLanguage = request.Language;
+            user.SecondLanguageLevel = request.Level;
+
+           var result=await _userManager.UpdateAsync(user);
+            if (!result.Succeeded)
+                return Result.Failure(PorfileErrors.InvalidLangiageUpdate);
+            return Result.Success();
+        }
     }
 }

@@ -82,6 +82,55 @@ namespace GraduationProject.Controllers
             return result.IsSuccess ? Ok() : result.ToProblem();
 
         }
+        [HttpDelete("Delete_account")]
+        public async Task<IActionResult> DeleteAccount( CancellationToken cancellationToken)
+        {
+            var result = await _userService.DeleteAccount(User.GetUserId(), cancellationToken);
+            return result.IsSuccess ? Ok() : result.ToProblem();
 
+        }
+        [HttpPut("Update-Skills")]
+        public async Task<IActionResult> UpdateSkills(UpdateSkillsRequest request, CancellationToken cancellationToken)
+        { 
+            var result=await _userService.UpdateSkills(request,cancellationToken);
+            return result.IsSuccess? Ok() : result.ToProblem();
+
+        }
+        [HttpPut("Update-experience")]
+        public async Task<IActionResult> UpdateExperience(UpdateExperienceRequest request, CancellationToken cancellationToken)
+        { 
+            var result = await _userService.UpdateExperience(request,cancellationToken);
+            return result.IsSuccess?Ok():result.ToProblem();
+        } 
+        [HttpPut("Update-education")]
+        public async Task<IActionResult> UpdateEducation(UpdateEducationRequest request, CancellationToken cancellationToken)
+        { 
+            var result = await _userService.UpdateEducation(request,cancellationToken);
+            return result.IsSuccess?Ok():result.ToProblem();
+        } 
+        
+        [HttpPut("Update-project")]
+        public async Task<IActionResult> UpdateProject(UpdateProjectRequest request, CancellationToken cancellationToken)
+        { 
+            var result = await _userService.UpdateProject(request,cancellationToken);
+            return result.IsSuccess?Ok():result.ToProblem();
+        } 
+        [HttpPut("Update-business-account")]
+        public async Task<IActionResult> UpdateBusinessAccount(UpdateBusinessAccountRequest request, CancellationToken cancellationToken)
+        { 
+            var result = await _userService.UpdateBusinessAccount(request,cancellationToken);
+            return result.IsSuccess?Ok():result.ToProblem();
+        } 
+        [HttpPut("Update-first-language")]
+        public async Task<IActionResult> UpdateFirstLanguage(UpdateLanguageRequest request, CancellationToken cancellationToken)
+        { 
+            var result = await _userService.UpdateFirstLanguage(request,cancellationToken);
+            return result.IsSuccess?Ok():result.ToProblem();
+        } [HttpPut("Update-second-language")]
+        public async Task<IActionResult> UpdateSecondLanguage(UpdateLanguageRequest request, CancellationToken cancellationToken)
+        { 
+            var result = await _userService.UpdateSecondLanguage(request,cancellationToken);
+            return result.IsSuccess?Ok():result.ToProblem();
+        }
     }
 }

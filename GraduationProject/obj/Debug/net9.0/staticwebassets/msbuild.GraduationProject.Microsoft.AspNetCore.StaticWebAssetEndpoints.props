@@ -1,17 +1,5 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/GraduationProject/.well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\.well-known\pki-validation\BA693C7F1A0AF3FE39E5F380D497B3A0.txt'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-wC8IHcaTklD0aALV0cEsV\u002B9cl8HgT23rVInI\u002BwdTfAo="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"95"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022wC8IHcaTklD0aALV0cEsV\u002B9cl8HgT23rVInI\u002BwdTfAo=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 20:34:17 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/GraduationProject/.well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.wg2fanpugp.txt">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\.well-known\pki-validation\BA693C7F1A0AF3FE39E5F380D497B3A0.txt'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wg2fanpugp"},{"Name":"integrity","Value":"sha256-wC8IHcaTklD0aALV0cEsV\u002B9cl8HgT23rVInI\u002BwdTfAo="},{"Name":"label","Value":"_content/GraduationProject/.well-known/pki-validation/BA693C7F1A0AF3FE39E5F380D497B3A0.txt"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"95"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022wC8IHcaTklD0aALV0cEsV\u002B9cl8HgT23rVInI\u002BwdTfAo=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 20:34:17 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/GraduationProject/CV/kqmirdcf.r1w">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CV\kqmirdcf.r1w'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -36,6 +24,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"124113"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 20:34:17 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GraduationProject/CV/x5e30aof.gftdurgj81.q20">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CV\x5e30aof.q20'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"gftdurgj81"},{"Name":"integrity","Value":"sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="},{"Name":"label","Value":"_content/GraduationProject/CV/x5e30aof.q20"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"124113"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:25:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GraduationProject/CV/x5e30aof.q20">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CV\x5e30aof.q20'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"124113"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022PMBVHUJVPkBFl5avWqOSywzWWHT8fUuvea4mY3oVJl4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:25:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/GraduationProject/Images/anas04">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\anas04'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -59,6 +59,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"y6kzhiaqx1"},{"Name":"integrity","Value":"sha256-\u002BqkKuOUAhqYIiCRP3DAc15jWmq2b0/6\u002BhSboNH86S3g="},{"Name":"label","Value":"_content/GraduationProject/Images/mhmd001"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"8751"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022\u002BqkKuOUAhqYIiCRP3DAc15jWmq2b0/6\u002BhSboNH86S3g=\u0022"},{"Name":"Last-Modified","Value":"Wed, 23 Apr 2025 20:34:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GraduationProject/Images/mhmd003">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\mhmd003'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-\u002BqkKuOUAhqYIiCRP3DAc15jWmq2b0/6\u002BhSboNH86S3g="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"8751"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022\u002BqkKuOUAhqYIiCRP3DAc15jWmq2b0/6\u002BhSboNH86S3g=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:24:52 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GraduationProject/Images/mhmd003.y6kzhiaqx1">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\mhmd003'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"y6kzhiaqx1"},{"Name":"integrity","Value":"sha256-\u002BqkKuOUAhqYIiCRP3DAc15jWmq2b0/6\u002BhSboNH86S3g="},{"Name":"label","Value":"_content/GraduationProject/Images/mhmd003"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"8751"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022\u002BqkKuOUAhqYIiCRP3DAc15jWmq2b0/6\u002BhSboNH86S3g=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:24:52 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

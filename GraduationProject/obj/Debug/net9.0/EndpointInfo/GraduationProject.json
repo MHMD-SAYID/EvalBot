@@ -296,6 +296,18 @@
         }
       }
     },
+    "/Delete_account": {
+      "delete": {
+        "tags": [
+          "Account"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/LogIn": {
       "post": {
         "tags": [
@@ -389,7 +401,38 @@
         }
       }
     },
-    "/register": {
+    "/register-wep": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/register-flutter": {
       "post": {
         "tags": [
           "Auth"
@@ -451,7 +494,7 @@
         }
       }
     },
-    "/resend-confirmation-email": {
+    "/resend-confirmation-email-wep": {
       "post": {
         "tags": [
           "Auth"
@@ -482,7 +525,69 @@
         }
       }
     },
-    "/forget-password": {
+    "/resend-confirmation-email-flutter": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReSendConfirmationEmail"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReSendConfirmationEmail"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReSendConfirmationEmail"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/forget-password-flutter": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ForgotPasswordRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ForgotPasswordRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ForgotPasswordRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/forget-password-wep": {
       "post": {
         "tags": [
           "Auth"
@@ -802,20 +907,6 @@
         },
         "additionalProperties": false
       },
-      "BusinessAccount": {
-        "type": "object",
-        "properties": {
-          "accountType": {
-            "type": "string",
-            "nullable": true
-          },
-          "accountLink": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "ConfirmEmailRequest": {
         "type": "object",
         "properties": {
@@ -840,60 +931,6 @@
           "id": {
             "type": "integer",
             "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Education": {
-        "type": "object",
-        "properties": {
-          "institution": {
-            "type": "string",
-            "nullable": true
-          },
-          "degree": {
-            "type": "string",
-            "nullable": true
-          },
-          "fieldOfStudy": {
-            "type": "string",
-            "nullable": true
-          },
-          "isUnderGraduate": {
-            "type": "boolean"
-          },
-          "startDate": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "endDate": {
-            "type": "integer",
-            "format": "int64"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Experience": {
-        "type": "object",
-        "properties": {
-          "jobTitle": {
-            "type": "string",
-            "nullable": true
-          },
-          "companyName": {
-            "type": "string",
-            "nullable": true
-          },
-          "stillWorkingThere": {
-            "type": "boolean"
-          },
-          "startDate": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "endDate": {
-            "type": "integer",
-            "format": "int64"
           }
         },
         "additionalProperties": false
@@ -923,20 +960,6 @@
             "nullable": true
           },
           "emailType": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Project": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "link": {
             "type": "string",
             "nullable": true
           }
@@ -1035,34 +1058,6 @@
           },
           "secondLanguageLevel": {
             "type": "string",
-            "nullable": true
-          },
-          "projects": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Project"
-            },
-            "nullable": true
-          },
-          "experiences": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Experience"
-            },
-            "nullable": true
-          },
-          "educations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Education"
-            },
-            "nullable": true
-          },
-          "accounts": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/BusinessAccount"
-            },
             "nullable": true
           }
         },

@@ -6,6 +6,10 @@ namespace GraduationProject.Entities
 {
     public partial class User:IdentityUser
     {
+        public User()
+        {
+            
+        }
         public string? IDCard { get; set; }
         public Gender gender { get; set; }
         public DateOnly DateOfBirth { get; set; }

@@ -6,13 +6,19 @@
         //Task<OneOf<AuthResponse, Error>> GetTokenAsync(string email, string password, CancellationToken cancellationToken = default);
         Task<Result<AuthResponse>> GetRefreshTokenAsync(string token, string refreshToken, CancellationToken cancellationToken = default);
         Task<Result> RevokeRefreshTokenAsync(string token, string refreshToken, CancellationToken cancellationToken = default);
-        Task<Result> RegisterAsync(Contracts.Authentication.RegisterRequest request, CancellationToken cancellationToken = default);
+        Task<Result> RegisterWepAsync(RegisterRequest request,/*experienceList experience,businessAccountList accounts,projectList projects,educationList education,*/ CancellationToken cancellationToken = default);
+        Task<Result> RegisterFlutterAsync(RegisterRequest request/*, experienceList experience, businessAccountList accounts, projectList projects, educationList education*/, CancellationToken cancellationToken = default);
         //Task<Result> CreateUserRoleAsync();
         Task<Result> ConfirmEmailAsync(ConfirmEmailRequest request);
-        Task<Result> ResendConfirmationEmailAsync(ReSendConfirmationEmail request);
+        Task<Result> ResendConfirmationEmailFlutterAsync(ReSendConfirmationEmail request);
+        Task<Result> ResendConfirmationEmailWepAsync(ReSendConfirmationEmail request);
 
-        Task<Result> SendResetPasswordCodeAsync(string email);
+        Task<Result> SendResetPasswordCodeFlutterAsync(string email);
+        Task<Result> SendResetPasswordCodeWepAsync(string email);
 
         Task<Result> ResetPasswordAsync(ResetPasswordRequest request);
+
+      
+       
     }
 }

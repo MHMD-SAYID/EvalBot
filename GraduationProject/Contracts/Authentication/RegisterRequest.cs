@@ -18,39 +18,43 @@ public record RegisterRequest(
     string FirstLanguage,
     string FirstLanguageLevel,
     string SecondLanguage,
-    string SecondLanguageLevel,
-    List<Project> Projects,
-    List<Experience> Experiences,
-    List<Education> Educations,
-    List<BusinessAccount> Accounts
+    string SecondLanguageLevel
+    //projectRegister Projects,
+    //experienceRegister Experiences,
+    //educationList Educations,
+    //businessAccountList Accounts
 
 );
-public record BusinessAccount
+public record businessAccountList(List<businessAccountRegister> accounts);
+public record educationList(List<educationRegister> education);
+public record projectList(List<projectRegister> projects);
+public record experienceList(List<experienceRegister> experience);
+public record businessAccountRegister
 (
 
     string AccountType,
     string AccountLink
 );
-public record Education
+public record educationRegister
 (
     string Institution,
     string Degree,
     string FieldOfStudy,
     bool IsUnderGraduate,
-    long   StartDate,
-    long   EndDate
+    long StartDate,
+    long EndDate
 
 );
-public record Experience
+public record experienceRegister
 (
     string JobTitle,
     string CompanyName,
     bool StillWorkingThere,
     long StartDate,
-    long EndDate
+    long? EndDate
 );
-public record Project
+public record projectRegister
 (
-    string name,
-    string link
+    string Name,
+    string Link
 );

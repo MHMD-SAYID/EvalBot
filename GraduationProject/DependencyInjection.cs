@@ -32,8 +32,8 @@ namespace GraduationProject
             );
 
         services.AddAuthConfig(configuration);
-         
 
+           
             var connectionString = configuration.GetConnectionString("constr") ??
                 throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 

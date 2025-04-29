@@ -22,10 +22,10 @@
         public string Email { get; set; }
         public string UserName { get; set; }
         public List<string> Skills { get; set; }
-        public List<project> Projects { get; set; }
-        public List<experience> Experience { get; set; }
-        public List<education> Education { get; set; }
-        public List<businessAccount> Accounts { get; set; }
+        public List<projectProfile> Projects { get; set; }
+        public List<experienceProfile> Experience { get; set; }
+        public List<educationProfile> Education { get; set; }
+        public List<businessAccountProfile> Accounts { get; set; }
         public string FirstLanguage { get; set; }
         public string FirstLanguageLevel { get; set; }
         public string SecondLanguage { get; set; }
@@ -34,13 +34,13 @@
         public string ProfilePicUrl { get; set; }
         public string CVUrl { get; set; }
     }
-    public class project
+    public class projectProfile
     {
         public int id { get; set; }
         public string name { get; set; }
         public string link { get; set; }
     }
-    public class businessAccount
+    public class businessAccountProfile
     {
 
         public int id { get; set; }
@@ -51,7 +51,7 @@
        
     }
 
-    public class education
+    public class educationProfile
     {
 
         public int id { get; set; }
@@ -60,13 +60,13 @@
         public string Degree { get; set; }
         public string FieldOfStudy { get; set; }
         public bool IsUnderGraduate { get; set; }
-        //public long StartDate { get; set; }
-        //public long EndDate { get; set; }
+        public long StartDate { get; set; }
+        public long EndDate { get; set; }
 
        
     }
 
-    public class experience
+    public class experienceProfile
     {
 
         public int id { get; set; }
@@ -74,8 +74,8 @@
         public string JobTitle { get; set; }
         public string CompanyName { get; set; }
         public bool StillWorkingThere { get; set; }
-        //public long StartDate { get; set; }
-        //public long EndDate { get; set; }
+        public long StartDate { get; set; }
+        public long EndDate { get; set; }
 
      
     }

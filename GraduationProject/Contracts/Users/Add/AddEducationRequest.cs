@@ -3,11 +3,6 @@
     public record AddEducationRequest
     (
         string Id,
-        string Institution,
-        string Degree,
-        string FieldOfStudy,
-        bool IsUnderGraduate,
-        long StartDate,
-        long EndDate
+        List<educationRegister>education
     );
 }

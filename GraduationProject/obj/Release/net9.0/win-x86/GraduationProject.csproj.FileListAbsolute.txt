@@ -209,3 +209,12 @@ C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Release\net9
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Release\net9.0\win-x86\GraduationProject.pdb
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Release\net9.0\win-x86\GraduationProject.genruntimeconfig.cache
 C:\Users\malko\source\repos\GraduationProject\GraduationProject\obj\Release\net9.0\win-x86\ref\GraduationProject.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\win-x86\Serilog.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\win-x86\Serilog.AspNetCore.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\win-x86\Serilog.Extensions.Hosting.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\win-x86\Serilog.Extensions.Logging.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\win-x86\Serilog.Formatting.Compact.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\win-x86\Serilog.Settings.Configuration.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\win-x86\Serilog.Sinks.Console.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\win-x86\Serilog.Sinks.Debug.dll
+C:\Users\malko\source\repos\GraduationProject\GraduationProject\bin\Release\net9.0\win-x86\Serilog.Sinks.File.dll
