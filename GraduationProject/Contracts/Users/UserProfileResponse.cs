@@ -26,10 +26,8 @@
         public List<experienceProfile> Experience { get; set; }
         public List<educationProfile> Education { get; set; }
         public List<businessAccountProfile> Accounts { get; set; }
-        public string FirstLanguage { get; set; }
-        public string FirstLanguageLevel { get; set; }
-        public string SecondLanguage { get; set; }
-        public string SecondLanguageLevel { get; set; }
+        public List<languageProfile> Languages { get; set; }
+
         public string Bio { get; set; }
         public string ProfilePicUrl { get; set; }
         public string CVUrl { get; set; }
@@ -60,8 +58,8 @@
         public string Degree { get; set; }
         public string FieldOfStudy { get; set; }
         public bool IsUnderGraduate { get; set; }
-        public long StartDate { get; set; }
-        public long EndDate { get; set; }
+        //public long StartDate { get; set; }
+        //public long EndDate { get; set; }
 
        
     }
@@ -74,10 +72,19 @@
         public string JobTitle { get; set; }
         public string CompanyName { get; set; }
         public bool StillWorkingThere { get; set; }
-        public long StartDate { get; set; }
-        public long EndDate { get; set; }
+        //public long StartDate { get; set; }
+        //public long EndDate { get; set; }
 
      
+    }public class languageProfile
+    {
+
+        public int id { get; set; }
+
+        public string name { get; set; }
+        public string lavel { get; set; }
+
+
     }
 
 }

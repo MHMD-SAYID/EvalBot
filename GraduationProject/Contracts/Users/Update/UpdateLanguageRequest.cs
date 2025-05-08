@@ -2,8 +2,7 @@
 {
     public record UpdateLanguageRequest
     (
-
-        string userId,
+        int id,
         string Language,
         string Level
         

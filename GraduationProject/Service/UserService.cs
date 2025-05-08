@@ -3,6 +3,7 @@ using GraduationProject.Contracts.Users;
 using GraduationProject.Contracts.Users.Add;
 using GraduationProject.Contracts.Users.Delete;
 using GraduationProject.Contracts.Users.Update;
+using System.IO;
 
 
 
@@ -20,13 +21,21 @@ namespace GraduationProject.Service
         public async Task<Result<UserProfileResponse>> GetProfileAsync(string userId)
         {
 
-            var cvName = await _userManager.Users
-               .Include(u => u.uploadedFiles)
-               .Where(u => u.Id == userId)
-               .Select(u => u.uploadedFiles)
-               .Select(f => f.StoredFileName)
-               .FirstOrDefaultAsync();
-            var path = !string.IsNullOrEmpty(cvName) ? Path.Combine(_FilePath, cvName) : null;
+            //var cvName = await _userManager.Users
+            //   .Include(u => u.uploadedFiles)
+            //   .Where(u => u.Id == userId)
+            //   .Select(u => u.uploadedFiles)
+            //   .Select(f => f.StoredFileName)
+            //   .FirstOrDefaultAsync();
+            //var path = !string.IsNullOrEmpty(cvName) ? Path.Combine(_FilePath, cvName) : null;
+            var cvpath = await _context.UserCV
+                .Where(x => x.userId == userId)
+                .Select(x => x.HostedPath)
+                .FirstOrDefaultAsync();
+            var Imagepath = await _context.UserImage
+                .Where(x => x.userId == userId)
+                .Select(x => x.HostedPath)
+                .FirstOrDefaultAsync();
             var user = await _userManager.Users
      .Where(x => x.Id == userId)
      .Select(x => new UserProfileResponse
@@ -46,21 +55,21 @@ namespace GraduationProject.Service
          Accounts = x.businessAccounts != null && x.businessAccounts.Any()
             ? x.businessAccounts.Select(b => new businessAccountProfile { id = b.Id, AccountLink = b.Link, AccountType = b.Type }).ToList()
             : null,
-         FirstLanguage = x.FirstLanguage,
-         FirstLanguageLevel = x.FirstLanguageLevel,
-         SecondLanguage = x.SecondLanguage,
-         SecondLanguageLevel = x.SecondLanguageLevel,
+         Languages = x.languages != null && x.languages.Any()
+            ? x.languages.Select(b => new languageProfile { id = b.Id, name = b.Name, lavel = b.Level }).ToList()
+            : null,
+        
          Bio = x.Bio,
-         ProfilePicUrl = "",
-         CVUrl = path
+         ProfilePicUrl = Imagepath,
+         CVUrl = cvpath
      })
      .SingleAsync();
 
             //var imageUrl = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}/Images/{user.UserName}";
             //user.ProfilePicUrl = File.Exists(imageUrl) ? imageUrl : null;
 
-            var imagePath = Path.Combine(_imagesPath, user.UserName);
-            user.ProfilePicUrl = File.Exists(imagePath) ? imagePath : null;
+            //var imagePath =user.ProfilePicUrl;
+            //user.ProfilePicUrl = File.Exists(imagePath) ? imagePath : null;
 
             return Result.Success(user);
         }
@@ -251,7 +260,24 @@ namespace GraduationProject.Service
             {
                 return Result.Failure(PorfileErrors.AccountNotFound);
             }
+            var cvpath = await _context.UserCV
+                .Where(x => x.userId == userId)
+                .Select(x => x.RealPath)
+                .FirstOrDefaultAsync();
+            var Imagepath = await _context.UserImage
+                .Where(x => x.userId == userId)
+                .Select(x => x.RealPath)
+                .FirstOrDefaultAsync();
+            if (System.IO.File.Exists(cvpath))
+            {
 
+                System.IO.File.Delete(cvpath);
+            }
+            if (System.IO.File.Exists(Imagepath))
+            {
+
+                System.IO.File.Delete(Imagepath);
+            }
             var result = await _userManager.DeleteAsync(user);
 
             if (!result.Succeeded)
@@ -342,30 +368,50 @@ namespace GraduationProject.Service
             return Result.Success();
         }
 
-        public async Task<Result> UpdateFirstLanguage(UpdateLanguageRequest request, CancellationToken cancellationToken)
+        public async Task<Result> UpdateLanguage(UpdateLanguageRequest request, CancellationToken cancellationToken)
         {
-            var user =await _userManager.Users.
-                FirstOrDefaultAsync();
-            user.FirstLanguage = request.Language;
-            user.FirstLanguageLevel = request.Level;
-           var result=await _userManager.UpdateAsync(user);
-            if (!result.Succeeded)
-                return Result.Failure(PorfileErrors.InvalidLangiageUpdate);
+            var language = await _context.Language.Where(x => x.Id == request.id).FirstOrDefaultAsync();
+            if (language is null)
+            {
+                return Result.Failure(PorfileErrors.ExperienceNotFound);
+            }
+            language.Name = request.Language;
+            language.Level = request.Level;
+            _context.Update(language);
+            var result = await _context.SaveChangesAsync();
             return Result.Success();
-
 
         }
 
-        public async Task<Result> UpdateSecondLanguage(UpdateLanguageRequest request, CancellationToken cancellationToken)
-        {
-            var user = await _userManager.Users.
-               FirstOrDefaultAsync();
-            user.SecondLanguage = request.Language;
-            user.SecondLanguageLevel = request.Level;
 
-           var result=await _userManager.UpdateAsync(user);
-            if (!result.Succeeded)
-                return Result.Failure(PorfileErrors.InvalidLangiageUpdate);
+        public async Task<Result> AddLanguages(AddLanguagesRequest request, CancellationToken cancellationToken)
+        {
+            var user = await _userManager.Users
+                .FirstOrDefaultAsync(x => x.Id == request.userId);
+
+            if (request.languages?.Any() != true)
+                return Result.Success();
+            var languages = request.languages.Select(p => new Language
+            {
+                Name = p.name,
+                Level = p.level,
+                userId= request.userId
+            }).ToList();
+            await _context.Language.AddRangeAsync(languages, cancellationToken);
+            var result = await _context.SaveChangesAsync(cancellationToken);
+
+            return result > 0 ? Result.Success() : Result.Failure(PorfileErrors.InvalidLangiageAdd);
+        }
+
+        public async Task<Result> DeleteLanguages(DeleteRequest request, CancellationToken cancellationToken)
+        {
+            var language = await _context.Language
+           .FirstOrDefaultAsync(e => e.Id == request.Id && e.userId == request.userId, cancellationToken);
+
+            if (language is null) { return Result.Failure(PorfileErrors.LanguageNotFound); }
+
+            _context.Language.Remove(language);
+            await _context.SaveChangesAsync(cancellationToken);
             return Result.Success();
         }
     }

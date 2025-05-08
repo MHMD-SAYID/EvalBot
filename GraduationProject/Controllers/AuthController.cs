@@ -52,15 +52,15 @@ namespace GraduationProject.Controllers
         {
             var result = await _authService.RegisterWepAsync(request ,cancellationToken);
 
-            return result.IsSuccess ? Ok() : result.ToProblem();
+            return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
         }
-        //[HttpPost("register-flutter")]
-        //public async Task<IActionResult> RegisterFlutter([FromBody] RegisterRequest request, CancellationToken cancellationToken)
-        //{
-        //    var result = await _authService.RegisterFlutterAsync(request ,cancellationToken);
+        [HttpPost("register-flutter")]
+        public async Task<IActionResult> RegisterFlutter([FromBody] RegisterRequest request, CancellationToken cancellationToken)
+        {
+            var result = await _authService.RegisterFlutterAsync(request, cancellationToken);
 
-        //    return result.IsSuccess ? Ok() : result.ToProblem();
-        //}
+            return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
+        }
 
         [HttpPost("confirm-email")]
         public async Task<IActionResult> ConfirmEmail([FromBody] ConfirmEmailRequest request, CancellationToken cancellationToken)

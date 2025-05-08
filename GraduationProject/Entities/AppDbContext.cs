@@ -18,6 +18,9 @@ namespace GraduationProject.Entities
         public DbSet<Job> Jobs { get; set; }
         public DbSet<UploadedFiles> Files { get; set; }
         public DbSet<BusinessAccount> businessAccounts { get; set; }
+        public DbSet<UserCV> UserCV { get; set; }
+        public DbSet<UserImage> UserImage { get; set; }
+        public DbSet<Language> Language { get; set; }
 
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)

@@ -1,8 +1,1 @@
-wwwroot\CV\CV.pdf..pdf
-wwwroot\CV\kqmirdcf.r1w
-wwwroot\CV\o5ir0b5w.uea
-wwwroot\CV\x5e30aof.q20
-wwwroot\Images\anas04
-wwwroot\Images\mhmd001
-wwwroot\Images\mhmd003
-wwwroot\Images\mohamed
+wwwroot\Images\mohamed.png

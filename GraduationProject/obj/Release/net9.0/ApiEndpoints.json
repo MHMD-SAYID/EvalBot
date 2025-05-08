@@ -64,6 +64,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "AddLanguage",
+    "RelativePath": "Add-language",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Users.Add.AddLanguagesRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GraduationProject.Controllers.AuthController",
     "Method": "ConfirmEmail",
     "RelativePath": "confirm-email",
@@ -141,6 +157,22 @@
     "ContainingType": "GraduationProject.Controllers.AccountController",
     "Method": "DeleteProject",
     "RelativePath": "Delete_Project",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Users.Delete.DeleteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "DeleteLanguage",
+    "RelativePath": "Delete-language",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -319,6 +351,22 @@
   },
   {
     "ContainingType": "GraduationProject.Controllers.AuthController",
+    "Method": "RegisterFlutter",
+    "RelativePath": "register-flutter",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Authentication.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AuthController",
     "Method": "RegisterWep",
     "RelativePath": "register-wep",
     "HttpMethod": "POST",
@@ -463,8 +511,8 @@
   },
   {
     "ContainingType": "GraduationProject.Controllers.AccountController",
-    "Method": "UpdateFirstLanguage",
-    "RelativePath": "Update-first-language",
+    "Method": "UpdateLanguage",
+    "RelativePath": "Update-language",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -488,22 +536,6 @@
       {
         "Name": "request",
         "Type": "GraduationProject.Contracts.Users.Update.UpdateProjectRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "GraduationProject.Controllers.AccountController",
-    "Method": "UpdateSecondLanguage",
-    "RelativePath": "Update-second-language",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "GraduationProject.Contracts.Users.Update.UpdateLanguageRequest",
         "IsRequired": true
       }
     ],

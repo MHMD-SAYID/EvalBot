@@ -224,6 +224,33 @@ namespace GraduationProject.Migrations
                     b.ToTable("Jobs");
                 });
 
+            modelBuilder.Entity("GraduationProject.Entities.Language", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Level")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("userId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("userId");
+
+                    b.ToTable("Language");
+                });
+
             modelBuilder.Entity("GraduationProject.Entities.OtpEntry", b =>
                 {
                     b.Property<int>("Id")
@@ -354,12 +381,9 @@ namespace GraduationProject.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId")
-                        .IsUnique();
 
                     b.ToTable("Files");
                 });
@@ -403,14 +427,6 @@ namespace GraduationProject.Migrations
                     b.Property<double>("ExpectedSalary")
                         .HasColumnType("float");
 
-                    b.Property<string>("FirstLanguage")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FirstLanguageLevel")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("IDCard")
                         .HasColumnType("nvarchar(max)");
 
@@ -441,14 +457,6 @@ namespace GraduationProject.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("SecondLanguage")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SecondLanguageLevel")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -462,6 +470,9 @@ namespace GraduationProject.Migrations
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<int>("YearsOfExperience")
+                        .HasColumnType("int");
 
                     b.Property<int>("gender")
                         .HasColumnType("int");
@@ -480,6 +491,70 @@ namespace GraduationProject.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("GraduationProject.Entities.UserCV", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Extension")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HostedPath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RealPath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("userId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("userId")
+                        .IsUnique();
+
+                    b.ToTable("UserCV");
+                });
+
+            modelBuilder.Entity("GraduationProject.Entities.UserImage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Extension")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HostedPath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RealPath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("userId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("userId")
+                        .IsUnique();
+
+                    b.ToTable("UserImage");
                 });
 
             modelBuilder.Entity("JobUser", b =>
@@ -689,6 +764,17 @@ namespace GraduationProject.Migrations
                         .HasForeignKey("CompanyId");
                 });
 
+            modelBuilder.Entity("GraduationProject.Entities.Language", b =>
+                {
+                    b.HasOne("GraduationProject.Entities.User", "user")
+                        .WithMany("languages")
+                        .HasForeignKey("userId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("user");
+                });
+
             modelBuilder.Entity("GraduationProject.Entities.Project", b =>
                 {
                     b.HasOne("GraduationProject.Entities.User", "User")
@@ -717,15 +803,6 @@ namespace GraduationProject.Migrations
                     b.Navigation("Interview");
 
                     b.Navigation("track");
-                });
-
-            modelBuilder.Entity("GraduationProject.Entities.UploadedFiles", b =>
-                {
-                    b.HasOne("GraduationProject.Entities.User", null)
-                        .WithOne("uploadedFiles")
-                        .HasForeignKey("GraduationProject.Entities.UploadedFiles", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("GraduationProject.Entities.User", b =>
@@ -763,6 +840,28 @@ namespace GraduationProject.Migrations
                         });
 
                     b.Navigation("RefreshTokens");
+                });
+
+            modelBuilder.Entity("GraduationProject.Entities.UserCV", b =>
+                {
+                    b.HasOne("GraduationProject.Entities.User", "user")
+                        .WithOne("CV")
+                        .HasForeignKey("GraduationProject.Entities.UserCV", "userId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("user");
+                });
+
+            modelBuilder.Entity("GraduationProject.Entities.UserImage", b =>
+                {
+                    b.HasOne("GraduationProject.Entities.User", "user")
+                        .WithOne("Image")
+                        .HasForeignKey("GraduationProject.Entities.UserImage", "userId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("user");
                 });
 
             modelBuilder.Entity("JobUser", b =>
@@ -851,9 +950,15 @@ namespace GraduationProject.Migrations
 
             modelBuilder.Entity("GraduationProject.Entities.User", b =>
                 {
+                    b.Navigation("CV")
+                        .IsRequired();
+
                     b.Navigation("Education");
 
                     b.Navigation("Experience");
+
+                    b.Navigation("Image")
+                        .IsRequired();
 
                     b.Navigation("Projects");
 
@@ -861,8 +966,7 @@ namespace GraduationProject.Migrations
 
                     b.Navigation("interviews");
 
-                    b.Navigation("uploadedFiles")
-                        .IsRequired();
+                    b.Navigation("languages");
                 });
 #pragma warning restore 612, 618
         }

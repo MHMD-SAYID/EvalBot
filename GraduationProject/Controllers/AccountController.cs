@@ -9,34 +9,34 @@ namespace GraduationProject.Controllers
     [ApiController]
     public class AccountController(IUserService userService) : ControllerBase
     {
-        private readonly IUserService _userService=userService;
+        private readonly IUserService _userService = userService;
         [HttpGet("Profile")]
         public async Task<IActionResult> Info()
         {
             var result = await _userService.GetProfileAsync(User.GetUserId());
-            
+
             return Ok(result.Value);
         }
 
         [HttpPost("Update_Bio")]
-        public async Task<IActionResult> UpdateBio(UpdateBioRequest request,CancellationToken cancellationToken)
+        public async Task<IActionResult> UpdateBio(UpdateBioRequest request, CancellationToken cancellationToken)
         {
-            var result = await _userService.UpdateBio(request,cancellationToken);
+            var result = await _userService.UpdateBio(request, cancellationToken);
             return Ok();
-        
+
         }
         [HttpPost("Add_Experience")]
         public async Task<IActionResult> AddExperience(AddExperienceRequest request, CancellationToken cancellationToken)
-        { 
-            
-            var result = await _userService.AddExperience(request,cancellationToken);
+        {
+
+            var result = await _userService.AddExperience(request, cancellationToken);
             return Ok();
         }
-        
+
         [HttpPost("Add_Education")]
         public async Task<IActionResult> AddEducation(AddEducationRequest request, CancellationToken cancellationToken)
-        { 
-            
+        {
+
             var result = await _userService.AddEducation(request, cancellationToken);
             return Ok();
         }
@@ -58,32 +58,32 @@ namespace GraduationProject.Controllers
         }
         [HttpDelete("Delete_Education")]
         public async Task<IActionResult> DeleteEducation(DeleteRequest request, CancellationToken cancellationToken)
-        { 
-            var result = await _userService.DeleteEducation(request,cancellationToken);
+        {
+            var result = await _userService.DeleteEducation(request, cancellationToken);
             return result.IsSuccess ? Ok() : result.ToProblem();
 
-        } 
+        }
         [HttpDelete("Delete_Experience")]
         public async Task<IActionResult> DeleteExperience(DeleteRequest request, CancellationToken cancellationToken)
-        { 
-            var result = await _userService.DeleteExperience(request,cancellationToken);
+        {
+            var result = await _userService.DeleteExperience(request, cancellationToken);
             return result.IsSuccess ? Ok() : result.ToProblem();
 
         } [HttpDelete("Delete_Project")]
         public async Task<IActionResult> DeleteProject(DeleteRequest request, CancellationToken cancellationToken)
-        { 
-            var result = await _userService.DeleteProject(request,cancellationToken);
+        {
+            var result = await _userService.DeleteProject(request, cancellationToken);
             return result.IsSuccess ? Ok() : result.ToProblem();
 
         } [HttpDelete("Delete_BusinessAccount")]
         public async Task<IActionResult> DeleteBuinessAcount(DeleteRequest request, CancellationToken cancellationToken)
-        { 
-            var result = await _userService.DeleteBusinessAccountLink(request,cancellationToken);
+        {
+            var result = await _userService.DeleteBusinessAccountLink(request, cancellationToken);
             return result.IsSuccess ? Ok() : result.ToProblem();
 
         }
         [HttpDelete("Delete_account")]
-        public async Task<IActionResult> DeleteAccount( CancellationToken cancellationToken)
+        public async Task<IActionResult> DeleteAccount(CancellationToken cancellationToken)
         {
             var result = await _userService.DeleteAccount(User.GetUserId(), cancellationToken);
             return result.IsSuccess ? Ok() : result.ToProblem();
@@ -91,46 +91,55 @@ namespace GraduationProject.Controllers
         }
         [HttpPut("Update-Skills")]
         public async Task<IActionResult> UpdateSkills(UpdateSkillsRequest request, CancellationToken cancellationToken)
-        { 
-            var result=await _userService.UpdateSkills(request,cancellationToken);
-            return result.IsSuccess? Ok() : result.ToProblem();
+        {
+            var result = await _userService.UpdateSkills(request, cancellationToken);
+            return result.IsSuccess ? Ok() : result.ToProblem();
 
         }
         [HttpPut("Update-experience")]
         public async Task<IActionResult> UpdateExperience(UpdateExperienceRequest request, CancellationToken cancellationToken)
-        { 
-            var result = await _userService.UpdateExperience(request,cancellationToken);
-            return result.IsSuccess?Ok():result.ToProblem();
-        } 
+        {
+            var result = await _userService.UpdateExperience(request, cancellationToken);
+            return result.IsSuccess ? Ok() : result.ToProblem();
+        }
         [HttpPut("Update-education")]
         public async Task<IActionResult> UpdateEducation(UpdateEducationRequest request, CancellationToken cancellationToken)
-        { 
-            var result = await _userService.UpdateEducation(request,cancellationToken);
-            return result.IsSuccess?Ok():result.ToProblem();
-        } 
-        
+        {
+            var result = await _userService.UpdateEducation(request, cancellationToken);
+            return result.IsSuccess ? Ok() : result.ToProblem();
+        }
+
         [HttpPut("Update-project")]
         public async Task<IActionResult> UpdateProject(UpdateProjectRequest request, CancellationToken cancellationToken)
-        { 
-            var result = await _userService.UpdateProject(request,cancellationToken);
-            return result.IsSuccess?Ok():result.ToProblem();
-        } 
+        {
+            var result = await _userService.UpdateProject(request, cancellationToken);
+            return result.IsSuccess ? Ok() : result.ToProblem();
+        }
         [HttpPut("Update-business-account")]
         public async Task<IActionResult> UpdateBusinessAccount(UpdateBusinessAccountRequest request, CancellationToken cancellationToken)
+        {
+            var result = await _userService.UpdateBusinessAccount(request, cancellationToken);
+            return result.IsSuccess ? Ok() : result.ToProblem();
+        }
+        [HttpPut("Update-language")]
+        public async Task<IActionResult> UpdateLanguage(UpdateLanguageRequest request, CancellationToken cancellationToken)
+        {
+            var result = await _userService.UpdateLanguage(request, cancellationToken);
+            return result.IsSuccess ? Ok() : result.ToProblem();
+        }
+        [HttpDelete("Delete-language")]
+        public async Task<IActionResult> DeleteLanguage(DeleteRequest request, CancellationToken cancellationToken)
         { 
-            var result = await _userService.UpdateBusinessAccount(request,cancellationToken);
-            return result.IsSuccess?Ok():result.ToProblem();
+            var result = await _userService.DeleteLanguages(request, cancellationToken);
+            return result.IsSuccess ? Ok() : result.ToProblem();
+
         } 
-        [HttpPut("Update-first-language")]
-        public async Task<IActionResult> UpdateFirstLanguage(UpdateLanguageRequest request, CancellationToken cancellationToken)
+        [HttpPost("Add-language")]
+        public async Task<IActionResult> AddLanguage(AddLanguagesRequest request, CancellationToken cancellationToken)
         { 
-            var result = await _userService.UpdateFirstLanguage(request,cancellationToken);
-            return result.IsSuccess?Ok():result.ToProblem();
-        } [HttpPut("Update-second-language")]
-        public async Task<IActionResult> UpdateSecondLanguage(UpdateLanguageRequest request, CancellationToken cancellationToken)
-        { 
-            var result = await _userService.UpdateSecondLanguage(request,cancellationToken);
-            return result.IsSuccess?Ok():result.ToProblem();
+            var result = await _userService.AddLanguages(request, cancellationToken);
+            return result.IsSuccess ? Ok() : result.ToProblem();
+
         }
     }
 }

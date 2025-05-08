@@ -14,11 +14,8 @@ public record RegisterRequest(
     string YearsOfExperience,
     double ExpectedSalary,
     string Nationality,
-    DateOnly DateOfBirth,
-    string FirstLanguage,
-    string FirstLanguageLevel,
-    string SecondLanguage,
-    string SecondLanguageLevel
+    DateOnly DateOfBirth
+    
     //projectRegister Projects,
     //experienceRegister Experiences,
     //educationList Educations,
@@ -29,11 +26,17 @@ public record businessAccountList(List<businessAccountRegister> accounts);
 public record educationList(List<educationRegister> education);
 public record projectList(List<projectRegister> projects);
 public record experienceList(List<experienceRegister> experience);
+public record languageList(List<LanguageRegister> language);
 public record businessAccountRegister
 (
 
     string AccountType,
     string AccountLink
+);public record LanguageRegister
+(
+
+    string name,
+    string level
 );
 public record educationRegister
 (

@@ -463,7 +463,7 @@
         }
       }
     },
-    "/Update-first-language": {
+    "/Update-language": {
       "put": {
         "tags": [
           "Account"
@@ -494,8 +494,8 @@
         }
       }
     },
-    "/Update-second-language": {
-      "put": {
+    "/Delete-language": {
+      "delete": {
         "tags": [
           "Account"
         ],
@@ -503,17 +503,48 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateLanguageRequest"
+                "$ref": "#/components/schemas/DeleteRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateLanguageRequest"
+                "$ref": "#/components/schemas/DeleteRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateLanguageRequest"
+                "$ref": "#/components/schemas/DeleteRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Add-language": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddLanguagesRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddLanguagesRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddLanguagesRequest"
               }
             }
           }
@@ -619,6 +650,37 @@
       }
     },
     "/register-wep": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/register-flutter": {
       "post": {
         "tags": [
           "Auth"
@@ -1046,6 +1108,23 @@
         },
         "additionalProperties": false
       },
+      "AddLanguagesRequest": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "languages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LanguageRegister"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "AddProjectRequest": {
         "type": "object",
         "properties": {
@@ -1098,6 +1177,20 @@
         "type": "object",
         "properties": {
           "email": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LanguageRegister": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "level": {
             "type": "string",
             "nullable": true
           }
@@ -1199,22 +1292,6 @@
           "dateOfBirth": {
             "type": "string",
             "format": "date"
-          },
-          "firstLanguage": {
-            "type": "string",
-            "nullable": true
-          },
-          "firstLanguageLevel": {
-            "type": "string",
-            "nullable": true
-          },
-          "secondLanguage": {
-            "type": "string",
-            "nullable": true
-          },
-          "secondLanguageLevel": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
