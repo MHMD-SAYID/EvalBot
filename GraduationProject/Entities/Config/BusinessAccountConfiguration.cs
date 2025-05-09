@@ -14,9 +14,9 @@
             //builder.HasOne(x=>x.User)
             //    .WithMany(x=>x.businessAccounts)
             //    .HasForeignKey(x=>x.BusinessAccountId);
-            builder.HasOne(x => x.User)
+            builder.HasOne(x => x.userProfile)
                 .WithMany(x => x.businessAccounts)
-                .HasForeignKey(x => x.UserId);
+                .HasForeignKey(x => x.userProfileId);
 
 
             builder.ToTable("BusinessAccount");

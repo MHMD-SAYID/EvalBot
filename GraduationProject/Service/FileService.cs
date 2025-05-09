@@ -37,7 +37,7 @@ public class FileService(IWebHostEnvironment webHostEnvironment, AppDbContext co
         // delete the image if exists
         if (System.IO.File.Exists(path))
         {
-            var usercv = await  _context.UserCV.FirstOrDefaultAsync(x => x.userId == userId);
+            var usercv = await  _context.UserCV.FirstOrDefaultAsync(x => x.userProfileId == userId);
             if (usercv != null)
             {
                 _context.Remove(usercv);
@@ -47,7 +47,7 @@ public class FileService(IWebHostEnvironment webHostEnvironment, AppDbContext co
         }
         var cv = new UserCV
         {
-            userId = user.Id,
+            userProfileId = user.Id,
             RealPath = _localfilesPath+ user.UserName + ex,
             Extension = ex,
             HostedPath  = "http://evalbot.runasp.net//CV//" + user.UserName + ex
@@ -95,7 +95,7 @@ public class FileService(IWebHostEnvironment webHostEnvironment, AppDbContext co
         // delete the image if exists
         if (System.IO.File.Exists(path))
         {
-            var userImage = await _context.UserImage.FirstOrDefaultAsync(x => x.userId == user.Id);
+            var userImage = await _context.UserImage.FirstOrDefaultAsync(x => x.userProfileId == user.Id);
             if (userImage != null)
             {
                 _context.Remove(userImage);
@@ -105,7 +105,7 @@ public class FileService(IWebHostEnvironment webHostEnvironment, AppDbContext co
         }
         var im = new UserImage
         {
-            userId = user.Id,
+            userProfileId = user.Id,
             RealPath = _localimagesPath + user.UserName + ex,
             Extension = ex,
             HostedPath = "http://evalbot.runasp.net//Images//" + user.UserName + ex

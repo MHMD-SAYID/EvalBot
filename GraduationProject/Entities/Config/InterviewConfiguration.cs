@@ -20,33 +20,33 @@ namespace GraduationProject.Entities.Config
                 .UseIdentityColumn(1, 1)
                 .IsRequired();
 
-            builder.Property(x => x.StartDate)
-                .HasColumnType("datetime2");
+            //builder.Property(x => x.StartDate)
+            //    .HasColumnType("datetime2");
 
-            builder.Property(x => x.EndDate)
-                .HasColumnType("datetime2");
+            //builder.Property(x => x.EndDate)
+            //    .HasColumnType("datetime2");
 
-            builder.Property(x => x.FeedBack)
-                .HasColumnType("varchar");
+            //builder.Property(x => x.FeedBack)
+            //    .HasColumnType("varchar");
 
-            builder.Property(x => x.Score)
-                .IsRequired();
+            //builder.Property(x => x.Score)
+            //    .IsRequired();
 
-            builder.Property(x => x.TracksId);
+            //builder.Property(x => x.TracksId);
 
-            builder.HasOne(x => x.User)
-                .WithMany(x => x.interviews)
-                .HasForeignKey(x => x.UserId);
+            //builder.HasOne(x => x.userProfile)
+            //    .WithMany(x => x.interviews)
+            //    .HasForeignKey(x => x.userProfileId);
 
             //builder.HasOne(x => x.track)
             //    .WithOne(x => x.interview)
             //    .HasForeignKey<Interview>(x => x.TracksId);
-            builder.HasOne(x=>x.track)
-                .WithOne(x=>x.interview)
-                .HasForeignKey<Interview>(x => x.TracksId);
+            //builder.HasOne(x=>x.track)
+            //    .WithOne(x=>x.interview)
+            //    .HasForeignKey<Interview>(x => x.TracksId);
 
-            builder.Property(i => i.level)
-                .HasConversion(x=>x.ToString(),x=>Enum.Parse<Level>(x));
+            //builder.Property(i => i.level)
+            //    .HasConversion(x=>x.ToString(),x=>Enum.Parse<Level>(x));
 
             builder.HasMany(x => x.q_a)
                 .WithOne(x => x.Interview)

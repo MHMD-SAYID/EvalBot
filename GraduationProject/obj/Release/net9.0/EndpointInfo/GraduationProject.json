@@ -1278,8 +1278,8 @@
             "nullable": true
           },
           "yearsOfExperience": {
-            "type": "string",
-            "nullable": true
+            "type": "integer",
+            "format": "int32"
           },
           "expectedSalary": {
             "type": "number",
@@ -1411,9 +1411,9 @@
       "UpdateLanguageRequest": {
         "type": "object",
         "properties": {
-          "userId": {
-            "type": "string",
-            "nullable": true
+          "id": {
+            "type": "integer",
+            "format": "int32"
           },
           "language": {
             "type": "string",

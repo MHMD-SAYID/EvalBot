@@ -8,7 +8,7 @@ namespace GraduationProject.Entities.Config
         public void Configure(EntityTypeBuilder<Job> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.HasMany(x => x.Users)
+            builder.HasMany(x => x.userProfile)
                 .WithMany(x => x.Jobs);
                 
         }

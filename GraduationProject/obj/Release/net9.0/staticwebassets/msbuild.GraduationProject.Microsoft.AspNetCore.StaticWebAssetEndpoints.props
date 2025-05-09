@@ -1,0 +1,16 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/GraduationProject/CV/mohamed.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CV\mohamed.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Sd94bvG55sXpR\u002BMdgfmLOik7H7rsgi/4DSA6XXoNbNQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"403512"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022Sd94bvG55sXpR\u002BMdgfmLOik7H7rsgi/4DSA6XXoNbNQ=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 May 2025 20:05:53 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GraduationProject/CV/mohamed.rjjfou0v4m.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CV\mohamed.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"rjjfou0v4m"},{"Name":"integrity","Value":"sha256-Sd94bvG55sXpR\u002BMdgfmLOik7H7rsgi/4DSA6XXoNbNQ="},{"Name":"label","Value":"_content/GraduationProject/CV/mohamed.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"403512"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022Sd94bvG55sXpR\u002BMdgfmLOik7H7rsgi/4DSA6XXoNbNQ=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 May 2025 20:05:53 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

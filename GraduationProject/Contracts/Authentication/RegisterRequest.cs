@@ -11,7 +11,7 @@ public record RegisterRequest(
     string PhoneNumber,
     int gender,
     List<string> Skills,
-    string YearsOfExperience,
+    int YearsOfExperience,
     double ExpectedSalary,
     string Nationality,
     DateOnly DateOfBirth

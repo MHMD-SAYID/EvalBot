@@ -23,9 +23,9 @@ namespace GraduationProject.Entities.Config
                 .HasColumnType("varchar")
                 .HasMaxLength(50);
 
-            builder.HasMany(x => x.q_a)
-                .WithOne(x => x.track)
-                .HasForeignKey(x => x.trackId);
+            //builder.HasMany(x => x.q_a)
+            //    .WithOne(x => x.track)
+            //    .HasForeignKey(x => x.trackId);
 
             builder.ToTable("Track");
 

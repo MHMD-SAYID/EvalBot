@@ -15,7 +15,7 @@ namespace GraduationProject.Controllers
         [HttpPost("LogIn")]
         public async Task<IActionResult> Login([FromBody] LoginRequest request, CancellationToken cancellationToken)
         {
-            bool IsSameType = await _context.Users.AnyAsync(x => x.EmailType == request.EmailType);
+            bool IsSameType = await _context.UserProfile.AnyAsync(x => x.EmailType == request.EmailType);
             if (IsSameType)
             {
                 _logger.LogInformation("Logging with email: {email} and password: {password}", request.Email, request.Password);

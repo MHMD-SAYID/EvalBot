@@ -29,19 +29,20 @@ namespace GraduationProject.Service
             //   .FirstOrDefaultAsync();
             //var path = !string.IsNullOrEmpty(cvName) ? Path.Combine(_FilePath, cvName) : null;
             var cvpath = await _context.UserCV
-                .Where(x => x.userId == userId)
+                .Where(x => x.userProfileId == userId)
                 .Select(x => x.HostedPath)
                 .FirstOrDefaultAsync();
             var Imagepath = await _context.UserImage
-                .Where(x => x.userId == userId)
+                .Where(x => x.userProfileId == userId)
                 .Select(x => x.HostedPath)
                 .FirstOrDefaultAsync();
-            var user = await _userManager.Users
-     .Where(x => x.Id == userId)
+            //vFirstOrDefaultAsync(x=>x.userId == userId);
+            var user = await _context.UserProfile
+     .Where(x => x.userId == userId)
      .Select(x => new UserProfileResponse
      {
-         Email = x.Email,
-         UserName = x.UserName,
+         Email = x.user.Email!,
+         UserName = x.user.UserName!,
          Skills = x.Skills.ToList(),
          Projects = x.Projects != null && x.Projects.Any()
             ? x.Projects.Select(p => new projectProfile { id = p.Id, name = p.Name, link = p.Link }).ToList()
@@ -82,7 +83,7 @@ namespace GraduationProject.Service
             {
                 Link=p.AccountLink,
                 Type=p.AccountType,
-                UserId = request.Id
+                userProfileId = request.Id
                 
 
             }).ToList();
@@ -102,7 +103,7 @@ namespace GraduationProject.Service
                 StartDate = p.StartDate,
                 Degree = p.Degree,
                 EndDate = p.EndDate,
-                UserId = request.Id
+                userProfileId = request.Id
 
 
             }).ToList();
@@ -147,7 +148,7 @@ namespace GraduationProject.Service
                 StartDate = p.StartDate,
                 EndDate = p.EndDate,
                 StillWorkingThere = p.StillWorkingThere,
-                UserId = request.Id
+                userProfileId = request.Id
             }).ToList();
 
             await _context.Experience.AddRangeAsync(experience, cancellationToken);
@@ -167,7 +168,7 @@ namespace GraduationProject.Service
             {
                 Link = p.Link,
                 Name = p.Name,
-                UserId = request.Id
+                userProfileId = request.Id
             }).ToList();
             await _context.Projects.AddRangeAsync(projects, cancellationToken);
             var result = await _context.SaveChangesAsync(cancellationToken);
@@ -177,7 +178,7 @@ namespace GraduationProject.Service
         public async Task<Result> DeleteBusinessAccountLink(DeleteRequest request, CancellationToken cancellationToken)
         {
             var account = await _context.businessAccounts
-                .FirstOrDefaultAsync(e => e.Id == request.Id && e.UserId == request.userId, cancellationToken);
+                .FirstOrDefaultAsync(e => e.Id == request.Id && e.userProfileId == request.userId, cancellationToken);
 
             if (account is null) { return Result.Failure(PorfileErrors.AccountNotFound); }
 
@@ -190,7 +191,7 @@ namespace GraduationProject.Service
         public async Task<Result> DeleteEducation(DeleteRequest request, CancellationToken cancellationToken)
         {
             var education = await _context.Education
-            .FirstOrDefaultAsync(e => e.Id == request.Id && e.UserId == request.userId, cancellationToken);
+            .FirstOrDefaultAsync(e => e.Id == request.Id && e.userProfileId == request.userId, cancellationToken);
 
             if(education is null) {return Result.Failure(PorfileErrors.EducationNotFound); }
 
@@ -202,8 +203,8 @@ namespace GraduationProject.Service
 
         public async Task<Result> DeleteExperience(DeleteRequest request, CancellationToken cancellationToken)
         {
-            var experience = await _context.Experience
-            .FirstOrDefaultAsync(e => e.Id == request.Id && e.UserId == request.userId, cancellationToken);
+            var experience = await _context.Experience.Where(e => e.Id == request.Id && e.userProfileId == request.userId)
+            .FirstOrDefaultAsync (cancellationToken);
 
             if (experience is null) { return Result.Failure(PorfileErrors.ExperienceNotFound); }
 
@@ -216,7 +217,7 @@ namespace GraduationProject.Service
         {
            
                 var project = await _context.Projects
-                    .FirstOrDefaultAsync(e => e.Id == request.Id && e.UserId == request.userId, cancellationToken);
+                    .FirstOrDefaultAsync(e => e.Id == request.Id && e.userProfileId == request.userId, cancellationToken);
 
                 if (project is null) { return Result.Failure(PorfileErrors.ProjectNotFound); }
 
@@ -233,39 +234,47 @@ namespace GraduationProject.Service
 
         public async Task<Result> UpdateBio(UpdateBioRequest request,CancellationToken cancellationToken )
         {
-            var user= await _userManager.Users
-                .Where(x=>x.Id==request.Id)
-                .SingleOrDefaultAsync();
+            var user =await  _context.UserProfile.Where(x => x.userId == request.Id).FirstOrDefaultAsync();
+            //var user= await _userManager.Users
+            //    .Where(x=>x.Id==request.Id)
+            //    .SingleOrDefaultAsync();
             if (user == null)
             {
                 return Result.Failure(UserErrors.EmailNotFound);
             }
             user.Bio = request.Bio;
-            var result= await _userManager.UpdateAsync(user);
+           _context.Update(user);
+            var result = await _context.SaveChangesAsync(cancellationToken);
 
-            if (!result.Succeeded)
-            {
-                return Result.Failure(UserErrors.InternalServerError);
-            }
-            return Result.Success(result);
+            //var result= await _userManager.UpdateAsync(user);
+            return result > 0 ?
+                 Result.Success(result) :
+                 Result.Failure(UserErrors.InternalServerError);
+
+            //if (!result)
+            //{
+            //    return Result.Failure(UserErrors.InternalServerError);
+            //}
+            //return Result.Success(result);
             
         }
 
         public async Task<Result> DeleteAccount(string userId, CancellationToken cancellationToken)
         {
-            var user = await _userManager.Users
+            var userman = await _userManager.Users
                     .FirstOrDefaultAsync(x => x.Id == userId, cancellationToken);
+            var user = await _context.UserProfile.Where(x => x.userId == userId).SingleOrDefaultAsync();
 
             if (user is null)
             {
                 return Result.Failure(PorfileErrors.AccountNotFound);
             }
             var cvpath = await _context.UserCV
-                .Where(x => x.userId == userId)
+                .Where(x => x.userProfileId == userman.Id)
                 .Select(x => x.RealPath)
                 .FirstOrDefaultAsync();
             var Imagepath = await _context.UserImage
-                .Where(x => x.userId == userId)
+                .Where(x => x.userProfileId == userman.Id)
                 .Select(x => x.RealPath)
                 .FirstOrDefaultAsync();
             if (System.IO.File.Exists(cvpath))
@@ -278,7 +287,7 @@ namespace GraduationProject.Service
 
                 System.IO.File.Delete(Imagepath);
             }
-            var result = await _userManager.DeleteAsync(user);
+            var result = await _userManager.DeleteAsync(userman);
 
             if (!result.Succeeded)
             {
@@ -290,16 +299,20 @@ namespace GraduationProject.Service
 
         public async Task<Result> UpdateSkills(UpdateSkillsRequest request, CancellationToken cancellationToken)
         {
-            var user = await _userManager.Users.FirstOrDefaultAsync(x=>x.Id==request.userId,cancellationToken);
+            var user = await _context.UserProfile.Where(x => x.userId == request.userId).SingleOrDefaultAsync();
+
+            //var user = await _userManager.Users.FirstOrDefaultAsync(x=>x.Id==request.userId,cancellationToken);
             user.Skills = request.Skills;
+            _context.Update(user);
+            var result=await _context.SaveChangesAsync(cancellationToken);
+            //var result =await _userManager.UpdateAsync(user);
+            return result > 0 ? Result.Success() : Result.Failure(PorfileErrors.InvalidSkillsUpdate);
+            //if (!result.Succeeded)
+            //{ 
+            //    return Result.Failure(PorfileErrors.InvalidSkillsUpdate);
+            //}
+            //return Result.Success();
 
-            var result =await _userManager.UpdateAsync(user);
-
-            if (!result.Succeeded)
-            { 
-                return Result.Failure(PorfileErrors.InvalidSkillsUpdate);
-            }
-            return Result.Success();
         }
 
         public async Task<Result> UpdateExperience(UpdateExperienceRequest request, CancellationToken cancellationToken)
@@ -386,16 +399,16 @@ namespace GraduationProject.Service
 
         public async Task<Result> AddLanguages(AddLanguagesRequest request, CancellationToken cancellationToken)
         {
-            var user = await _userManager.Users
-                .FirstOrDefaultAsync(x => x.Id == request.userId);
-
+            //var user = await _userManager.Users
+            //    .FirstOrDefaultAsync(x => x.Id == request.userId);
+            var user = await _context.UserProfile.Where(x => x.userId == request.userId).SingleOrDefaultAsync();
             if (request.languages?.Any() != true)
                 return Result.Success();
             var languages = request.languages.Select(p => new Language
             {
                 Name = p.name,
                 Level = p.level,
-                userId= request.userId
+                userProfileId= request.userId
             }).ToList();
             await _context.Language.AddRangeAsync(languages, cancellationToken);
             var result = await _context.SaveChangesAsync(cancellationToken);
@@ -406,7 +419,7 @@ namespace GraduationProject.Service
         public async Task<Result> DeleteLanguages(DeleteRequest request, CancellationToken cancellationToken)
         {
             var language = await _context.Language
-           .FirstOrDefaultAsync(e => e.Id == request.Id && e.userId == request.userId, cancellationToken);
+           .FirstOrDefaultAsync(e => e.Id == request.Id && e.userProfileId == request.userId, cancellationToken);
 
             if (language is null) { return Result.Failure(PorfileErrors.LanguageNotFound); }
 

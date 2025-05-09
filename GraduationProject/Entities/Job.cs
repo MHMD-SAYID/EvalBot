@@ -10,7 +10,9 @@
         public string Description { get; set; }
         public string Benefits { get; set; }
         ICollection<string> Skills { get; set; } = new List<string>();
-        public ICollection<User> Users { get; set; }
+        public int companyProfileId { get; set; }
+        public CompanyProfile Company { get; set; }
+        public ICollection<UserProfile> userProfile { get; set; }=new List<UserProfile>();
 
     }
 }

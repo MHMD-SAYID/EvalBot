@@ -11,8 +11,8 @@ namespace GraduationProject.Entities
         public bool IsUnderGraduate { get; set; }
         public long StartDate { get; set; }
         public long EndDate { get; set; }
-        public string UserId { get; set; }
-        public User User { get; set; }
+        public string userProfileId { get; set; }
+        public UserProfile userProfile { get; set; }
 
 
     }
