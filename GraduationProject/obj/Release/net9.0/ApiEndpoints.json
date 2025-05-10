@@ -64,6 +64,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GraduationProject.Controllers.CompanyAccountController",
+    "Method": "AddJob",
+    "RelativePath": "add-job",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Company.AddJopRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GraduationProject.Controllers.AccountController",
     "Method": "AddLanguage",
     "RelativePath": "Add-language",
@@ -77,6 +93,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.CompanyAccountController",
+    "Method": "Info",
+    "RelativePath": "company-profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -324,6 +350,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GraduationProject.Controllers.AuthController",
+    "Method": "LoginCompany",
+    "RelativePath": "Login-company",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Authentication.LoginCompanyRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GraduationProject.Controllers.AccountController",
     "Method": "Info",
     "RelativePath": "Profile",
@@ -344,6 +386,22 @@
       {
         "Name": "request",
         "Type": "GraduationProject.Contracts.Authentication.RefreshTokenRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AuthController",
+    "Method": "RegisterCompany",
+    "RelativePath": "register-company",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Authentication.RegisterCompanyRequest",
         "IsRequired": true
       }
     ],

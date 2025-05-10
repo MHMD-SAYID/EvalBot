@@ -8,6 +8,7 @@
         Task<Result> RevokeRefreshTokenAsync(string token, string refreshToken, CancellationToken cancellationToken = default);
         Task<Result<RegisterResponse>> RegisterWepAsync(RegisterRequest request,/*experienceList experience,businessAccountList accounts,projectList projects,educationList education,*/ CancellationToken cancellationToken = default);
         Task<Result<RegisterResponse>> RegisterFlutterAsync(RegisterRequest request/*, experienceList experience, businessAccountList accounts, projectList projects, educationList education*/, CancellationToken cancellationToken = default);
+        Task<Result<RegisterCompanyResponse>> RegisterCompanyAsync(RegisterCompanyRequest request/*, experienceList experience, businessAccountList accounts, projectList projects, educationList education*/, CancellationToken cancellationToken = default);
         //Task<Result> CreateUserRoleAsync();
         Task<Result> ConfirmEmailAsync(ConfirmEmailRequest request);
         Task<Result> ResendConfirmationEmailFlutterAsync(ReSendConfirmationEmail request);

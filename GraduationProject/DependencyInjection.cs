@@ -48,6 +48,7 @@ namespace GraduationProject
             services.AddScoped<IFileService, FileService>();
             services.AddScoped<IEmailSender, EmailService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ICompanyService, CompanyService>();
 
             //services.AddScoped<IResultService, ResultService>();
 

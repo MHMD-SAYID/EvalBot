@@ -54,11 +54,7 @@ namespace GraduationProject.Migrations
                     b.Property<string>("userId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
+                    b.Property<string>("Location")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -194,31 +190,36 @@ namespace GraduationProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CompanyuserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Level")
+                    b.Property<string>("Location")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("ReleaseDate")
-                        .HasColumnType("datetime2");
+                    b.Property<DateOnly>("ReleaseDate")
+                        .HasColumnType("date");
+
+                    b.Property<string>("Requirements")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("companyProfileId")
-                        .HasColumnType("int");
+                    b.Property<string>("applicaitonLink")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("companyProfileId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CompanyuserId");
+                    b.HasIndex("companyProfileId");
 
                     b.ToTable("Jobs");
                 });
@@ -494,11 +495,17 @@ namespace GraduationProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("companyProfileId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("userProfileId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("companyProfileId");
 
                     b.HasIndex("userProfileId")
                         .IsUnique();
@@ -741,7 +748,7 @@ namespace GraduationProject.Migrations
                 {
                     b.HasOne("GraduationProject.Entities.CompanyProfile", "Company")
                         .WithMany("Jobs")
-                        .HasForeignKey("CompanyuserId")
+                        .HasForeignKey("companyProfileId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -846,11 +853,19 @@ namespace GraduationProject.Migrations
 
             modelBuilder.Entity("GraduationProject.Entities.UserImage", b =>
                 {
+                    b.HasOne("GraduationProject.Entities.CompanyProfile", "companyProfile")
+                        .WithMany()
+                        .HasForeignKey("companyProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("GraduationProject.Entities.UserProfile", "userProfile")
                         .WithOne("Image")
                         .HasForeignKey("GraduationProject.Entities.UserImage", "userProfileId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("companyProfile");
 
                     b.Navigation("userProfile");
                 });

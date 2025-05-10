@@ -30,6 +30,17 @@ namespace GraduationProject.Controllers
             //    error => Problem(statusCode: StatusCodes.Status400BadRequest, title: error.Code, detail: error.Description)
             //);
         }
+        [HttpPost("Login-company")]
+        public async Task<IActionResult> LoginCompany([FromBody] LoginCompanyRequest request, CancellationToken cancellationToken)
+        {
+            _logger.LogInformation("Logging with email: {email} and password: {password}", request.Email, request.Password);
+
+            var authResult = await _authService.GetTokenAsync(request.Email, request.Password, cancellationToken);
+
+            return authResult.IsSuccess ? Ok(authResult.Value) : authResult.ToProblem();
+
+        }
+        
 
         [HttpPost("refresh")]
         public async Task<IActionResult> Refresh([FromBody] RefreshTokenRequest request, CancellationToken cancellationToken)
@@ -52,6 +63,12 @@ namespace GraduationProject.Controllers
         {
             var result = await _authService.RegisterWepAsync(request ,cancellationToken);
 
+            return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
+        }
+        [HttpPost("register-company")]
+        public async Task<IActionResult> RegisterCompany([FromBody]RegisterCompanyRequest request, CancellationToken cancellationToken)
+        {
+            var result = await _authService.RegisterCompanyAsync(request, cancellationToken);
             return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
         }
         [HttpPost("register-flutter")]

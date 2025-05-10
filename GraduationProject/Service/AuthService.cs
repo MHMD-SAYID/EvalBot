@@ -89,53 +89,53 @@ namespace GraduationProject.Service
         }
 
 
-        public async Task<Result<RegisterResponse>> RegisterCompanyWepAsync(RegisterRequest request, CancellationToken cancellationToken = default)
-        {
+        //public async Task<Result<RegisterResponse>> RegisterCompanyWepAsync(RegisterRequest request, CancellationToken cancellationToken = default)
+        //{
 
 
-            var emailIsExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
-            if (emailIsExists)
-                return Result.Failure<RegisterResponse>(UserErrors.DuplicatedEmail);
+        //    var emailIsExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
+        //    if (emailIsExists)
+        //        return Result.Failure<RegisterResponse>(UserErrors.DuplicatedEmail);
 
-            var UserNameExists = await _userManager.Users.AnyAsync(x => x.UserName == request.UserName, cancellationToken);
-            if (UserNameExists)
-                return Result.Failure<RegisterResponse>(UserErrors.DuplicatedUserName);
-            var user = new User
-            {
-                Email = request.Email,
-                PhoneNumber = request.PhoneNumber,
-                UserName = request.UserName
-            };
-            //var user = request.Adapt<UserProfile>();
+        //    var UserNameExists = await _userManager.Users.AnyAsync(x => x.UserName == request.UserName, cancellationToken);
+        //    if (UserNameExists)
+        //        return Result.Failure<RegisterResponse>(UserErrors.DuplicatedUserName);
+        //    var user = new User
+        //    {
+        //        Email = request.Email,
+        //        PhoneNumber = request.PhoneNumber,
+        //        UserName = request.UserName
+        //    };
+        //    //var user = request.Adapt<UserProfile>();
 
-            var result = await _userManager.CreateAsync(user, request.Password);
+        //    var result = await _userManager.CreateAsync(user, request.Password);
 
 
 
-            //var usera=await _userManager.FindByEmailAsync(request.Email);
-            var usera = await _context.UserProfile.Where(x => x.user.Email == request.Email)
-                .FirstOrDefaultAsync();
-            usera.Skills = request.Skills;
-            if (result.Succeeded)
-            {
+        //    //var usera=await _userManager.FindByEmailAsync(request.Email);
+        //    var usera = await _context.UserProfile.Where(x => x.user.Email == request.Email)
+        //        .FirstOrDefaultAsync();
+        //    usera.Skills = request.Skills;
+        //    if (result.Succeeded)
+        //    {
 
-                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+        //        var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+        //        code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
 
-                _logger.LogInformation("Confirmation code: {code}", code);
+        //        _logger.LogInformation("Confirmation code: {code}", code);
 
-                await SendConfirmationEmailWep(user, code);
+        //        await SendConfirmationEmailWep(user, code);
 
-                var response = new RegisterResponse(usera.userId, usera.user.UserName, usera.CountryOfResidence
-                    , usera.user.PhoneNumber, usera.Skills, usera.YearsOfExperience, usera.ExpectedSalary,
-                    usera.Nationality, usera.DateOfBirth);
-                return Result.Success(response);
-            }
+        //        var response = new RegisterResponse(usera.userId, usera.user.UserName, usera.CountryOfResidence
+        //            , usera.user.PhoneNumber, usera.Skills, usera.YearsOfExperience, usera.ExpectedSalary,
+        //            usera.Nationality, usera.DateOfBirth);
+        //        return Result.Success(response);
+        //    }
 
-            var error = result.Errors.First();
+        //    var error = result.Errors.First();
 
-            return Result.Failure<RegisterResponse>(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
-        }
+        //    return Result.Failure<RegisterResponse>(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
+        //}
 
 
 
@@ -604,6 +604,51 @@ namespace GraduationProject.Service
             await Task.CompletedTask;
         }
 
-      
+        public async Task<Result<RegisterCompanyResponse>> RegisterCompanyAsync(RegisterCompanyRequest request, CancellationToken cancellationToken = default)
+        {
+            var emailexists= await  _userManager.Users.AnyAsync(x=>x.Email==request.Email,cancellationToken);
+            if (emailexists)
+                return Result.Failure<RegisterCompanyResponse>(UserErrors.DuplicatedEmail);
+            var usernameexists = await _userManager.Users.AnyAsync(x => x.UserName == request.UserName, cancellationToken);
+            if (usernameexists)
+                return Result.Failure<RegisterCompanyResponse>(UserErrors.DuplicatedUserName);
+
+            var user = request.Adapt<User>();
+            user.EmailConfirmed = true;
+            //var user = new User
+            //{
+            //    Email=request.Email,
+            //    EmailConfirmed=true,
+            //    UserName=request.UserName,
+
+            //};
+
+            var result =await _userManager.CreateAsync(user, request.Password);
+            if (!result.Succeeded)
+            {
+                var error = result.Errors.First();
+                return Result.Failure<RegisterCompanyResponse>(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
+            }
+            var company = new CompanyProfile
+            {
+                userId = user.Id,
+                Location = request.Location
+            };
+            _context.Add(company);
+            await _context.SaveChangesAsync(cancellationToken);
+            var companyProfile=await _context.CompanyProfile
+                .Include(x=>x.user)
+                .FirstOrDefaultAsync(x=>x.userId==user.Id);
+            var response = new RegisterCompanyResponse
+            (
+
+                companyProfile.user.Email,
+                companyProfile.user.UserName,
+                companyProfile.Location
+
+            );
+
+            return Result.Success(response);
+        }
     }
 }
