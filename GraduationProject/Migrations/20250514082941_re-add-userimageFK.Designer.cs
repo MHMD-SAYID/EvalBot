@@ -4,6 +4,7 @@ using GraduationProject.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GraduationProject.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250514082941_re-add-userimageFK")]
+    partial class readduserimageFK
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -495,13 +498,18 @@ namespace GraduationProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("userId")
+                    b.Property<string>("companyProfileId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("userProfileId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("userId")
+                    b.HasIndex("companyProfileId");
+
+                    b.HasIndex("userProfileId")
                         .IsUnique();
 
                     b.ToTable("UserImage");
@@ -847,13 +855,19 @@ namespace GraduationProject.Migrations
 
             modelBuilder.Entity("GraduationProject.Entities.UserImage", b =>
                 {
-                    b.HasOne("GraduationProject.Entities.User", "user")
+                    b.HasOne("GraduationProject.Entities.CompanyProfile", "companyProfile")
+                        .WithMany()
+                        .HasForeignKey("companyProfileId");
+
+                    b.HasOne("GraduationProject.Entities.UserProfile", "userProfile")
                         .WithOne("Image")
-                        .HasForeignKey("GraduationProject.Entities.UserImage", "userId")
+                        .HasForeignKey("GraduationProject.Entities.UserImage", "userProfileId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("user");
+                    b.Navigation("companyProfile");
+
+                    b.Navigation("userProfile");
                 });
 
             modelBuilder.Entity("GraduationProject.Entities.UserProfile", b =>
@@ -899,9 +913,6 @@ namespace GraduationProject.Migrations
 
             modelBuilder.Entity("GraduationProject.Entities.User", b =>
                 {
-                    b.Navigation("Image")
-                        .IsRequired();
-
                     b.Navigation("companyProfile");
 
                     b.Navigation("userProfile");
@@ -914,6 +925,9 @@ namespace GraduationProject.Migrations
                     b.Navigation("Education");
 
                     b.Navigation("Experience");
+
+                    b.Navigation("Image")
+                        .IsRequired();
 
                     b.Navigation("Projects");
 

@@ -30,6 +30,13 @@ public class FilesController(IFileService fileService) : ControllerBase
         var imagePath=await _fileService.UploadImageAsync(request.Image,request.userId, cancellationToken);
 
         return Ok(imagePath);
+    } 
+    [HttpPost(template: "upload-company-image")]
+    public async Task<IActionResult> UploadCompanyImage([FromForm] UploadImageRequest request, CancellationToken cancellationToken)
+    {
+        var imagePath=await _fileService.UploadCompanyImageAsync(request.Image,request.userId, cancellationToken);
+
+        return Ok(imagePath);
     }
 
     [HttpGet("download/{id}")]

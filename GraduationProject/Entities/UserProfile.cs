@@ -25,7 +25,7 @@ namespace GraduationProject.Entities
         public ICollection<Language> languages { get; set; } = new List<Language>();
         public ICollection<BusinessAccount> businessAccounts { get; set; } = new List<BusinessAccount>();
         public ICollection<Interview>? interviews { get; set; } = new List<Interview>();//list int score gender list<string> skills project
-        public UserImage Image { get; set; }
+        //public UserImage Image { get; set; }
         public UserCV? CV { get; set; }
         public ICollection<Job>? Jobs { get; set; }
     }

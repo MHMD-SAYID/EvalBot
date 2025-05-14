@@ -1,0 +1,2 @@
+wwwroot\CV\mohamed.pdf
+wwwroot\Images\mohamed.png

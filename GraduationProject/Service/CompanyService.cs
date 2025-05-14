@@ -1,6 +1,8 @@
 ﻿
 using GraduationProject.Contracts.Company;
 using GraduationProject.Contracts.Users;
+using GraduationProject.Contracts.Users.Delete;
+using GraduationProject.Entities;
 
 namespace GraduationProject.Service
 {
@@ -13,7 +15,7 @@ namespace GraduationProject.Service
         public async Task<Result<CompanyProfileResponse>> GetCompanyProfileAsync(string companyId)
         {
             var Imagepath = await _context.UserImage
-                .Where(x => x.companyProfileId == companyId)
+                .Where(x => x.userId == companyId)
                 .Select(x => x.HostedPath)
                 .FirstOrDefaultAsync();
             var company = await _context.CompanyProfile
@@ -56,6 +58,17 @@ namespace GraduationProject.Service
             var result = await _context.SaveChangesAsync(cancellationToken);
 
             return result > 0 ? Result.Success() : Result.Failure(PorfileErrors.EducationNotFound);
+        }
+
+        public async Task<Result> DeleteJob(DeleteRequest request, CancellationToken cancellationToken)
+        {
+            var job =await _context.Jobs.Where(x=>x.Id==request.Id && x.companyProfileId==request.userId)
+                .FirstOrDefaultAsync(cancellationToken);
+            if (job is null) { return Result.Failure(UserErrors.InternalServerError); }
+
+            _context.Remove(job);
+            var result =await _context.SaveChangesAsync();
+            return Result.Success();
         }
     }
 }

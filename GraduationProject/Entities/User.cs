@@ -11,6 +11,7 @@ namespace GraduationProject.Entities
             
         }
         public List<RefreshToken> RefreshTokens { get; set; } = [];
+        public UserImage Image { get; set; }
         public UserProfile? userProfile { get; set; }
         public CompanyProfile? companyProfile { get; set; }
 

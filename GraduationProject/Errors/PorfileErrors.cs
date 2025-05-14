@@ -19,5 +19,7 @@
             new("Language.InvalidUpdate", "The provided language is invalid.", StatusCodes.Status400BadRequest);
     public static readonly Error InvalidLangiageAdd =
             new("Language.InvalidAdd", "The provided language is invalid.", StatusCodes.Status400BadRequest);
-    }
+    public static readonly Error JobNotFound =
+            new("Job.NotFound", "The specified Job could not be found.", StatusCodes.Status404NotFound);
+}
 

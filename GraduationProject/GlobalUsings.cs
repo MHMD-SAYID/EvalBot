@@ -17,4 +17,6 @@ global using GraduationProject.Abstractions;
 global using GraduationProject.Errors;
 global using GraduationProject.Entities;
 global using GraduationProject.Authentication;
+global using GraduationProject.Contracts.Company;
+global using GraduationProject.Contracts.Users.Delete;
 //global using GraduationProject.Extensions;

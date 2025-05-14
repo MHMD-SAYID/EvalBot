@@ -196,6 +196,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GraduationProject.Controllers.CompanyAccountController",
+    "Method": "DeleteJob",
+    "RelativePath": "Delete-job",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Users.Delete.DeleteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GraduationProject.Controllers.AccountController",
     "Method": "DeleteLanguage",
     "RelativePath": "Delete-language",
@@ -253,6 +269,27 @@
     "Parameters": [
       {
         "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileManager.Api.Controllers.FilesController",
+    "Method": "UploadCompanyImage",
+    "RelativePath": "Files/upload-company-image",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Image",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
       },

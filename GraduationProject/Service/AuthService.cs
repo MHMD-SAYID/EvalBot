@@ -1,19 +1,9 @@
 ﻿
-
-using GraduationProject.Contracts.Authentication;
 using GraduationProject.Helpers;
-using GraduationProject.Entities;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.WebUtilities;
 using System.Security.Cryptography;
 using System.Text;
-using System.Text.Json;
-using BusinessAccount = GraduationProject.Entities.BusinessAccount;
-using Education = GraduationProject.Entities.Education;
-using Experience = GraduationProject.Entities.Experience;
-using Project = GraduationProject.Entities.Project;
-using System.Web.Providers.Entities;
 using User = GraduationProject.Entities.User;
 using Hangfire;
 
@@ -89,53 +79,53 @@ namespace GraduationProject.Service
         }
 
 
-        //public async Task<Result<RegisterResponse>> RegisterCompanyWepAsync(RegisterRequest request, CancellationToken cancellationToken = default)
-        //{
+        public async Task<Result<RegisterResponse>> RegisterCompanyWepAsync(RegisterRequest request, CancellationToken cancellationToken = default)
+        {
 
 
-        //    var emailIsExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
-        //    if (emailIsExists)
-        //        return Result.Failure<RegisterResponse>(UserErrors.DuplicatedEmail);
+            var emailIsExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
+            if (emailIsExists)
+                return Result.Failure<RegisterResponse>(UserErrors.DuplicatedEmail);
 
-        //    var UserNameExists = await _userManager.Users.AnyAsync(x => x.UserName == request.UserName, cancellationToken);
-        //    if (UserNameExists)
-        //        return Result.Failure<RegisterResponse>(UserErrors.DuplicatedUserName);
-        //    var user = new User
-        //    {
-        //        Email = request.Email,
-        //        PhoneNumber = request.PhoneNumber,
-        //        UserName = request.UserName
-        //    };
-        //    //var user = request.Adapt<UserProfile>();
+            var UserNameExists = await _userManager.Users.AnyAsync(x => x.UserName == request.UserName, cancellationToken);
+            if (UserNameExists)
+                return Result.Failure<RegisterResponse>(UserErrors.DuplicatedUserName);
+            var user = new User
+            {
+                Email = request.Email,
+                PhoneNumber = request.PhoneNumber,
+                UserName = request.UserName
+            };
+            //var user = request.Adapt<UserProfile>();
 
-        //    var result = await _userManager.CreateAsync(user, request.Password);
+            var result = await _userManager.CreateAsync(user, request.Password);
 
 
 
-        //    //var usera=await _userManager.FindByEmailAsync(request.Email);
-        //    var usera = await _context.UserProfile.Where(x => x.user.Email == request.Email)
-        //        .FirstOrDefaultAsync();
-        //    usera.Skills = request.Skills;
-        //    if (result.Succeeded)
-        //    {
+            //var usera=await _userManager.FindByEmailAsync(request.Email);
+            var usera = await _context.UserProfile.Where(x => x.user.Email == request.Email)
+                .FirstOrDefaultAsync();
+            usera.Skills = request.Skills;
+            if (result.Succeeded)
+            {
 
-        //        var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-        //        code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
 
-        //        _logger.LogInformation("Confirmation code: {code}", code);
+                _logger.LogInformation("Confirmation code: {code}", code);
 
-        //        await SendConfirmationEmailWep(user, code);
+                await SendConfirmationEmailWep(user, code);
 
-        //        var response = new RegisterResponse(usera.userId, usera.user.UserName, usera.CountryOfResidence
-        //            , usera.user.PhoneNumber, usera.Skills, usera.YearsOfExperience, usera.ExpectedSalary,
-        //            usera.Nationality, usera.DateOfBirth);
-        //        return Result.Success(response);
-        //    }
+                var response = new RegisterResponse(usera.userId, usera.user.UserName, usera.CountryOfResidence
+                    , usera.user.PhoneNumber, usera.Skills, usera.YearsOfExperience, usera.ExpectedSalary,
+                    usera.Nationality, usera.DateOfBirth);
+                return Result.Success(response);
+            }
 
-        //    var error = result.Errors.First();
+            var error = result.Errors.First();
 
-        //    return Result.Failure<RegisterResponse>(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
-        //}
+            return Result.Failure<RegisterResponse>(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
+        }
 
 
 

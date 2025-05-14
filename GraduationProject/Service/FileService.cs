@@ -95,7 +95,7 @@ public class FileService(IWebHostEnvironment webHostEnvironment, AppDbContext co
         // delete the image if exists
         if (System.IO.File.Exists(path))
         {
-            var userImage = await _context.UserImage.FirstOrDefaultAsync(x => x.userProfileId == user.Id);
+            var userImage = await _context.UserImage.FirstOrDefaultAsync(x => x.userId == user.Id);
             if (userImage != null)
             {
                 _context.Remove(userImage);
@@ -105,7 +105,7 @@ public class FileService(IWebHostEnvironment webHostEnvironment, AppDbContext co
         }
         var im = new UserImage
         {
-            userProfileId = user.Id,
+            userId = user.Id,
             RealPath = _localimagesPath + user.UserName + ex,
             Extension = ex,
             HostedPath = "http://evalbot.runasp.net//Images//" + user.UserName + ex
@@ -192,5 +192,90 @@ public class FileService(IWebHostEnvironment webHostEnvironment, AppDbContext co
         await file.CopyToAsync(stream, cancellationToken);
 
         return uploadedFile;
+    }
+
+    public async Task<UploadImageResponse> UploadCompanyImageAsync(IFormFile image, string CompanyId, CancellationToken cancellationToken = default)
+    {
+        //var ex = Path.GetExtension(image.FileName);
+
+        //var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Id == CompanyId);
+
+        //var path = Path.Combine(_localimagesPath, $"{user.UserName}{ex}");
+        //// delete the image if exists
+        //if (System.IO.File.Exists(path))
+        //{
+        //    var userImage = await _context.UserImage.FirstOrDefaultAsync(x => x.companyProfileId == user.Id);
+        //    if (userImage != null)
+        //    {
+        //        _context.Remove(userImage);
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    System.IO.File.Delete(path);
+        //}
+        //var im = new UserImage
+        //{
+        //    companyProfileId = user.Id,
+        //    RealPath = _localimagesPath + user.UserName + ex,
+        //    Extension = ex,
+        //    HostedPath = "http://evalbot.runasp.net//Images//" + user.UserName + ex,
+        //    userProfileId = null
+
+
+        //};
+        //await _context.AddAsync(im);
+        //await _context.SaveChangesAsync();
+        ////var cv=await _context.AddAsync(new =>UserCV
+
+
+        ////    { })
+
+        //using var stream = System.IO.File.Create(path);
+        //await image.CopyToAsync(stream, cancellationToken);
+        ////user.cvURL = "http://evalbot.runasp.net//CV//" + user.UserName + ex;
+        //await _userManager.UpdateAsync(user);
+        //var response = new UploadImageResponse(im.HostedPath);
+        //return response;
+
+
+        var ex = Path.GetExtension(image.FileName);
+
+        var user = await _userManager.Users.FirstOrDefaultAsync(x => x.Id == CompanyId);
+
+        var path = Path.Combine(_localimagesPath, $"{user.UserName}{ex}");
+        // delete the image if exists
+        if (System.IO.File.Exists(path))
+        {
+            var userImage = await _context.UserImage.FirstOrDefaultAsync(x => x.userId == user.Id);
+            if (userImage != null)
+            {
+                _context.Remove(userImage);
+                await _context.SaveChangesAsync();
+            }
+            System.IO.File.Delete(path);
+        }
+        var im = new UserImage
+        {
+            userId = user.Id,
+            RealPath = _localimagesPath + user.UserName + ex,
+            Extension = ex,
+            HostedPath = "http://evalbot.runasp.net//Images//" + user.UserName + ex
+
+
+        };
+        await _context.AddAsync(im);
+        await _context.SaveChangesAsync();
+        //var cv=await _context.AddAsync(new =>UserCV
+
+
+        //    { })
+
+        using var stream = System.IO.File.Create(path);
+        await image.CopyToAsync(stream, cancellationToken);
+        //user.cvURL = "http://evalbot.runasp.net//CV//" + user.UserName + ex;
+        await _userManager.UpdateAsync(user);
+        var response = new UploadImageResponse(im.HostedPath);
+        return response;
+
+
     }
 }

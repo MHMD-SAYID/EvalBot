@@ -4,6 +4,7 @@ using GraduationProject.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GraduationProject.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250514082823_delete-userimageFK")]
+    partial class deleteuserimageFK
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -495,14 +498,12 @@ namespace GraduationProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("userId")
-                        .IsRequired()
+                    b.Property<string>("companyProfileId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("userId")
-                        .IsUnique();
+                    b.HasIndex("companyProfileId");
 
                     b.ToTable("UserImage");
                 });
@@ -847,13 +848,11 @@ namespace GraduationProject.Migrations
 
             modelBuilder.Entity("GraduationProject.Entities.UserImage", b =>
                 {
-                    b.HasOne("GraduationProject.Entities.User", "user")
-                        .WithOne("Image")
-                        .HasForeignKey("GraduationProject.Entities.UserImage", "userId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("GraduationProject.Entities.CompanyProfile", "companyProfile")
+                        .WithMany()
+                        .HasForeignKey("companyProfileId");
 
-                    b.Navigation("user");
+                    b.Navigation("companyProfile");
                 });
 
             modelBuilder.Entity("GraduationProject.Entities.UserProfile", b =>
@@ -899,9 +898,6 @@ namespace GraduationProject.Migrations
 
             modelBuilder.Entity("GraduationProject.Entities.User", b =>
                 {
-                    b.Navigation("Image")
-                        .IsRequired();
-
                     b.Navigation("companyProfile");
 
                     b.Navigation("userProfile");

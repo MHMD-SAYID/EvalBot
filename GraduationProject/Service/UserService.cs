@@ -18,62 +18,62 @@ namespace GraduationProject.Service
         private readonly string _imagesPath = $"{webHostEnvironment.WebRootPath}/Images";
         private readonly string _FilePath = $"{webHostEnvironment.WebRootPath}/CV";
      
-        public async Task<Result<UserProfileResponse>> GetProfileAsync(string userId)
-        {
+     //   public async Task<Result<UserProfileResponse>> GetProfileAsync(string userId)
+     //   {
 
-            //var cvName = await _userManager.Users
-            //   .Include(u => u.uploadedFiles)
-            //   .Where(u => u.Id == userId)
-            //   .Select(u => u.uploadedFiles)
-            //   .Select(f => f.StoredFileName)
-            //   .FirstOrDefaultAsync();
-            //var path = !string.IsNullOrEmpty(cvName) ? Path.Combine(_FilePath, cvName) : null;
-            var cvpath = await _context.UserCV
-                .Where(x => x.userProfileId == userId)
-                .Select(x => x.HostedPath)
-                .FirstOrDefaultAsync();
-            var Imagepath = await _context.UserImage
-                .Where(x => x.userProfileId == userId)
-                .Select(x => x.HostedPath)
-                .FirstOrDefaultAsync();
-            //vFirstOrDefaultAsync(x=>x.userId == userId);
-            var user = await _context.UserProfile
-     .Where(x => x.userId == userId)
-     .Select(x => new UserProfileResponse
-     {
-         Email = x.user.Email!,
-         UserName = x.user.UserName!,
-         Skills = x.Skills.ToList(),
-         Projects = x.Projects != null && x.Projects.Any()
-            ? x.Projects.Select(p => new projectProfile { id = p.Id, name = p.Name, link = p.Link }).ToList()
-            : null,
-         Experience = x.Experience != null && x.Experience.Any()
-            ? x.Experience.Select(e => new experienceProfile { id = e.Id, CompanyName = e.CompanyName, JobTitle = e.JobTitle, StillWorkingThere = e.StillWorkingThere }).ToList()
-            : null,
-            Education = x.Education != null && x.Education.Any()
-            ? x.Education.Select(e => new educationProfile { id = e.Id, Degree = e.Degree, FieldOfStudy = e.FieldOfStudy, Institution = e.Institution, IsUnderGraduate = e.IsUnderGraduate }).ToList()
-            : null,
-         Accounts = x.businessAccounts != null && x.businessAccounts.Any()
-            ? x.businessAccounts.Select(b => new businessAccountProfile { id = b.Id, AccountLink = b.Link, AccountType = b.Type }).ToList()
-            : null,
-         Languages = x.languages != null && x.languages.Any()
-            ? x.languages.Select(b => new languageProfile { id = b.Id, name = b.Name, lavel = b.Level }).ToList()
-            : null,
+     //       //var cvName = await _userManager.Users
+     //       //   .Include(u => u.uploadedFiles)
+     //       //   .Where(u => u.Id == userId)
+     //       //   .Select(u => u.uploadedFiles)
+     //       //   .Select(f => f.StoredFileName)
+     //       //   .FirstOrDefaultAsync();
+     //       //var path = !string.IsNullOrEmpty(cvName) ? Path.Combine(_FilePath, cvName) : null;
+     //       var cvpath = await _context.UserCV
+     //           .Where(x => x.userProfileId == userId)
+     //           .Select(x => x.HostedPath)
+     //           .FirstOrDefaultAsync();
+     //       var Imagepath = await _context.UserImage
+     //           .Where(x => x.userProfileId == userId)
+     //           .Select(x => x.HostedPath)
+     //           .FirstOrDefaultAsync();
+     //       //vFirstOrDefaultAsync(x=>x.userId == userId);
+     //       var user = await _context.UserProfile
+     //.Where(x => x.userId == userId)
+     //.Select(x => new UserProfileResponse
+     //{
+     //    Email = x.user.Email!,
+     //    UserName = x.user.UserName!,
+     //    Skills = x.Skills.ToList(),
+     //    Projects = x.Projects != null && x.Projects.Any()
+     //       ? x.Projects.Select(p => new projectProfile { id = p.Id, name = p.Name, link = p.Link }).ToList()
+     //       : null,
+     //    Experience = x.Experience != null && x.Experience.Any()
+     //       ? x.Experience.Select(e => new experienceProfile { id = e.Id, CompanyName = e.CompanyName, JobTitle = e.JobTitle, StillWorkingThere = e.StillWorkingThere }).ToList()
+     //       : null,
+     //       Education = x.Education != null && x.Education.Any()
+     //       ? x.Education.Select(e => new educationProfile { id = e.Id, Degree = e.Degree, FieldOfStudy = e.FieldOfStudy, Institution = e.Institution, IsUnderGraduate = e.IsUnderGraduate }).ToList()
+     //       : null,
+     //    Accounts = x.businessAccounts != null && x.businessAccounts.Any()
+     //       ? x.businessAccounts.Select(b => new businessAccountProfile { id = b.Id, AccountLink = b.Link, AccountType = b.Type }).ToList()
+     //       : null,
+     //    Languages = x.languages != null && x.languages.Any()
+     //       ? x.languages.Select(b => new languageProfile { id = b.Id, name = b.Name, lavel = b.Level }).ToList()
+     //       : null,
         
-         Bio = x.Bio,
-         ProfilePicUrl = Imagepath,
-         CVUrl = cvpath
-     })
-     .SingleAsync();
+     //    Bio = x.Bio,
+     //    ProfilePicUrl = Imagepath,
+     //    CVUrl = cvpath
+     //})
+     //.SingleAsync();
 
-            //var imageUrl = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}/Images/{user.UserName}";
-            //user.ProfilePicUrl = File.Exists(imageUrl) ? imageUrl : null;
+     //       //var imageUrl = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}/Images/{user.UserName}";
+     //       //user.ProfilePicUrl = File.Exists(imageUrl) ? imageUrl : null;
 
-            //var imagePath =user.ProfilePicUrl;
-            //user.ProfilePicUrl = File.Exists(imagePath) ? imagePath : null;
+     //       //var imagePath =user.ProfilePicUrl;
+     //       //user.ProfilePicUrl = File.Exists(imagePath) ? imagePath : null;
 
-            return Result.Success(user);
-        }
+     //       return Result.Success(user);
+     //   }
         public async Task<Result> AddBusinessAcount(AddBusinessAccountRequest request, CancellationToken cancellationToken)
         {
 
@@ -224,7 +224,7 @@ namespace GraduationProject.Service
                 _context.Projects.Remove(project);
                 await _context.SaveChangesAsync(cancellationToken);
 
-                return Result.Failure(UserErrors.EmailNotFound);
+                return Result.Success();
             
                 
             
@@ -274,7 +274,7 @@ namespace GraduationProject.Service
                 .Select(x => x.RealPath)
                 .FirstOrDefaultAsync();
             var Imagepath = await _context.UserImage
-                .Where(x => x.userProfileId == userman.Id)
+                //.Where(x => x.userProfileId == userman.Id)
                 .Select(x => x.RealPath)
                 .FirstOrDefaultAsync();
             if (System.IO.File.Exists(cvpath))
@@ -426,6 +426,11 @@ namespace GraduationProject.Service
             _context.Language.Remove(language);
             await _context.SaveChangesAsync(cancellationToken);
             return Result.Success();
+        }
+
+        public Task<Result<UserProfileResponse>> GetProfileAsync(string userId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

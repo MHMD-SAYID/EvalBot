@@ -10,5 +10,6 @@ namespace GraduationProject.Entities
         [Key]
         public string userId { get; set; }
         public User user { get; set; }
+        
     }
 }
