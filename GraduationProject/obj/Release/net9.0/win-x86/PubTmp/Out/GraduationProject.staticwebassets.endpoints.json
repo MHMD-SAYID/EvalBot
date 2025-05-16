@@ -1,5 +1,252 @@
 {
   "Version": 1,
   "ManifestType": "Publish",
-  "Endpoints": []
+  "Endpoints": [
+    {
+      "Route": "CV/mohamed.pdf",
+      "AssetFile": "CV/mohamed.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "403512"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Sd94bvG55sXpR+MdgfmLOik7H7rsgi/4DSA6XXoNbNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 May 2025 19:07:03 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Sd94bvG55sXpR+MdgfmLOik7H7rsgi/4DSA6XXoNbNQ="
+        }
+      ]
+    },
+    {
+      "Route": "CV/mohamed.rjjfou0v4m.pdf",
+      "AssetFile": "CV/mohamed.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "403512"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Sd94bvG55sXpR+MdgfmLOik7H7rsgi/4DSA6XXoNbNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 May 2025 19:07:03 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rjjfou0v4m"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Sd94bvG55sXpR+MdgfmLOik7H7rsgi/4DSA6XXoNbNQ="
+        },
+        {
+          "Name": "label",
+          "Value": "CV/mohamed.pdf"
+        }
+      ]
+    },
+    {
+      "Route": "Images/company011.jpg",
+      "AssetFile": "Images/company011.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "158027"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D+Diik3B5mjf0DC2R/KQYVxa5FFNyWrrdIAyQOLGgac=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 08:46:18 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D+Diik3B5mjf0DC2R/KQYVxa5FFNyWrrdIAyQOLGgac="
+        }
+      ]
+    },
+    {
+      "Route": "Images/company011.txbec8gtke.jpg",
+      "AssetFile": "Images/company011.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "158027"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D+Diik3B5mjf0DC2R/KQYVxa5FFNyWrrdIAyQOLGgac=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 08:46:18 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "txbec8gtke"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D+Diik3B5mjf0DC2R/KQYVxa5FFNyWrrdIAyQOLGgac="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/company011.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "Images/mohamed.png",
+      "AssetFile": "Images/mohamed.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "274021"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VLrCBCyxMDl4944x3APUWu2WVpv0Gv4n+T8BITrKGGA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 08:46:14 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VLrCBCyxMDl4944x3APUWu2WVpv0Gv4n+T8BITrKGGA="
+        }
+      ]
+    },
+    {
+      "Route": "Images/mohamed.w1xkuew0cw.png",
+      "AssetFile": "Images/mohamed.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "274021"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VLrCBCyxMDl4944x3APUWu2WVpv0Gv4n+T8BITrKGGA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 08:46:14 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w1xkuew0cw"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VLrCBCyxMDl4944x3APUWu2WVpv0Gv4n+T8BITrKGGA="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/mohamed.png"
+        }
+      ]
+    }
+  ]
 }

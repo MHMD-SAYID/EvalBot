@@ -14,7 +14,7 @@
         //ICollection<string> Skills { get; set; } = new List<string>();
         public string companyProfileId { get; set; }
         public CompanyProfile Company { get; set; }
-        public ICollection<UserProfile> userProfile { get; set; }=new List<UserProfile>();
+        public ICollection<JobUserProfile> jobUserProfiles { get; set; }=new List<JobUserProfile>();
 
     }
 }

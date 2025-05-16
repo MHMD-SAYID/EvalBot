@@ -25,11 +25,17 @@ namespace GraduationProject.Controllers
             var result = await _companyService.AddJob(request, cancellationToken);
             return result.IsSuccess ? Ok() : result.ToProblem();
         } 
-        [HttpPost("Delete-job")]
+        [HttpDelete("delete-job")]
         public async Task<IActionResult>DeleteJob(DeleteRequest request,CancellationToken cancellationToken)
         {
             var result = await _companyService.DeleteJob(request, cancellationToken);
             return result.IsSuccess ? Ok() : result.ToProblem();
+        }
+        [HttpGet("get-job-data")]
+        public async Task<IActionResult> GetJobData(int Id , CancellationToken cancellationToken)
+        {
+            var result = await _companyService.GetJobData(Id, cancellationToken);
+            return Ok(result.Value);
         }
     }
 }

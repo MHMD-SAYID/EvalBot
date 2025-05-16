@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\CV\\mohamed.pdf",
+      "PackagePath": "staticwebassets\\CV\\mohamed.pdf"
+    },
+    {
+      "Id": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\company011.jpg",
+      "PackagePath": "staticwebassets\\Images\\company011.jpg"
+    },
+    {
       "Id": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mohamed.png",
       "PackagePath": "staticwebassets\\Images\\mohamed.png"
     },

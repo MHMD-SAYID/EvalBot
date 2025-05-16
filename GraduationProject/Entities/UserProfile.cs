@@ -27,6 +27,8 @@ namespace GraduationProject.Entities
         public ICollection<Interview>? interviews { get; set; } = new List<Interview>();//list int score gender list<string> skills project
         //public UserImage Image { get; set; }
         public UserCV? CV { get; set; }
-        public ICollection<Job>? Jobs { get; set; }
+        //public ICollection<Job>? Jobs { get; set; }
+        public ICollection<JobUserProfile> jobUserProfiles { get; set; } = new List<JobUserProfile>();
+
     }
 }

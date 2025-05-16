@@ -1,1 +1,3 @@
+wwwroot\CV\mohamed.pdf
+wwwroot\Images\company011.jpg
 wwwroot\Images\mohamed.png

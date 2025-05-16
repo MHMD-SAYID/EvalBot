@@ -190,7 +190,7 @@ namespace GraduationProject.Migrations
                     b.ToTable("Interview");
                 });
 
-            modelBuilder.Entity("GraduationProject.Entities.Job", b =>
+            modelBuilder.Entity("GraduationProject.Entities.jobData", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -749,7 +749,7 @@ namespace GraduationProject.Migrations
                     b.Navigation("track");
                 });
 
-            modelBuilder.Entity("GraduationProject.Entities.Job", b =>
+            modelBuilder.Entity("GraduationProject.Entities.jobData", b =>
                 {
                     b.HasOne("GraduationProject.Entities.Company", null)
                         .WithMany("Jobs")
@@ -847,7 +847,7 @@ namespace GraduationProject.Migrations
 
             modelBuilder.Entity("JobUser", b =>
                 {
-                    b.HasOne("GraduationProject.Entities.Job", null)
+                    b.HasOne("GraduationProject.Entities.jobData", null)
                         .WithMany()
                         .HasForeignKey("JobsId")
                         .OnDelete(DeleteBehavior.Cascade)

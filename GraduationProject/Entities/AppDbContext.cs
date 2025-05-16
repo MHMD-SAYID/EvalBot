@@ -23,6 +23,8 @@ namespace GraduationProject.Entities
         public DbSet<Language> Language { get; set; }
         public DbSet<UserProfile> UserProfile { get; set; }
         public DbSet<CompanyProfile> CompanyProfile { get; set; }
+        public DbSet<JobUserProfile> JobUserProfiles { get; set; }
+        
 
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)

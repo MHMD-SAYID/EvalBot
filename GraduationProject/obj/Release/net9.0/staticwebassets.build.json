@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZqAQwClm+tf2P6KHybNECOTeI0LXWyFWQJ8zUO+ntbQ=",
+  "Hash": "1wA6+RYqhrb9iGw8Q6ky8gdQeToK2xTWMa9N88GDGhU=",
   "Source": "GraduationProject",
   "BasePath": "_content/GraduationProject",
   "Mode": "Default",
@@ -36,6 +36,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CV\\mohamed.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\company011.jpg",
+      "SourceId": "GraduationProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\",
+      "BasePath": "_content/GraduationProject",
+      "RelativePath": "Images/company011#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "txbec8gtke",
+      "Integrity": "D+Diik3B5mjf0DC2R/KQYVxa5FFNyWrrdIAyQOLGgac=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\company011.jpg"
     },
     {
       "Identity": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mohamed.png",
@@ -143,6 +164,88 @@
       ]
     },
     {
+      "Route": "Images/company011.jpg",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\company011.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "158027"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D+Diik3B5mjf0DC2R/KQYVxa5FFNyWrrdIAyQOLGgac=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 08:46:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D+Diik3B5mjf0DC2R/KQYVxa5FFNyWrrdIAyQOLGgac="
+        }
+      ]
+    },
+    {
+      "Route": "Images/company011.txbec8gtke.jpg",
+      "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\company011.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "158027"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D+Diik3B5mjf0DC2R/KQYVxa5FFNyWrrdIAyQOLGgac=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 08:46:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "txbec8gtke"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/company011.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D+Diik3B5mjf0DC2R/KQYVxa5FFNyWrrdIAyQOLGgac="
+        }
+      ]
+    },
+    {
       "Route": "Images/mohamed.png",
       "AssetFile": "C:\\Users\\malko\\source\\repos\\GraduationProject\\GraduationProject\\wwwroot\\Images\\mohamed.png",
       "Selectors": [],
@@ -165,7 +268,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 08:39:19 GMT"
+          "Value": "Wed, 14 May 2025 08:46:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -202,7 +305,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 08:39:19 GMT"
+          "Value": "Wed, 14 May 2025 08:46:14 GMT"
         },
         {
           "Name": "Cache-Control",

@@ -27,7 +27,7 @@ namespace GraduationProject.Service
                     x.user.Email,
                     Imagepath,
                     x.Jobs != null && x.Jobs.Any()
-                        ? x.Jobs.Select(p => new jobsProfile(p.Title, p.ReleaseDate)).ToList()
+                        ? x.Jobs.Select(p => new jobsProfile(p.Id,p.Title, p.ReleaseDate)).ToList()
                         : null
 
 
@@ -64,11 +64,33 @@ namespace GraduationProject.Service
         {
             var job =await _context.Jobs.Where(x=>x.Id==request.Id && x.companyProfileId==request.userId)
                 .FirstOrDefaultAsync(cancellationToken);
-            if (job is null) { return Result.Failure(UserErrors.InternalServerError); }
+            if (job is null) { return Result.Failure(CompanyErrors.JobNotFound); }
 
             _context.Remove(job);
             var result =await _context.SaveChangesAsync();
             return Result.Success();
+        }
+
+        public async Task<Result<GetJobDataResponse>> GetJobData(int Id, CancellationToken cancellationToken)
+        {
+            var response = await _context.Jobs
+                .Where(x => x.Id == Id)
+                .Select(j => new GetJobDataResponse
+                (
+                    j.Id,
+                    j.Title,
+                    j.Location,
+                    j.applicaitonLink,
+                    j.Description,
+                    j.Requirements,
+                    j.Benefits
+                ))
+                .SingleAsync();
+             
+            if(response is null )
+                return Result.Failure<GetJobDataResponse>(CompanyErrors.JobNotFound);
+            return Result.Success(response);
+            
         }
     }
 }

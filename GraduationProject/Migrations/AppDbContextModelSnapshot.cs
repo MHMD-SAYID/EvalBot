@@ -224,6 +224,30 @@ namespace GraduationProject.Migrations
                     b.ToTable("Jobs");
                 });
 
+            modelBuilder.Entity("GraduationProject.Entities.JobUserProfile", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("jobId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("userProfileId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("jobId");
+
+                    b.HasIndex("userProfileId");
+
+                    b.ToTable("JobUserProfiles");
+                });
+
             modelBuilder.Entity("GraduationProject.Entities.Language", b =>
                 {
                     b.Property<int>("Id")
@@ -554,21 +578,6 @@ namespace GraduationProject.Migrations
                     b.ToTable("UserProfile");
                 });
 
-            modelBuilder.Entity("JobUserProfile", b =>
-                {
-                    b.Property<int>("JobsId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("userProfileuserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("JobsId", "userProfileuserId");
-
-                    b.HasIndex("userProfileuserId");
-
-                    b.ToTable("JobUserProfile");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -749,6 +758,25 @@ namespace GraduationProject.Migrations
                     b.Navigation("Company");
                 });
 
+            modelBuilder.Entity("GraduationProject.Entities.JobUserProfile", b =>
+                {
+                    b.HasOne("GraduationProject.Entities.Job", "job")
+                        .WithMany("jobUserProfiles")
+                        .HasForeignKey("jobId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GraduationProject.Entities.UserProfile", "userProfile")
+                        .WithMany("jobUserProfiles")
+                        .HasForeignKey("userProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("job");
+
+                    b.Navigation("userProfile");
+                });
+
             modelBuilder.Entity("GraduationProject.Entities.Language", b =>
                 {
                     b.HasOne("GraduationProject.Entities.UserProfile", "userProfile")
@@ -867,21 +895,6 @@ namespace GraduationProject.Migrations
                     b.Navigation("user");
                 });
 
-            modelBuilder.Entity("JobUserProfile", b =>
-                {
-                    b.HasOne("GraduationProject.Entities.Job", null)
-                        .WithMany()
-                        .HasForeignKey("JobsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("GraduationProject.Entities.UserProfile", null)
-                        .WithMany()
-                        .HasForeignKey("userProfileuserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("GraduationProject.Entities.CompanyProfile", b =>
                 {
                     b.Navigation("Jobs");
@@ -890,6 +903,11 @@ namespace GraduationProject.Migrations
             modelBuilder.Entity("GraduationProject.Entities.Interview", b =>
                 {
                     b.Navigation("q_a");
+                });
+
+            modelBuilder.Entity("GraduationProject.Entities.Job", b =>
+                {
+                    b.Navigation("jobUserProfiles");
                 });
 
             modelBuilder.Entity("GraduationProject.Entities.Track", b =>
@@ -920,6 +938,8 @@ namespace GraduationProject.Migrations
                     b.Navigation("businessAccounts");
 
                     b.Navigation("interviews");
+
+                    b.Navigation("jobUserProfiles");
 
                     b.Navigation("languages");
                 });

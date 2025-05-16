@@ -38,7 +38,10 @@ public static class UserErrors
        new("CV.UploadedSuccessfully", "Uploaded Successfully", StatusCodes.Status200OK);
     public static readonly Error InternalServerError =
        new("CV.InternalServerError", " Internal Server Error", StatusCodes.Status500InternalServerError);
-    
-   
+    public static readonly Error DuplicatedApply =
+    new("User.DuplicatedApply", "Duplicated apply is not allowed.", StatusCodes.Status409Conflict);
+
+
+
 
 }

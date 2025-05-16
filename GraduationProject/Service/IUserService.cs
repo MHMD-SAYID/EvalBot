@@ -26,6 +26,8 @@ namespace GraduationProject.Service
         Task<Result> UpdateProject(UpdateProjectRequest request,CancellationToken cancellationToken);
         Task<Result> UpdateBusinessAccount(UpdateBusinessAccountRequest request,CancellationToken cancellationToken);
         Task<Result> UpdateLanguage(UpdateLanguageRequest request,CancellationToken cancellationToken);
+        Task<Result<List<GetAllJobsResponse>>> GetAllJobs(CancellationToken cancellationToken);
+        Task<Result> ApplyToJob(ApplyToJobRequest request,CancellationToken cancellationToken);
 
     }
 }

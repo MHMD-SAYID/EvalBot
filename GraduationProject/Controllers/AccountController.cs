@@ -1,4 +1,5 @@
-﻿using GraduationProject.Contracts.Users.Add;
+﻿using GraduationProject.Contracts.Users;
+using GraduationProject.Contracts.Users.Add;
 using GraduationProject.Contracts.Users.Delete;
 using GraduationProject.Contracts.Users.Update;
 using GraduationProject.Extensions;
@@ -140,6 +141,20 @@ namespace GraduationProject.Controllers
             var result = await _userService.AddLanguages(request, cancellationToken);
             return result.IsSuccess ? Ok() : result.ToProblem();
 
+        }[HttpGet("get-all-jobs")]
+        public async Task<IActionResult> GetAllJobs( CancellationToken cancellationToken)
+        { 
+            var response = await _userService.GetAllJobs( cancellationToken);
+            
+            return Ok(response.Value);
+
+        }
+        [HttpPost("apply-to-job")]
+        public async Task<IActionResult>ApllyToJob(ApplyToJobRequest request,CancellationToken cancellationToken)
+        {
+
+            var result = await _userService.ApplyToJob(request, cancellationToken);
+            return result.IsSuccess ? Ok() : result.ToProblem();
         }
     }
 }

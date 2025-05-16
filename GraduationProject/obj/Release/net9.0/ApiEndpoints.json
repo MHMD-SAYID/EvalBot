@@ -96,6 +96,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "ApllyToJob",
+    "RelativePath": "apply-to-job",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Users.ApplyToJobRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GraduationProject.Controllers.CompanyAccountController",
     "Method": "Info",
     "RelativePath": "company-profile",
@@ -198,8 +214,8 @@
   {
     "ContainingType": "GraduationProject.Controllers.CompanyAccountController",
     "Method": "DeleteJob",
-    "RelativePath": "Delete-job",
-    "HttpMethod": "POST",
+    "RelativePath": "delete-job",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -366,6 +382,32 @@
         "Name": "request",
         "Type": "Microsoft.AspNetCore.Identity.Data.ForgotPasswordRequest",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "GetAllJobs",
+    "RelativePath": "get-all-jobs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.CompanyAccountController",
+    "Method": "GetJobData",
+    "RelativePath": "get-job-data",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

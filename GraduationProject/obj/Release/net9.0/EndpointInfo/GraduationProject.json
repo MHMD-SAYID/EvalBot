@@ -556,6 +556,49 @@
         }
       }
     },
+    "/get-all-jobs": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/apply-to-job": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApplyToJobRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApplyToJobRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApplyToJobRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/LogIn": {
       "post": {
         "tags": [
@@ -1002,8 +1045,8 @@
         }
       }
     },
-    "/Delete-job": {
-      "post": {
+    "/delete-job": {
+      "delete": {
         "tags": [
           "CompanyAccount"
         ],
@@ -1026,6 +1069,28 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/get-job-data": {
+      "get": {
+        "tags": [
+          "CompanyAccount"
+        ],
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -1282,36 +1347,6 @@
         },
         "additionalProperties": false
       },
-      "AddJob": {
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "location": {
-            "type": "string",
-            "nullable": true
-          },
-          "applicaitonLink": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "requirements": {
-            "type": "string",
-            "nullable": true
-          },
-          "benefits": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "AddJopRequest": {
         "type": "object",
         "properties": {
@@ -1322,7 +1357,7 @@
           "jobs": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/AddJob"
+              "$ref": "#/components/schemas/jobData"
             },
             "nullable": true
           }
@@ -1359,6 +1394,20 @@
               "$ref": "#/components/schemas/projectRegister"
             },
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApplyToJobRequest": {
+        "type": "object",
+        "properties": {
+          "userProfileId": {
+            "type": "string",
+            "nullable": true
+          },
+          "jobId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -1782,6 +1831,36 @@
           "endDate": {
             "type": "integer",
             "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "jobData": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "applicaitonLink": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "requirements": {
+            "type": "string",
+            "nullable": true
+          },
+          "benefits": {
+            "type": "string",
             "nullable": true
           }
         },

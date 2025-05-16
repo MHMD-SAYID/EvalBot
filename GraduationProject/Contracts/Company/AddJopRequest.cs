@@ -3,15 +3,6 @@
     public record AddJopRequest
     (
         string companyId,
-        List<AddJob> Jobs
+        List<jobData> Jobs
     );
-    public record AddJob
-        (
-        string Title,
-        string Location,
-        string applicaitonLink,
-        string Description,
-        string Requirements,
-        string Benefits
-        );
 }

@@ -9,6 +9,7 @@
     );
    public record jobsProfile
    (
+       int id,
        string title,
        DateOnly releaseDate
    );
