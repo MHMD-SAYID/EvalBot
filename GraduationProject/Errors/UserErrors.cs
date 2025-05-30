@@ -28,9 +28,10 @@ public static class UserErrors
         new("User.DuplicatedUserName", "Username already exists", StatusCodes.Status409Conflict);
     public static readonly Error EmailNotFound =
         new("User.EmailNotFound", "The provided email does not exist", StatusCodes.Status404NotFound);
-
+    
     public static readonly Error NoFileUploaded =
         new("CV.NoFileUploaded", "No File Uploaded", StatusCodes.Status404NotFound);
+    
 
     public static readonly Error NotPDF =
         new("CV.NotPDF", "Wrong file type", StatusCodes.Status415UnsupportedMediaType);
@@ -41,7 +42,12 @@ public static class UserErrors
     public static readonly Error DuplicatedApply =
     new("User.DuplicatedApply", "Duplicated apply is not allowed.", StatusCodes.Status409Conflict);
 
-
+    public static readonly Error InterviewNotFound =
+        new("Interview.InterviewNotFound", "There is No such interview", StatusCodes.Status404NotFound);
+    public static readonly Error InterviewDataNotAdded =
+        new("Interview.InterviewDataNotAdded", "Couldn't add interview data", StatusCodes.Status400BadRequest);
+    public static readonly Error InterviewVisionDataNotAdded =
+        new("Interview.InterviewVisionDataNotAdded", "Couldn't add interview vision data", StatusCodes.Status400BadRequest);
 
 
 }

@@ -1,6 +1,7 @@
 ﻿using GraduationProject.Contracts.Company;
 using GraduationProject.Contracts.Users.Delete;
 using GraduationProject.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace GraduationProject.Controllers
 {
     //[Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CompanyAccountController(ICompanyService companyService) : ControllerBase
     {
         private readonly ICompanyService _companyService = companyService;

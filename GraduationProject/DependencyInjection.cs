@@ -34,7 +34,7 @@ namespace GraduationProject
         services.AddAuthConfig(configuration);
 
            
-            var connectionString = configuration.GetConnectionString("constr") ??
+            var connectionString = configuration.GetConnectionString("Localconstr") ??
                 throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
             services.AddDbContext<AppDbContext>(options =>
@@ -162,7 +162,7 @@ namespace GraduationProject
                 .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
                 .UseSimpleAssemblyNameTypeSerializer()
                 .UseRecommendedSerializerSettings()
-                .UseSqlServerStorage(configuration.GetConnectionString("Hnagfireconstr")));
+                .UseSqlServerStorage(configuration.GetConnectionString("LocalHnagfireconstr")));
 
             services.AddHangfireServer();
 

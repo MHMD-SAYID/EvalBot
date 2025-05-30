@@ -2,6 +2,7 @@
 using GraduationProject.Contracts.Users;
 using GraduationProject.Contracts.Users.Add;
 using GraduationProject.Contracts.Users.Delete;
+using GraduationProject.Contracts.Users.Interview;
 using GraduationProject.Contracts.Users.Update;
 using GraduationProject.Entities;
 using System.IO;
@@ -11,7 +12,8 @@ using System.IO;
 
 namespace GraduationProject.Service
 {
-    public class UserService(IWebHostEnvironment webHostEnvironment, IHttpContextAccessor httpContextAccessor, UserManager<User> userManager,AppDbContext context) : IUserService
+    public class UserService(IWebHostEnvironment webHostEnvironment, IHttpContextAccessor httpContextAccessor
+        , UserManager<User> userManager,AppDbContext context) : IUserService
     {
         private readonly AppDbContext _context=context;
         private readonly UserManager<User> _userManager=userManager;
@@ -466,6 +468,71 @@ namespace GraduationProject.Service
             }, cancellationToken);
             var response= await _context.SaveChangesAsync();
             return Result.Success();
+        }
+
+        public async Task<Result<int>> ConductInterView(CoductInterviewRequest request, CancellationToken cancellationToken)
+        {
+            var interview = new Interview
+            {
+                userProfileId = request.userProfileId,
+                Topic=request.Topic
+                
+            };
+            _context.Interview.Add(interview);
+            var result =await _context.SaveChangesAsync(cancellationToken); 
+            return Result.Success(interview.Id);
+        }
+
+        public async Task<Result> AddInterViewData(AddInterviewDataRequest request, CancellationToken cancellationToken)
+        {
+            var interviewExists = await _context.Interview
+                .AnyAsync(x => x.Id == request.interviewId, cancellationToken);
+            if(!interviewExists)
+            { return Result.Failure(UserErrors.InterviewNotFound); }
+            var Data = new Q_A
+            {
+                InterviewId=request.interviewId,
+                Topic=request.Topic,
+                QuestionNumber = request.questionNumber,
+                Question = request.Question,
+                Answer=request.Answer,
+                userAnswer=request.userAnswer,
+                Score=request.Score,
+                ScoreExplanation=request.ScoreExplanation,
+                Links = request.Links,
+            };
+            _context.Q_A.Add(Data);
+            var result =await _context.SaveChangesAsync(cancellationToken);
+            return result > 0 ? Result.Success() : Result.Failure(UserErrors.InterviewDataNotAdded);
+        }
+
+        public async Task<Result> AddInterViewVisionData(AddVisionResultRequest request, CancellationToken cancellationToken)
+        {
+            var interview = await _context.Interview
+                .FirstOrDefaultAsync(x => x.Id == request.interviewId, cancellationToken);
+            if (interview==null)
+            { return Result.Failure(UserErrors.InterviewNotFound); }
+            
+            {
+                interview.AverageConfidenceScore = request.interviewAverageConfidenceScore;
+                interview.AverageTensionScore = request.interviewAverageTensionScore;
+                interview.videoPath = request.VideoPath;
+                interview.Warnings = request.Warnings;
+                interview.IsCompleted = request.isCompleted;
+                interview.CheatTimes = request.cheatTimes;
+            }
+            var vision = new Q_AVisionResult
+            {
+                questionNumber = request.questionNumber,
+                interviewId = request.interviewId,
+                AverageConfidenceScore=request.averageConfidenceScore,
+                AverageTensionScore=request.averageTensionScore,
+                
+            };
+            _context.Interview.Update(interview);
+            _context.Q_AVisionResults.Add(vision);
+            var result = await _context.SaveChangesAsync(cancellationToken);    
+            return result>0? Result.Success() : Result.Failure(UserErrors.InterviewVisionDataNotAdded);
         }
     }
 }

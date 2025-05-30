@@ -1,6 +1,7 @@
 ﻿using GraduationProject.Contracts.Users;
 using GraduationProject.Contracts.Users.Add;
 using GraduationProject.Contracts.Users.Delete;
+using GraduationProject.Contracts.Users.Interview;
 using GraduationProject.Contracts.Users.Update;
 
 namespace GraduationProject.Service
@@ -28,6 +29,10 @@ namespace GraduationProject.Service
         Task<Result> UpdateLanguage(UpdateLanguageRequest request,CancellationToken cancellationToken);
         Task<Result<List<GetAllJobsResponse>>> GetAllJobs(CancellationToken cancellationToken);
         Task<Result> ApplyToJob(ApplyToJobRequest request,CancellationToken cancellationToken);
+        Task<Result<int>> ConductInterView(CoductInterviewRequest request,CancellationToken cancellationToken);
+        Task<Result> AddInterViewData(AddInterviewDataRequest request,CancellationToken cancellationToken);
+        Task<Result> AddInterViewVisionData(AddVisionResultRequest request,CancellationToken cancellationToken);
+
 
     }
 }

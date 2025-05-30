@@ -4,6 +4,7 @@ using GraduationProject.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GraduationProject.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250530142122_RemoveTrackFromQ_A")]
+    partial class RemoveTrackFromQ_A
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -147,23 +150,20 @@ namespace GraduationProject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<double?>("AverageConfidenceScore")
+                    b.Property<double>("AverageConfidenceScore")
                         .HasColumnType("float");
 
-                    b.Property<double?>("AverageTensionScore")
+                    b.Property<double>("AverageTensionScore")
                         .HasColumnType("float");
 
                     b.PrimitiveCollection<string>("CheatTimes")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsCompleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Topic")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("Warnings")
+                    b.Property<int>("Warnings")
                         .HasColumnType("int");
 
                     b.Property<string>("userProfileId")
@@ -171,6 +171,7 @@ namespace GraduationProject.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("videoPath")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -336,71 +337,23 @@ namespace GraduationProject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Answer")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("InterviewId")
-                        .HasColumnType("int");
-
-                    b.PrimitiveCollection<string>("Links")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Question")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("QuestionNumber")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Score")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ScoreExplanation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Topic")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("userAnswer")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("InterviewId");
-
-                    b.ToTable("Q_A");
-                });
-
-            modelBuilder.Entity("GraduationProject.Entities.Q_AVisionResult", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
                     b.Property<double>("AverageConfidenceScore")
                         .HasColumnType("float");
 
                     b.Property<double>("AverageTensionScore")
                         .HasColumnType("float");
 
-                    b.Property<int>("interviewId")
+                    b.Property<int>("InterviewId")
                         .HasColumnType("int");
 
-                    b.Property<int>("questionNumber")
+                    b.Property<int>("QuestionNumber")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("interviewId");
+                    b.HasIndex("InterviewId");
 
-                    b.ToTable("Q_AVisionResults");
+                    b.ToTable("Q_A");
                 });
 
             modelBuilder.Entity("GraduationProject.Entities.Track", b =>
@@ -849,17 +802,6 @@ namespace GraduationProject.Migrations
                     b.HasOne("GraduationProject.Entities.Interview", "Interview")
                         .WithMany("q_a")
                         .HasForeignKey("InterviewId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Interview");
-                });
-
-            modelBuilder.Entity("GraduationProject.Entities.Q_AVisionResult", b =>
-                {
-                    b.HasOne("GraduationProject.Entities.Interview", "Interview")
-                        .WithMany()
-                        .HasForeignKey("interviewId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

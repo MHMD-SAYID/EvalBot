@@ -4,6 +4,7 @@ using GraduationProject.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GraduationProject.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250530150033_AddVisionResult")]
+    partial class AddVisionResult
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -374,33 +377,6 @@ namespace GraduationProject.Migrations
                     b.HasIndex("InterviewId");
 
                     b.ToTable("Q_A");
-                });
-
-            modelBuilder.Entity("GraduationProject.Entities.Q_AVisionResult", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<double>("AverageConfidenceScore")
-                        .HasColumnType("float");
-
-                    b.Property<double>("AverageTensionScore")
-                        .HasColumnType("float");
-
-                    b.Property<int>("interviewId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("questionNumber")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("interviewId");
-
-                    b.ToTable("Q_AVisionResults");
                 });
 
             modelBuilder.Entity("GraduationProject.Entities.Track", b =>
@@ -849,17 +825,6 @@ namespace GraduationProject.Migrations
                     b.HasOne("GraduationProject.Entities.Interview", "Interview")
                         .WithMany("q_a")
                         .HasForeignKey("InterviewId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Interview");
-                });
-
-            modelBuilder.Entity("GraduationProject.Entities.Q_AVisionResult", b =>
-                {
-                    b.HasOne("GraduationProject.Entities.Interview", "Interview")
-                        .WithMany()
-                        .HasForeignKey("interviewId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

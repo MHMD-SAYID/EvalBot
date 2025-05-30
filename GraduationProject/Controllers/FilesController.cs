@@ -1,9 +1,11 @@
 ﻿
 
 using GraduationProject.Services;
+using Microsoft.AspNetCore.Authorization;
 namespace FileManager.Api.Controllers;
 [Route("[controller]")]
 [ApiController]
+
 public class FilesController(IFileService fileService) : ControllerBase
 {
     private readonly IFileService _fileService = fileService;
