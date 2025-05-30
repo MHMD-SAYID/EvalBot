@@ -32,6 +32,8 @@ namespace GraduationProject.Service
         Task<Result<int>> ConductInterView(CoductInterviewRequest request,CancellationToken cancellationToken);
         Task<Result> AddInterViewData(AddInterviewDataRequest request,CancellationToken cancellationToken);
         Task<Result> AddInterViewVisionData(AddVisionResultRequest request,CancellationToken cancellationToken);
+        Task<Result<GetAllInterviewsResponse>> GetAllInterviews(GetAllInterviewsRequest request,CancellationToken cancellationToken);
+        //Task<Result<GetInterViewResponse>> GetInterview(GetInterViewRequest request,CancellationToken cancellationToken);
 
 
     }

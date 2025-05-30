@@ -534,5 +534,44 @@ namespace GraduationProject.Service
             var result = await _context.SaveChangesAsync(cancellationToken);    
             return result>0? Result.Success() : Result.Failure(UserErrors.InterviewVisionDataNotAdded);
         }
+
+        public async Task<Result<GetAllInterviewsResponse>> GetAllInterviews(GetAllInterviewsRequest request, CancellationToken cancellationToken)
+        {
+            var user = await _context.UserProfile
+                .AnyAsync(x => x.userId == request.userProfileId, cancellationToken);
+            if (!user)
+            {
+                return Result.Failure<GetAllInterviewsResponse>(UserErrors.UserNotFound);
+            }
+            var interviewExists = await _context.Interview
+                .AnyAsync(x => x.userProfileId == request.userProfileId, cancellationToken);
+            if (!interviewExists)
+            {
+                return Result.Failure<GetAllInterviewsResponse>(UserErrors.PreviousInterviewsNotFound);
+            }
+            var interviews = await _context.Interview
+            .Where(x => x.userProfileId == request.userProfileId)
+            .Select(i => new InterViewProfile
+            (
+                i.Id,
+                i.videoPath,
+                i.Topic,
+                i.Warnings,
+                i.AverageConfidenceScore,
+                i.AverageTensionScore,
+                i.CheatTimes.ToList(),
+                i.IsCompleted
+            ))
+            .ToListAsync(cancellationToken);
+            return Result.Success(new GetAllInterviewsResponse(interviews));
+
+        }
+        ////Uncomment the following method if you want to implement fetching a specific interview's details
+
+        //public Task<Result<GetInterViewResponse>> GetInterview(GetInterViewRequest request, CancellationToken cancellationToken)
+        //{
+        //    //Code to fetch the interview details based on the request
+        //    return Result.Success();
+        //}
     }
 }

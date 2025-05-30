@@ -1,6 +1,7 @@
 ﻿namespace GraduationProject.Contracts.Users.Interview
 {
-    public class GetAllInterviewsRequest
-    {
-    }
+    public record GetAllInterviewsRequest
+    (
+        string userProfileId
+    );
 }

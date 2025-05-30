@@ -4,6 +4,8 @@ namespace GraduationProject.Errors;
 
 public static class UserErrors
 {
+    public static readonly Error UserNotFound =
+        new("User.NotFound", "Invalid user data", StatusCodes.Status404NotFound);
     public static readonly Error InvalidCredentials = 
         new("User.InvalidCredentials", "Invalid email/password", StatusCodes.Status401Unauthorized);
 
@@ -48,6 +50,7 @@ public static class UserErrors
         new("Interview.InterviewDataNotAdded", "Couldn't add interview data", StatusCodes.Status400BadRequest);
     public static readonly Error InterviewVisionDataNotAdded =
         new("Interview.InterviewVisionDataNotAdded", "Couldn't add interview vision data", StatusCodes.Status400BadRequest);
-
+    public static readonly Error PreviousInterviewsNotFound =
+        new("Interview.InterviewsNotFound", "There is no interviews for this user", StatusCodes.Status404NotFound);
 
 }
