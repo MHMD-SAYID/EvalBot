@@ -10,8 +10,8 @@ namespace GraduationProject.Contracts.Authentication
             .NotEmpty()
             .EmailAddress();
 
-            RuleFor(x => x.Code)
-               .NotEmpty();
+            //RuleFor(x => x.Code)
+            //   .NotEmpty();
 
             RuleFor(x => x.NewPassword)
                 .NotEmpty()

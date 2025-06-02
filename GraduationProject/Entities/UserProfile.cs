@@ -17,6 +17,7 @@ namespace GraduationProject.Entities
         public double ExpectedSalary { get; set; }
         public int YearsOfExperience { get; set; }
         public string Nationality { get; set; }
+        public string role { get; set; }
         public string? Bio { get; set; }
         public ICollection<string> Skills { get; set; } = new List<string>();
         public ICollection<Education> Education { get; set; } = new List<Education>();

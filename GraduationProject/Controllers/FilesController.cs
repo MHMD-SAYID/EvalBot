@@ -1,7 +1,6 @@
 ﻿
 
-using GraduationProject.Services;
-using Microsoft.AspNetCore.Authorization;
+using GraduationProject.IService;
 namespace FileManager.Api.Controllers;
 [Route("[controller]")]
 [ApiController]

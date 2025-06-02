@@ -1,4 +1,4 @@
-﻿namespace GraduationProject.Service
+﻿namespace GraduationProject.IService
 {
     public interface IAuthService
     {
@@ -19,7 +19,7 @@
 
         Task<Result> ResetPasswordAsync(ResetPasswordRequest request);
 
-      
-       
+
+
     }
 }

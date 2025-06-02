@@ -5,6 +5,7 @@ using GraduationProject.Contracts.Users.Delete;
 using GraduationProject.Contracts.Users.Interview;
 using GraduationProject.Contracts.Users.Update;
 using GraduationProject.Entities;
+using GraduationProject.IService;
 using System.IO;
 
 
@@ -65,7 +66,8 @@ namespace GraduationProject.Service
 
          Bio = x.Bio,
          ProfilePicUrl = Imagepath,
-         CVUrl = cvpath
+         CVUrl = cvpath,
+         role=x.role
      })
      .SingleAsync();
 
@@ -470,7 +472,7 @@ namespace GraduationProject.Service
             return Result.Success();
         }
 
-        public async Task<Result<int>> ConductInterView(CoductInterviewRequest request, CancellationToken cancellationToken)
+        public async Task<Result<ConductInterviewResponse>> ConductInterView(CoductInterviewRequest request, CancellationToken cancellationToken)
         {
             var interview = new Interview
             {
@@ -480,7 +482,8 @@ namespace GraduationProject.Service
             };
             _context.Interview.Add(interview);
             var result =await _context.SaveChangesAsync(cancellationToken); 
-            return Result.Success(interview.Id);
+            
+            return Result.Success(new ConductInterviewResponse( interview.Id));
         }
 
         public async Task<Result> AddInterViewData(AddInterviewDataRequest request, CancellationToken cancellationToken)
@@ -521,20 +524,19 @@ namespace GraduationProject.Service
                 interview.IsCompleted = request.isCompleted;
                 interview.CheatTimes = request.cheatTimes;
             }
-            var vision = new Q_AVisionResult
+            var vision = request.Data.Select(d => new Q_A
             {
-                questionNumber = request.questionNumber,
-                interviewId = request.interviewId,
-                AverageConfidenceScore=request.averageConfidenceScore,
-                AverageTensionScore=request.averageTensionScore,
-                
-            };
-            _context.Interview.Update(interview);
-            _context.Q_AVisionResults.Add(vision);
+                QuestionNumber = d.questionNumber,
+                AverageTensionScore = d.averageTensionScore,
+                AverageConfidenceScore = d.averageConfidenceScore,
+                InterviewId = request.interviewId
+            }).ToList();
+
+            _context.Update(interview);
+            _context.Q_A.UpdateRange(vision);
             var result = await _context.SaveChangesAsync(cancellationToken);    
             return result>0? Result.Success() : Result.Failure(UserErrors.InterviewVisionDataNotAdded);
         }
-
         public async Task<Result<GetAllInterviewsResponse>> GetAllInterviews(GetAllInterviewsRequest request, CancellationToken cancellationToken)
         {
             var user = await _context.UserProfile
@@ -564,14 +566,54 @@ namespace GraduationProject.Service
             ))
             .ToListAsync(cancellationToken);
             return Result.Success(new GetAllInterviewsResponse(interviews));
-
         }
-        ////Uncomment the following method if you want to implement fetching a specific interview's details
+        public async Task<Result<GetInterViewResponse>> GetInterview(GetInterViewRequest request, CancellationToken cancellationToken)
+        {
+            var userExists = await _context.UserProfile
+                .AnyAsync(x => x.userId == request.userProfileId, cancellationToken);
+            if (!userExists)
+            {
+                return Result.Failure<GetInterViewResponse>(UserErrors.UserNotFound);
+            }
+                var interviewExists = await _context.Interview
+                .AnyAsync(x => x.Id == request.interviewId, cancellationToken);
+            if (!interviewExists)
+            {
+                return Result.Failure<GetInterViewResponse>(UserErrors.InterviewNotFound);
+            }
+            var interview = await _context.Interview
+                .Where(x => x.Id == request.interviewId)
+                .Select(i => new GetInterViewResponse
+                (
 
-        //public Task<Result<GetInterViewResponse>> GetInterview(GetInterViewRequest request, CancellationToken cancellationToken)
-        //{
-        //    //Code to fetch the interview details based on the request
-        //    return Result.Success();
-        //}
+                    i.Id,
+                    i.videoPath,
+                    i.Topic,
+                    i.Warnings,
+                    i.AverageConfidenceScore,
+                    i.AverageTensionScore,
+                    i.CheatTimes.ToList(),
+                    i.IsCompleted,
+                    i.q_a.Select(q => new InterviewQuestions
+                    (
+                        q.QuestionNumber,
+                        q.Question,
+                        q.userAnswer,
+                        q.Answer,
+                        q.Links,
+                        q.Score,
+                        q.ScoreExplanation,
+                        q.Topic,
+                        q.AverageConfidenceScore,
+                        q.AverageTensionScore
+                    )).ToList()
+                    )
+                )
+
+                .SingleAsync(cancellationToken);
+
+            return Result.Success(interview);
+        }
+
     }
 }

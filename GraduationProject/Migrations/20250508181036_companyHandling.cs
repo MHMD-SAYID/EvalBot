@@ -322,7 +322,7 @@ namespace GraduationProject.Migrations
                 column: "CompanyuserId",
                 principalTable: "CompanyProfile",
                 principalColumn: "userId",
-                onDelete: ReferentialAction.NoAction);
+                onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Language_UserProfile_userProfileId",

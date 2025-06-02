@@ -2,7 +2,9 @@
 using GraduationProject.Contracts.Company;
 using GraduationProject.Contracts.Users;
 using GraduationProject.Contracts.Users.Delete;
+using GraduationProject.Contracts.Users.Interview;
 using GraduationProject.Entities;
+using GraduationProject.IService;
 
 namespace GraduationProject.Service
 {
@@ -92,5 +94,7 @@ namespace GraduationProject.Service
             return Result.Success(response);
             
         }
+        
+
     }
 }

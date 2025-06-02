@@ -6,6 +6,8 @@ using System.Security.Cryptography;
 using System.Text;
 using User = GraduationProject.Entities.User;
 using Hangfire;
+using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
+using GraduationProject.IService;
 
 namespace GraduationProject.Service
 {
@@ -34,48 +36,233 @@ namespace GraduationProject.Service
         {
 
 
-            var emailIsExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
-            if (emailIsExists)
-                return Result.Failure<RegisterResponse>(UserErrors.DuplicatedEmail);
+            //var emailIsExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
+            //if (emailIsExists)
+            //    return Result.Failure<RegisterResponse>(UserErrors.DuplicatedEmail);
 
-            var UserNameExists = await _userManager.Users.AnyAsync(x => x.UserName == request.UserName, cancellationToken);
-            if (UserNameExists)
-                return Result.Failure<RegisterResponse>(UserErrors.DuplicatedUserName);
-            var user = new User
+            //var UserNameExists = await _userManager.Users.AnyAsync(x => x.UserName == request.UserName, cancellationToken);
+            //if (UserNameExists)
+            //    return Result.Failure<RegisterResponse>(UserErrors.DuplicatedUserName);
+            //var user = new User
+            //{
+            //    Email = request.Email,
+            //    PhoneNumber = request.PhoneNumber,
+            //    UserName = request.UserName
+            //};
+            ////var user = request.Adapt<UserProfile>();
+
+            //var result = await _userManager.CreateAsync(user, request.Password);
+
+
+
+            ////var usera=await _userManager.FindByEmailAsync(request.Email);
+            //var usera = await _context.UserProfile.Where(x => x.user.Email == request.Email)
+            //    .FirstOrDefaultAsync();
+            //usera.Skills = request.Skills;
+            //if (result.Succeeded)
+            //{
+
+            //    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            //    code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+
+            //    _logger.LogInformation("Confirmation code: {code}", code);
+
+            //    await SendConfirmationEmailWep(user, code);
+
+            //    var  response=new RegisterResponse(usera.userId, usera.user.UserName, usera.CountryOfResidence
+            //        , usera.user.PhoneNumber, usera.Skills, usera.YearsOfExperience, usera.ExpectedSalary,
+            //        usera.Nationality, usera.DateOfBirth,usera.role);
+            //    return Result.Success(response);
+            //}
+
+            //var error = result.Errors.First();
+
+            //return Result.Failure<RegisterResponse>(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
+
+
+
+
+            //if (request == null || string.IsNullOrEmpty(request.Email))
+            //{
+            //    return Result.Failure<RegisterResponse>(new Error("InvalidInput", "Email is required.", StatusCodes.Status400BadRequest));
+            //}
+            //if (string.IsNullOrEmpty(request.UserName))
+            //{
+            //    return Result.Failure<RegisterResponse>(new Error("InvalidInput", "UserName is required.", StatusCodes.Status400BadRequest));
+            //}
+            //if (string.IsNullOrEmpty(request.Password))
+            //{
+            //    return Result.Failure<RegisterResponse>(new Error("InvalidInput", "Password is required.", StatusCodes.Status400BadRequest));
+            //}
+
+            //// Check for duplicate email
+            //_logger.LogInformation("Checking email: {Email}", request.Email);
+            //var emailIsExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
+            //if (emailIsExists)
+            //{
+            //    return Result.Failure<RegisterResponse>(UserErrors.DuplicatedEmail);
+            //}
+
+            //// Check for duplicate username
+            //var userNameExists = await _userManager.Users.AnyAsync(x => x.UserName == request.UserName, cancellationToken);
+            //if (userNameExists)
+            //{
+            //    return Result.Failure<RegisterResponse>(UserErrors.DuplicatedUserName);
+            //}
+
+            //// Create user
+            //var user = request.Adapt<User>();
+            //user.EmailConfirmed = true;
+            //var result = await _userManager.CreateAsync(user, request.Password);
+            //if (!result.Succeeded)
+            //{
+            //    var error = result.Errors.First();
+            //    return Result.Failure<RegisterResponse>(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
+            //}
+
+            //// Create and save UserProfile
+            //var profile = new UserProfile
+            //{
+            //    userId = user.Id,
+            //    CountryOfResidence = request.CountryOfResidence,
+            //    Skills = request.Skills,
+            //    Nationality = request.Nationality,
+            //    DateOfBirth = request.DateOfBirth,
+            //    ExpectedSalary = request.ExpectedSalary,
+            //    YearsOfExperience = request.YearsOfExperience,
+            //    EmailType = request.EmailType,
+            //    role = request.role
+            //};
+            //_context.UserProfile.Add(profile);
+            //var result1 =await _context.SaveChangesAsync(cancellationToken);
+            //if (result1>0)
+            //{
+
+            //    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            //    code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+
+            //    _logger.LogInformation("Confirmation code: {code}", code);
+
+            //    await SendConfirmationEmailWep(user, code);
+            //    var usera = await _context.UserProfile
+            //    .Include(x => x.user)
+            //    .FirstOrDefaultAsync(x => x.userId == user.Id, cancellationToken);
+            //    var response1 = new RegisterResponse(usera.userId, usera.user.UserName, usera.CountryOfResidence
+            //        , usera.user.PhoneNumber, usera.Skills, usera.YearsOfExperience, usera.ExpectedSalary,
+            //        usera.Nationality, usera.DateOfBirth, usera.role);
+            //    if (usera == null)
+            //    {
+            //        return Result.Failure<RegisterResponse>(new Error("ProfileNotFound", "Failed to create user profile.", StatusCodes.Status500InternalServerError));
+            //    }
+            //    return Result.Success(response1);
+            //}
+            //// Retrieve UserProfile with User
+            //var userProfile = await _context.UserProfile
+            //    .Include(x => x.user)
+            //    .FirstOrDefaultAsync(x => x.userId == user.Id, cancellationToken);
+
+            //if (userProfile == null)
+            //{
+            //    return Result.Failure<RegisterResponse>(new Error("ProfileNotFound", "Failed to create user profile.", StatusCodes.Status500InternalServerError));
+            //}
+
+            //// Create response
+            //var response = new RegisterResponse(
+            //    userProfile.userId,
+            //    userProfile.user.UserName,
+            //    userProfile.CountryOfResidence,
+            //    userProfile.user.PhoneNumber,
+            //    userProfile.Skills,
+            //    userProfile.YearsOfExperience,
+            //    userProfile.ExpectedSalary,
+            //    userProfile.Nationality,
+            //    userProfile.DateOfBirth,
+            //    userProfile.role
+            //    );
+
+            //return Result.Success(response);
+
+
+            if (request == null || string.IsNullOrEmpty(request.Email))
             {
-                Email = request.Email,
-                PhoneNumber = request.PhoneNumber,
-                UserName = request.UserName
-            };
-            //var user = request.Adapt<UserProfile>();
-
-            var result = await _userManager.CreateAsync(user, request.Password);
-            
-            
-
-            //var usera=await _userManager.FindByEmailAsync(request.Email);
-            var usera = await _context.UserProfile.Where(x => x.user.Email == request.Email)
-                .FirstOrDefaultAsync();
-            usera.Skills = request.Skills;
-            if (result.Succeeded)
+                return Result.Failure<RegisterResponse>(new Error("InvalidInput", "Email is required.", StatusCodes.Status400BadRequest));
+            }
+            if (string.IsNullOrEmpty(request.UserName))
             {
-
-                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-
-                _logger.LogInformation("Confirmation code: {code}", code);
-
-                await SendConfirmationEmailWep(user, code);
-                
-                var  response=new RegisterResponse(usera.userId, usera.user.UserName, usera.CountryOfResidence
-                    , usera.user.PhoneNumber, usera.Skills, usera.YearsOfExperience, usera.ExpectedSalary,
-                    usera.Nationality, usera.DateOfBirth);
-                return Result.Success(response);
+                return Result.Failure<RegisterResponse>(new Error("InvalidInput", "UserName is required.", StatusCodes.Status400BadRequest));
+            }
+            if (string.IsNullOrEmpty(request.Password))
+            {
+                return Result.Failure<RegisterResponse>(new Error("InvalidInput", "Password is required.", StatusCodes.Status400BadRequest));
             }
 
-            var error = result.Errors.First();
+            // Check for duplicate email
+            _logger.LogInformation("Checking email: {Email}", request.Email);
+            var emailIsExists = await _userManager.Users.AnyAsync(x => x.Email == request.Email, cancellationToken);
+            if (emailIsExists)
+            {
+                return Result.Failure<RegisterResponse>(UserErrors.DuplicatedEmail);
+            }
 
-            return Result.Failure<RegisterResponse>(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
+            // Check for duplicate username
+            var userNameExists = await _userManager.Users.AnyAsync(x => x.UserName == request.UserName, cancellationToken);
+            if (userNameExists)
+            {
+                return Result.Failure<RegisterResponse>(UserErrors.DuplicatedUserName);
+            }
+
+            // Create user
+            var user = request.Adapt<User>();
+            user.EmailConfirmed = true;
+            var result = await _userManager.CreateAsync(user, request.Password);
+            if (!result.Succeeded)
+            {
+                var error = result.Errors.First();
+                return Result.Failure<RegisterResponse>(new Error(error.Code, error.Description, StatusCodes.Status400BadRequest));
+            }
+
+            // Create and save UserProfile
+            var profile = new UserProfile
+            {
+                userId = user.Id,
+                CountryOfResidence = request.CountryOfResidence,
+                Skills = request.Skills,
+                Nationality = request.Nationality,
+                DateOfBirth = request.DateOfBirth,
+                ExpectedSalary = request.ExpectedSalary,
+                YearsOfExperience = request.YearsOfExperience,
+                EmailType = request.EmailType,
+                role = request.role
+            };
+            _context.UserProfile.Add(profile);
+            await _context.SaveChangesAsync(cancellationToken);
+
+            // Retrieve UserProfile with User
+            var userProfile = await _context.UserProfile
+                .Include(x => x.user)
+                .FirstOrDefaultAsync(x => x.userId == user.Id, cancellationToken);
+
+            if (userProfile == null)
+            {
+                return Result.Failure<RegisterResponse>(new Error("ProfileNotFound", "Failed to create user profile.", StatusCodes.Status500InternalServerError));
+            }
+
+            // Create response
+            var response = new RegisterResponse(
+                userProfile.userId,
+                userProfile.user.UserName,
+                userProfile.CountryOfResidence,
+                userProfile.user.PhoneNumber,
+                userProfile.Skills,
+                userProfile.YearsOfExperience,
+                userProfile.ExpectedSalary,
+                userProfile.Nationality,
+                userProfile.DateOfBirth,
+                userProfile.role
+                );
+
+            return Result.Success(response);
+
         }
 
 
@@ -118,7 +305,7 @@ namespace GraduationProject.Service
 
                 var response = new RegisterResponse(usera.userId, usera.user.UserName, usera.CountryOfResidence
                     , usera.user.PhoneNumber, usera.Skills, usera.YearsOfExperience, usera.ExpectedSalary,
-                    usera.Nationality, usera.DateOfBirth);
+                    usera.Nationality, usera.DateOfBirth,usera.role);
                 return Result.Success(response);
             }
 
@@ -241,7 +428,8 @@ namespace GraduationProject.Service
                 DateOfBirth = request.DateOfBirth,
                 ExpectedSalary = request.ExpectedSalary,
                 YearsOfExperience = request.YearsOfExperience,
-                EmailType= request.EmailType
+                EmailType= request.EmailType,
+                role=request.role
             };
             _context.UserProfile.Add(profile);
             await _context.SaveChangesAsync(cancellationToken);
@@ -266,7 +454,9 @@ namespace GraduationProject.Service
                 userProfile.YearsOfExperience,
                 userProfile.ExpectedSalary,
                 userProfile.Nationality,
-                userProfile.DateOfBirth);
+                userProfile.DateOfBirth,
+                userProfile.role
+                );
 
             return Result.Success(response);
         }
@@ -535,20 +725,21 @@ namespace GraduationProject.Service
             var user = await _userManager.FindByEmailAsync(request.Email);
 
             if (user is null || !user.EmailConfirmed)
-                return Result.Failure(UserErrors.InvalidCode);
+                return Result.Failure(UserErrors.EmailNotFound);
 
             IdentityResult result;
 
-            try
-            {
-                var code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(request.Code));
-                result = await _userManager.ResetPasswordAsync(user, code, request.NewPassword);
-            }
-            catch (FormatException)
-            {
-                result = IdentityResult.Failed(_userManager.ErrorDescriber.InvalidToken());
-            }
-
+            //try
+            //{
+            //    var code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(request.Code));
+            //    result = await _userManager.ResetPasswordAsync(user, code, request.NewPassword);
+            //}
+            //catch (FormatException)
+            //{
+            //    result = IdentityResult.Failed(_userManager.ErrorDescriber.InvalidToken());
+            //}
+            var token=await _userManager.GeneratePasswordResetTokenAsync(user);
+            result = await _userManager.ResetPasswordAsync(user,token, request.NewPassword);
             if (result.Succeeded)
                 return Result.Success();
 

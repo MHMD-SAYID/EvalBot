@@ -10,5 +10,8 @@ public record AddInterviewDataRequest
     List<string> Links,
     string Topic,
     string ScoreExplanation,
-    int Score
+    int Score,
+    double confidenceScore,
+    double tensionScore
+    
 );

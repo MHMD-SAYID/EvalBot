@@ -1,6 +1,5 @@
 ﻿
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
 namespace GraduationProject.Entities
@@ -24,7 +23,7 @@ namespace GraduationProject.Entities
         public DbSet<UserProfile> UserProfile { get; set; }
         public DbSet<CompanyProfile> CompanyProfile { get; set; }
         public DbSet<JobUserProfile> JobUserProfiles { get; set; }
-        public DbSet<Q_AVisionResult> Q_AVisionResults { get; set; }
+
         public DbSet<Q_A> Q_A { get; set; }
         
 

@@ -21,7 +21,10 @@ namespace GraduationProject.Entities.Config
             //    .IsRequired();
             builder.HasKey(x => x.userId);
 
-
+            builder.HasOne(x => x.user)
+        .WithOne(u => u.companyProfile)
+        .HasForeignKey<UserProfile>(x => x.userId)
+        .OnDelete(DeleteBehavior.Cascade);
             builder.ToTable("companyProfile");
 
 

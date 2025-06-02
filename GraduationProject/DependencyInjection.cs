@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using GraduationProject.Services;
 using FluentValidation.AspNetCore;
 using Hangfire;
+using GraduationProject.IService;
 
 namespace GraduationProject
 {

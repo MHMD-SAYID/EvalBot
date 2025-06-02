@@ -41,7 +41,7 @@ namespace GraduationProject.Migrations
                 column: "companyProfileId",
                 principalTable: "CompanyProfile",
                 principalColumn: "userId",
-                onDelete: ReferentialAction.NoAction);
+                onDelete: ReferentialAction.Cascade);
         }
 
         /// <inheritdoc />

@@ -17,9 +17,10 @@ namespace GraduationProject.Entities
         public string Question { get; set; }
         public string Answer { get; set; }
         public string userAnswer { get; set; }
-       
         public int InterviewId { get; set; }
         public Interview Interview { get; set; }
-
+        public string audioLink { get; set; }
+        public double? AverageConfidenceScore { get; set; }
+        public double? AverageTensionScore { get; set; }
     }
 }

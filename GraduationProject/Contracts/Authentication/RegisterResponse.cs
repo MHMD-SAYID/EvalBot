@@ -10,7 +10,7 @@
         int yearsOfExperience,
         double expectedSalary,
         string nationality,
-        DateOnly dateOfBirth
-        
+        DateOnly dateOfBirth,
+        string role
     );
 }

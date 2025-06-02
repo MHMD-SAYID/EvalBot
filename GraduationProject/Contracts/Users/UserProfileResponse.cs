@@ -31,6 +31,7 @@
         public string Bio { get; set; }
         public string ProfilePicUrl { get; set; }
         public string CVUrl { get; set; }
+        public string role { get; set; }
     }
     public class projectProfile
     {

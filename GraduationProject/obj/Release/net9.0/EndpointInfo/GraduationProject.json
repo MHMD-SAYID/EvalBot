@@ -692,6 +692,68 @@
         }
       }
     },
+    "/get-all-interviews": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllInterviewsRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllInterviewsRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllInterviewsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/get-interview": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetInterViewRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetInterViewRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetInterViewRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/LogIn": {
       "post": {
         "tags": [
@@ -1481,6 +1543,14 @@
           "score": {
             "type": "integer",
             "format": "int32"
+          },
+          "confidenceScore": {
+            "type": "number",
+            "format": "double"
+          },
+          "tensionScore": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
@@ -1539,21 +1609,9 @@
       "AddVisionResultRequest": {
         "type": "object",
         "properties": {
-          "questionNumber": {
-            "type": "integer",
-            "format": "int32"
-          },
           "interviewId": {
             "type": "integer",
             "format": "int32"
-          },
-          "averageConfidenceScore": {
-            "type": "number",
-            "format": "double"
-          },
-          "averageTensionScore": {
-            "type": "number",
-            "format": "double"
           },
           "videoPath": {
             "type": "string",
@@ -1581,6 +1639,13 @@
           },
           "isCompleted": {
             "type": "boolean"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/visionPerQuestion"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1650,6 +1715,30 @@
           "email": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllInterviewsRequest": {
+        "type": "object",
+        "properties": {
+          "userProfileId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetInterViewRequest": {
+        "type": "object",
+        "properties": {
+          "userProfileId": {
+            "type": "string",
+            "nullable": true
+          },
+          "interviewId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -1799,6 +1888,10 @@
           "dateOfBirth": {
             "type": "string",
             "format": "date"
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1807,10 +1900,6 @@
         "type": "object",
         "properties": {
           "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "code": {
             "type": "string",
             "nullable": true
           },
@@ -2077,6 +2166,28 @@
           "link": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "visionPerQuestion": {
+        "type": "object",
+        "properties": {
+          "interviewId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "questionNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "averageConfidenceScore": {
+            "type": "number",
+            "format": "double"
+          },
+          "averageTensionScore": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false

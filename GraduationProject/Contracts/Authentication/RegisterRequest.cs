@@ -14,8 +14,8 @@ public record RegisterRequest(
     int YearsOfExperience,
     double ExpectedSalary,
     string Nationality,
-    DateOnly DateOfBirth
-    
+    DateOnly DateOfBirth,
+    string role
     //projectRegister Projects,
     //experienceRegister Experiences,
     //educationList Educations,

@@ -44,6 +44,11 @@ namespace GraduationProject.Entities.Config
                     c => c.Aggregate(0, (a, v) => HashCode.Combine(a, v.GetHashCode())),
                     c => c.ToList()
                     ));
+            builder.HasOne(x => x.user)
+        .WithOne(u => u.userProfile)
+        .HasForeignKey<UserProfile>(x => x.userId)
+        .OnDelete(DeleteBehavior.Cascade);
+
         }
     }
 }

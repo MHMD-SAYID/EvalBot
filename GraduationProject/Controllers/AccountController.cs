@@ -4,6 +4,8 @@ using GraduationProject.Contracts.Users.Delete;
 using GraduationProject.Contracts.Users.Interview;
 using GraduationProject.Contracts.Users.Update;
 using GraduationProject.Extensions;
+using GraduationProject.IService;
+using GraduationProject.Service;
 using Microsoft.AspNetCore.Authorization;
 
 
@@ -180,5 +182,18 @@ public class AccountController(IUserService userService) : ControllerBase
     {
         var result = await _userService.AddInterViewVisionData(request, cancellationToken);
         return result.IsSuccess ? Ok() : result.ToProblem();
+    }
+    [HttpGet("get-all-interviews")]
+    public async Task<IActionResult> GetAllInterviews(GetAllInterviewsRequest request, CancellationToken cancellationToken)
+    {
+        var result = await _userService.GetAllInterviews(request, cancellationToken);
+        return result.IsSuccess ? Ok(result.Value) : result.ToProblem();
+
+    }
+    [HttpGet("get-interview")]
+    public async Task<IActionResult> GetInterview(GetInterViewRequest request, CancellationToken cancellationToken)
+    {
+        var result = await _userService.GetInterview(request, cancellationToken);
+        return result.IsSuccess? Ok(result.Value):result.ToProblem();
     }
 }

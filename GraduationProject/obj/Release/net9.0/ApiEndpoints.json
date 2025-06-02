@@ -436,12 +436,44 @@
   },
   {
     "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "GetAllInterviews",
+    "RelativePath": "get-all-interviews",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Users.Interview.GetAllInterviewsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
     "Method": "GetAllJobs",
     "RelativePath": "get-all-jobs",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "GetInterview",
+    "RelativePath": "get-interview",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Users.Interview.GetInterViewRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

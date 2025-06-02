@@ -2,9 +2,16 @@
 
 public record GetInterViewResponse
 (
-    InterViewProfiles InterviewProfile,
-    List<InterviewQuestions> Questions,
-    List<interviewVisionResult> VisionResults
+    int Id,
+    string? VideoPath,
+    string Topic,
+    int? Warnings,
+    double? AverageConfidenceScore,
+    double? AverageTensionScore,
+    List<double>? CheatTimes,
+    bool IsCompleted,
+    List<InterviewQuestions> Questions
+    //List<interviewVisionResult> VisionResults
 );
 public record InterViewProfiles
 (
@@ -23,14 +30,15 @@ public record InterviewQuestions
     string Question,
     string userAnswer,
     string answer,
-    List<string> Links,
+    ICollection<string> Links,
     int score,
     string scoreExplanation,
-    string Topic
+    string Topic,
+    
+    double? tensionScore,
+    double? confidenceScore
 );
 public record interviewVisionResult
 (
-    int questionNumber,
-    double tensionScore,
-    double confidenceScore
+    
 );
