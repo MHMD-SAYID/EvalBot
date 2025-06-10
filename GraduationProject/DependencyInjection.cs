@@ -24,7 +24,7 @@ namespace GraduationProject
             services.AddHybridCache();
 
             services.AddCors(options =>
-                options.AddDefaultPolicy(builder =>
+                options.AddPolicy("AllowAll",builder =>
                     builder
                         .AllowAnyMethod()
                         .AllowAnyHeader()

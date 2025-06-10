@@ -346,6 +346,22 @@
   },
   {
     "ContainingType": "FileManager.Api.Controllers.FilesController",
+    "Method": "UploadAudio",
+    "RelativePath": "Files/upload-audio",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Audio",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileManager.Api.Controllers.FilesController",
     "Method": "UploadCompanyImage",
     "RelativePath": "Files/upload-company-image",
     "HttpMethod": "POST",
@@ -461,6 +477,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "GraduationProject.Controllers.CompanyAccountController",
+    "Method": "GetAllJobs",
+    "RelativePath": "get-all-jobs-company",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Users.Interview.GetAllJObsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "GraduationProject.Controllers.AccountController",
     "Method": "GetInterview",
     "RelativePath": "get-interview",
@@ -488,6 +520,22 @@
         "Name": "Id",
         "Type": "System.Int32",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.CompanyAccountController",
+    "Method": "GetUsersAppliedToJob",
+    "RelativePath": "get-users-applied",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Company.GetUsersAppliedToJobRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

@@ -42,21 +42,23 @@ namespace GraduationProject.Service
         }
         public async Task<Result> AddJob(AddJopRequest request, CancellationToken cancellationToken)
         {
-            if (request.Jobs?.Any() != true)
-                return Result.Success();
-            var job = request.Jobs.Select(p => new Job
+            
+            var companyExists = await _context.CompanyProfile
+                .AnyAsync(x => x.userId == request.companyId, cancellationToken);
+            var job = new Job
             {
-                applicaitonLink = p.applicaitonLink,
-                Benefits = p.Benefits,
-                Description= p.Description,
-                Location = p.Location,
-                Requirements = p.Requirements,
-                Title = p.Title,
-                companyProfileId=request.companyId
-
-
-            }).ToList();
-            await _context.Jobs.AddRangeAsync(job, cancellationToken);
+                Title = request.Title,
+                Location = request.Location,
+                questionNumber=request.questionNumber,
+                track = request.track,
+                difficulty = request.difficulty,
+                Description = request.Description,
+                Requirements = request.Requirements,
+                Benefits = request.Benefits,
+                companyProfileId = request.companyId,
+                ReleaseDate = DateOnly.FromDateTime(DateTime.UtcNow)
+            };
+            await _context.Jobs.AddAsync(job, cancellationToken);
             var result = await _context.SaveChangesAsync(cancellationToken);
 
             return result > 0 ? Result.Success() : Result.Failure(PorfileErrors.EducationNotFound);
@@ -80,13 +82,16 @@ namespace GraduationProject.Service
                 .Select(j => new GetJobDataResponse
                 (
                     j.Id,
+                    j.Company.user.Image.HostedPath,
                     j.Title,
                     j.Location,
-                    j.applicaitonLink,
                     j.Description,
                     j.Requirements,
-                    j.Benefits
-                ))
+                    j.Benefits,
+                    j.track,
+                    j.questionNumber,
+                    j.difficulty
+                )).Distinct()
                 .SingleAsync();
              
             if(response is null )
@@ -94,7 +99,36 @@ namespace GraduationProject.Service
             return Result.Success(response);
             
         }
-        
 
+        public async Task<Result<List<GetAllJobsResponse>>> GetAllJobs(GetAllJObsRequest request, CancellationToken cancellationToken)
+        {
+            var jobs = await _context.Jobs.Where(x=>x.companyProfileId==request.companyId)
+               .Select(j => new GetAllJobsResponse
+               (
+                   j.Id,
+                   j.Company.user.Image.HostedPath,
+                   j.Title,
+                   j.Company.user.UserName!,
+                   j.Location,
+                   j.ReleaseDate
+
+               )).Distinct()
+               .ToListAsync();
+            return Result.Success(jobs);
+        }
+
+        public async Task<Result<List<GetUsersAppliedToJobResponse>>> GetUserAppliedToJob(GetUsersAppliedToJobRequest request, CancellationToken cancellationToken)
+        {
+            var users =await  _context.JobUserProfiles
+                .Where(j => j.jobId == request.jobId)
+                .Select(u => new GetUsersAppliedToJobResponse
+                (
+                    u.userProfileId,
+                    u.userProfile.user.Image.HostedPath
+                )).ToListAsync(cancellationToken);
+            return Result.Success(users);
+        }
+
+        
     }
 }

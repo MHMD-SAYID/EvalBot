@@ -85,6 +85,88 @@
       ]
     },
     {
+      "Route": "Images/company01.dkf0wkvvq2.jpg",
+      "AssetFile": "Images/company01.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5524"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ze63cvCRcZsJ2oZ+HoblycNrUbLTuJ18EkLrn5Zru64=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 08:30:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dkf0wkvvq2"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ze63cvCRcZsJ2oZ+HoblycNrUbLTuJ18EkLrn5Zru64="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/company01.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "Images/company01.jpg",
+      "AssetFile": "Images/company01.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5524"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ze63cvCRcZsJ2oZ+HoblycNrUbLTuJ18EkLrn5Zru64=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Jun 2025 08:30:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ze63cvCRcZsJ2oZ+HoblycNrUbLTuJ18EkLrn5Zru64="
+        }
+      ]
+    },
+    {
       "Route": "Images/company011.jpg",
       "AssetFile": "Images/company011.jpg",
       "Selectors": [],

@@ -3,11 +3,15 @@
     public record GetJobDataResponse
     (
         int Id,
+        string imageUrl,
         string Title,
         string Location,
-        string applicaitonLink,
         string Description,
         string Requirements,
-        string Benefits
+        string Benefits,
+        string track,
+        int questionNumber,
+        string difficulty
+
     );
 }

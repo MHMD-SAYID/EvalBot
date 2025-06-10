@@ -55,4 +55,10 @@ public class FilesController(IFileService fileService) : ControllerBase
 
         return stream is null ? NotFound() : File(stream, contentType, fileName, enableRangeProcessing: true);
     }
+    [HttpPost("upload-audio")]
+    public async Task<IActionResult> UploadAudio([FromForm] UploadAudioRequest request, CancellationToken cancellationToken)
+    {
+        return await _fileService.UploadAudioAsync(request.Audio, cancellationToken)
+            .ContinueWith(task => Ok(task.Result));
+    }
 }

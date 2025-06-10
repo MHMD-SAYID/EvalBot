@@ -2,6 +2,7 @@
 {
     public record CompanyProfileResponse
     (
+        
         string userName,
         string Location,
         string companyImageURL,

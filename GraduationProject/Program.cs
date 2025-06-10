@@ -8,7 +8,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDependencies(builder.Configuration);
 
 var app = builder.Build();
-app.UseCors();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -16,6 +15,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseHttpsRedirection();
+app.UseCors("AllowAll");
+
 app.UseAuthorization();
 
 app.MapStaticAssets();

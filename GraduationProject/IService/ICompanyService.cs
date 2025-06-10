@@ -1,4 +1,5 @@
-﻿using GraduationProject.Contracts.Users.Interview;
+﻿using GraduationProject.Contracts.Users;
+using GraduationProject.Contracts.Users.Interview;
 
 namespace GraduationProject.IService
 {
@@ -8,6 +9,8 @@ namespace GraduationProject.IService
         Task<Result> AddJob(AddJopRequest request, CancellationToken cancellationToken);
         Task<Result> DeleteJob(DeleteRequest request, CancellationToken cancellationToken);
         Task<Result<GetJobDataResponse>> GetJobData(int Id, CancellationToken cancellationToken);
+        Task<Result<List<GetAllJobsResponse>>> GetAllJobs(GetAllJObsRequest request, CancellationToken cancellationToken);
+        Task<Result<List<GetUsersAppliedToJobResponse>>> GetUserAppliedToJob(GetUsersAppliedToJobRequest request, CancellationToken cancellationToken);
         
     }
 }

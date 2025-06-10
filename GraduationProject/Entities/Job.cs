@@ -3,9 +3,12 @@
     public class Job
     {
         public int Id { get; set; }
-        public string applicaitonLink { get; set; }
+        //public string applicaitonLink { get; set; }
         public string Location { get; set; }
         public string Requirements { get; set; }
+        public string track { get; set; }
+        public int questionNumber { get; set; }
+        public string difficulty { get; set; }
         public string Title { get; set; }
         //public string Level { get; set; }
         public DateOnly ReleaseDate { get; set; } = DateOnly.FromDateTime(DateTime.Now);

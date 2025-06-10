@@ -10,6 +10,7 @@ public class Q_AConfiguration : IEntityTypeConfiguration<Q_A>
         builder.Property(x => x.Id)
             .UseIdentityColumn(1, 1);
 
+        //builder.Property(x=>x.audioLink).
        // builder.Property(i => i.level)
        //     .HasConversion(x=>x.ToString(), x => Enum.Parse<Level>(x));
 

@@ -1253,6 +1253,68 @@
         }
       }
     },
+    "/get-all-jobs-company": {
+      "get": {
+        "tags": [
+          "CompanyAccount"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllJObsRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllJObsRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllJObsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/get-users-applied": {
+      "get": {
+        "tags": [
+          "CompanyAccount"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUsersAppliedToJobRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUsersAppliedToJobRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUsersAppliedToJobRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/Files/upload": {
       "post": {
         "tags": [
@@ -1447,6 +1509,38 @@
           }
         }
       }
+    },
+    "/Files/upload-audio": {
+      "post": {
+        "tags": [
+          "Files"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Audio": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "Audio": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1505,11 +1599,131 @@
       "AddInterviewDataRequest": {
         "type": "object",
         "properties": {
+          "interviewId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userProfileId": {
+            "type": "string",
+            "nullable": true
+          },
+          "videoPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "averageConfidenceScore": {
+            "type": "number",
+            "format": "double"
+          },
+          "averageTensionScore": {
+            "type": "number",
+            "format": "double"
+          },
+          "warnings": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cheatTimes": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "double"
+            },
+            "nullable": true
+          },
+          "isCompleted": {
+            "type": "boolean"
+          },
+          "questions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AddQuestions"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddJopRequest": {
+        "type": "object",
+        "properties": {
+          "companyId": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "track": {
+            "type": "string",
+            "nullable": true
+          },
           "questionNumber": {
             "type": "integer",
             "format": "int32"
           },
-          "interviewId": {
+          "difficulty": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "requirements": {
+            "type": "string",
+            "nullable": true
+          },
+          "benefits": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddLanguagesRequest": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "languages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LanguageRegister"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddProjectRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "project": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/projectRegister"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddQuestions": {
+        "type": "object",
+        "properties": {
+          "questionNumber": {
             "type": "integer",
             "format": "int32"
           },
@@ -1551,56 +1765,9 @@
           "tensionScore": {
             "type": "number",
             "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
-      "AddJopRequest": {
-        "type": "object",
-        "properties": {
-          "companyId": {
-            "type": "string",
-            "nullable": true
           },
-          "jobs": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/jobData"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "AddLanguagesRequest": {
-        "type": "object",
-        "properties": {
-          "userId": {
+          "audioLink": {
             "type": "string",
-            "nullable": true
-          },
-          "languages": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LanguageRegister"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "AddProjectRequest": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "nullable": true
-          },
-          "project": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/projectRegister"
-            },
             "nullable": true
           }
         },
@@ -1729,6 +1896,16 @@
         },
         "additionalProperties": false
       },
+      "GetAllJObsRequest": {
+        "type": "object",
+        "properties": {
+          "companyId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "GetInterViewRequest": {
         "type": "object",
         "properties": {
@@ -1737,6 +1914,20 @@
             "nullable": true
           },
           "interviewId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetUsersAppliedToJobRequest": {
+        "type": "object",
+        "properties": {
+          "companyId": {
+            "type": "string",
+            "nullable": true
+          },
+          "jobId": {
             "type": "integer",
             "format": "int32"
           }
@@ -2121,36 +2312,6 @@
           "endDate": {
             "type": "integer",
             "format": "int64",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "jobData": {
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "location": {
-            "type": "string",
-            "nullable": true
-          },
-          "applicaitonLink": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "requirements": {
-            "type": "string",
-            "nullable": true
-          },
-          "benefits": {
-            "type": "string",
             "nullable": true
           }
         },

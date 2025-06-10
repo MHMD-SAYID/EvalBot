@@ -1,5 +1,6 @@
 ﻿using GraduationProject.IService;
 using Microsoft.AspNetCore.Http;
+using Microsoft.IdentityModel.Tokens;
 
 namespace GraduationProject.Services;
 
@@ -9,6 +10,7 @@ public class FileService(IWebHostEnvironment webHostEnvironment, AppDbContext co
 
     private readonly string _localfilesPath = $"{webHostEnvironment.WebRootPath}/CV/";
     private readonly string _localimagesPath = $"{webHostEnvironment.WebRootPath}/Images/";
+    private readonly string _localaudioPath = $"{webHostEnvironment.WebRootPath}/Audio/";
     private readonly UserManager<User> _userManager=userManager;
     private readonly AppDbContext _context = context;
 
@@ -277,6 +279,23 @@ public class FileService(IWebHostEnvironment webHostEnvironment, AppDbContext co
         var response = new UploadImageResponse(im.HostedPath);
         return response;
 
+
+    }
+
+    public async Task<UploadAudioResponse> UploadAudioAsync(IFormFile Audio, CancellationToken cancellationToken = default)
+    {
+        var ex = Path.GetExtension(Audio.FileName);
+
+        var date= DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+        var path = Path.Combine(_localaudioPath, $"{date}{ex}");
+            
+
+        using var stream = System.IO.File.Create(path);
+        await Audio.CopyToAsync(stream, cancellationToken);
+        //user.cvURL = "http://evalbot.runasp.net//CV//" + user.UserName + ex;
+        var hostedPath = "http://evalbot.runasp.net//Audio//" + date + ex;
+        var response = new UploadAudioResponse(hostedPath);
+        return response;
 
     }
 }

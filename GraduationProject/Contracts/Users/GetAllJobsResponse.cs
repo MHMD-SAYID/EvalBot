@@ -3,11 +3,11 @@
     public record GetAllJobsResponse
     (
         int Id,
+        string imageUrl,
         string jobTitle,
         string companyName,
         string Location,
         DateOnly releaseDate
-    //List<jobShowedToUser> jobs
     );
     public record jobShowedToUser
     (

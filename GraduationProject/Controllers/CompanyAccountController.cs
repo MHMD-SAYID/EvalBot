@@ -41,6 +41,17 @@ namespace GraduationProject.Controllers
             var result = await _companyService.GetJobData(Id, cancellationToken);
             return Ok(result.Value);
         }
-        
+        [HttpGet("get-all-jobs-company")]
+        public async Task<IActionResult> GetAllJobs([FromBody] GetAllJObsRequest request, CancellationToken cancellationToken)
+        {
+            var result = await _companyService.GetAllJobs(request, cancellationToken);
+            return Ok(result.Value);
+        }
+        [HttpGet("get-users-applied")]
+        public async Task<IActionResult> GetUsersAppliedToJob([FromBody] GetUsersAppliedToJobRequest request, CancellationToken cancellationToken)
+        {
+            var result = await _companyService.GetUserAppliedToJob(request, cancellationToken);
+            return Ok(result.Value);
+        }
     }
 }

@@ -3,6 +3,14 @@
     public record AddJopRequest
     (
         string companyId,
-        List<jobData> Jobs
+        string Title,
+        string track,
+        int questionNumber,
+        string difficulty,
+        string Location,
+        string Description,
+        string Requirements,
+        string Benefits
+    //List<jobData> Jobs
     );
 }

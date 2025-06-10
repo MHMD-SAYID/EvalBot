@@ -5,4 +5,9 @@
 
         string imageUrl
     );
+    public record UploadAudioResponse
+    (
+
+        string audioUrl
+    );
 }

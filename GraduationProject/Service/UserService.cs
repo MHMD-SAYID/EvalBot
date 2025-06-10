@@ -441,11 +441,13 @@ namespace GraduationProject.Service
                 .Select(j => new GetAllJobsResponse
                 (
                     j.Id,
+                    j.Company.user.Image.HostedPath,
                     j.Title,
                     j.Company.user.UserName!,
                     j.Location,
                     j.ReleaseDate
-                ))
+                    
+                )).Distinct()
                 .ToListAsync();
             return Result.Success(jobs);
             
@@ -492,19 +494,40 @@ namespace GraduationProject.Service
                 .AnyAsync(x => x.Id == request.interviewId, cancellationToken);
             if(!interviewExists)
             { return Result.Failure(UserErrors.InterviewNotFound); }
-            var Data = new Q_A
+            //var questionExists = await _context.Q_A
+            //    .AnyAsync(x => x.InterviewId == request.interviewId && x.QuestionNumber == request.questionNumber, cancellationToken);
+            //if(!questionExists)
+            //    return Result.Failure(UserErrors.)
+            var interview=
+                await _context.Interview.SingleOrDefaultAsync(x=>x.Id == request.interviewId, cancellationToken);
+            //insert general interview data
+
+            interview.videoPath=request.videoPath;
+            interview.Warnings = request.warnings;
+            interview.AverageConfidenceScore = request.AverageConfidenceScore;
+            interview.AverageTensionScore = request.AverageTensionScore;
+            interview.CheatTimes = request.cheatTimes;
+            interview.IsCompleted = request.isCompleted;
+
+
+            var questions = request.questions.Select(q => new Q_A
             {
-                InterviewId=request.interviewId,
-                Topic=request.Topic,
-                QuestionNumber = request.questionNumber,
-                Question = request.Question,
-                Answer=request.Answer,
-                userAnswer=request.userAnswer,
-                Score=request.Score,
-                ScoreExplanation=request.ScoreExplanation,
-                Links = request.Links,
-            };
-            _context.Q_A.Add(Data);
+                InterviewId = request.interviewId,
+                QuestionNumber = q.questionNumber,
+                Question=q.Question,
+                Answer=q.Answer,
+                userAnswer=q.userAnswer,
+                Links=q.Links,
+                Score=q.Score,
+                ScoreExplanation=q.ScoreExplanation,
+                Topic = q.Topic,
+                AverageConfidenceScore=q.confidenceScore,
+                AverageTensionScore=q.tensionScore
+               
+            }).ToList();
+                
+            _context.Interview.Update(interview);
+            await _context.Q_A.AddRangeAsync(questions);
             var result =await _context.SaveChangesAsync(cancellationToken);
             return result > 0 ? Result.Success() : Result.Failure(UserErrors.InterviewDataNotAdded);
         }

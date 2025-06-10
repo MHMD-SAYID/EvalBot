@@ -52,7 +52,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\CV\" />
     <Folder Include="wwwroot\Images\" />
-    <Folder Include="wwwroot\Video\" />
+    <Folder Include="wwwroot\Audio\" />
   </ItemGroup>
 
 </Project>

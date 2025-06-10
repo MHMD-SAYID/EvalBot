@@ -4,4 +4,8 @@
     (
         string userProfileId
     );
+    public record GetAllJObsRequest
+    (
+        string companyId
+    );
 }
