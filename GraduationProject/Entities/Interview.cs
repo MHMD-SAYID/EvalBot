@@ -16,13 +16,7 @@ namespace GraduationProject.Entities
         public UserProfile userProfile { get; set; }
         public ICollection<Q_A> q_a { get; set; } = new List<Q_A>();
 
-
-        //public DateTime StartDate { get; set; }
-        //public DateTime EndDate { get; set; }
-        //public string FeedBack { get; set; }
-        //public int TracksId { get; set; }
-        //public Track track { get; set; }
-        //public int Score { get; set; }
-        // public Level level { get; set; }
+        public List<SoftSkills> softSkills { get; set; }
+       
     }
     }

@@ -5,12 +5,7 @@
     
         int interviewId,
         string userProfileId,
-        string videoPath,
-        double AverageConfidenceScore,
-        double AverageTensionScore,
-        int warnings,
-        List<double>cheatTimes,
-        bool isCompleted,
+        
         List<AddQuestions> questions
 
     );
@@ -25,6 +20,5 @@
         string ScoreExplanation,
         int Score,
         double confidenceScore,
-        double tensionScore,
-        string audioLink
+        double tensionScore
     );

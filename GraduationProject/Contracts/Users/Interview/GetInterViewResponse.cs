@@ -10,8 +10,8 @@ public record GetInterViewResponse
     double? AverageTensionScore,
     List<double>? CheatTimes,
     bool IsCompleted,
-    List<InterviewQuestions> Questions
-    //List<interviewVisionResult> VisionResults
+    List<InterviewQuestions> Questions,
+    List<SoftSkillsDataResponse> SoftSkillsData
 );
 public record InterViewProfiles
 (
@@ -33,12 +33,21 @@ public record InterviewQuestions
     ICollection<string> Links,
     int score,
     string scoreExplanation,
-    string Topic,
-    
-    double? tensionScore,
-    double? confidenceScore
-);
-public record interviewVisionResult
-(
+    string Topic
     
 );
+public record SoftSkillsDataResponse
+    (
+        string softSkillsQuestion,
+        string targetSkill,
+        string softSkillAnswer,
+        int Level,
+        int Clarity,
+        int exampleQuality,
+        int Structure,
+        int Outcome,
+        int Score,
+        string Strength,
+        string Weakness,
+        string Feedback
+    );

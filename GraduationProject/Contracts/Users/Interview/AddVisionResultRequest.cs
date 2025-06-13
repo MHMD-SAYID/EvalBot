@@ -8,13 +8,7 @@ public record AddVisionResultRequest
     double interviewAverageConfidenceScore,
     double interviewAverageTensionScore,
     List<double> cheatTimes,
-    bool isCompleted,
-    List<visionPerQuestion> Data
+    bool isCompleted
+   
 );
-public record visionPerQuestion
-(
-    int interviewId,
-    int questionNumber,
-    double averageConfidenceScore,
-    double averageTensionScore
-);
+
