@@ -129,6 +129,22 @@
   },
   {
     "ContainingType": "GraduationProject.Controllers.AccountController",
+    "Method": "AddSoftSkills",
+    "RelativePath": "Add-soft-skills",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "GraduationProject.Contracts.Users.Interview.AddSoftSkillsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GraduationProject.Controllers.AccountController",
     "Method": "ApllyToJob",
     "RelativePath": "apply-to-job",
     "HttpMethod": "POST",

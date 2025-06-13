@@ -36,5 +36,6 @@ namespace GraduationProject.IService
         Task<Result<GetInterViewResponse>> GetInterview(GetInterViewRequest request, CancellationToken cancellationToken);
         Task<Result<GetAllInterviewsResponse>> GetAllInterviews(GetAllInterviewsRequest request, CancellationToken cancellationToken);
 
+        Task<Result> AddSoftSkills(AddSoftSkillsRequest request, CancellationToken cancellationToken);
     }
 }

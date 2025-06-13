@@ -1,0 +1,33 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.resharper
+*.dotSettings
+*.opensdf
+*.sdf
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+
+# Packages
+packages/
+*.nupkg
+
+# Node.js
+node_modules/
+
+# Editor folders
+.idea/
+
+# Temp files
+*.~
+*.bak
+*.log

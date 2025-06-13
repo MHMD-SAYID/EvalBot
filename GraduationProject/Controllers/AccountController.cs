@@ -196,4 +196,10 @@ public class AccountController(IUserService userService) : ControllerBase
         var result = await _userService.GetInterview(request, cancellationToken);
         return result.IsSuccess? Ok(result.Value):result.ToProblem();
     }
+    [HttpPost("Add-soft-skills")]
+    public async Task<IActionResult> AddSoftSkills(AddSoftSkillsRequest request, CancellationToken cancellationToken)
+    {
+        var result = await _userService.AddSoftSkills(request, cancellationToken);
+        return result.IsSuccess ? Ok() : result.ToProblem();
+    }
 }

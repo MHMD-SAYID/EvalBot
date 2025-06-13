@@ -754,6 +754,37 @@
         }
       }
     },
+    "/Add-soft-skills": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSoftSkillsRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSoftSkillsRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSoftSkillsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/LogIn": {
       "post": {
         "tags": [
@@ -1607,33 +1638,6 @@
             "type": "string",
             "nullable": true
           },
-          "videoPath": {
-            "type": "string",
-            "nullable": true
-          },
-          "averageConfidenceScore": {
-            "type": "number",
-            "format": "double"
-          },
-          "averageTensionScore": {
-            "type": "number",
-            "format": "double"
-          },
-          "warnings": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "cheatTimes": {
-            "type": "array",
-            "items": {
-              "type": "number",
-              "format": "double"
-            },
-            "nullable": true
-          },
-          "isCompleted": {
-            "type": "boolean"
-          },
           "questions": {
             "type": "array",
             "items": {
@@ -1773,6 +1777,27 @@
         },
         "additionalProperties": false
       },
+      "AddSoftSkillsRequest": {
+        "type": "object",
+        "properties": {
+          "userProfileId": {
+            "type": "string",
+            "nullable": true
+          },
+          "interviewId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "softSkillsList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SoftSkillsData"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "AddVisionResultRequest": {
         "type": "object",
         "properties": {
@@ -1806,13 +1831,6 @@
           },
           "isCompleted": {
             "type": "boolean"
-          },
-          "data": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/visionPerQuestion"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2101,6 +2119,64 @@
         },
         "additionalProperties": false
       },
+      "SoftSkillsData": {
+        "type": "object",
+        "properties": {
+          "questionNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "question": {
+            "type": "string",
+            "nullable": true
+          },
+          "targetSkill": {
+            "type": "string",
+            "nullable": true
+          },
+          "answer": {
+            "type": "string",
+            "nullable": true
+          },
+          "level": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "clarity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "exampleQuality": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "structure": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "outcome": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "score": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "strength": {
+            "type": "string",
+            "nullable": true
+          },
+          "weakness": {
+            "type": "string",
+            "nullable": true
+          },
+          "feedback": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "UpdateBioRequest": {
         "type": "object",
         "properties": {
@@ -2327,28 +2403,6 @@
           "link": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "visionPerQuestion": {
-        "type": "object",
-        "properties": {
-          "interviewId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "questionNumber": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "averageConfidenceScore": {
-            "type": "number",
-            "format": "double"
-          },
-          "averageTensionScore": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false

@@ -14,11 +14,11 @@ using System.IO;
 namespace GraduationProject.Service
 {
     public class UserService(IWebHostEnvironment webHostEnvironment, IHttpContextAccessor httpContextAccessor
-        , UserManager<User> userManager,AppDbContext context) : IUserService
+        , UserManager<User> userManager, AppDbContext context) : IUserService
     {
-        private readonly AppDbContext _context=context;
-        private readonly UserManager<User> _userManager=userManager;
-        private readonly IHttpContextAccessor _httpContextAccessor= httpContextAccessor;
+        private readonly AppDbContext _context = context;
+        private readonly UserManager<User> _userManager = userManager;
+        private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
         private readonly string _imagesPath = $"{webHostEnvironment.WebRootPath}/Images";
         private readonly string _FilePath = $"{webHostEnvironment.WebRootPath}/CV";
 
@@ -67,7 +67,7 @@ namespace GraduationProject.Service
          Bio = x.Bio,
          ProfilePicUrl = Imagepath,
          CVUrl = cvpath,
-         role=x.role
+         role = x.role
      })
      .SingleAsync();
 
@@ -86,10 +86,10 @@ namespace GraduationProject.Service
                 return Result.Success();
             var account = request.businessAccounts.Select(p => new BusinessAccount
             {
-                Link=p.AccountLink,
-                Type=p.AccountType,
+                Link = p.AccountLink,
+                Type = p.AccountType,
                 userProfileId = request.Id
-                
+
 
             }).ToList();
             await _context.businessAccounts.AddRangeAsync(account, cancellationToken);
@@ -159,9 +159,9 @@ namespace GraduationProject.Service
             await _context.Experience.AddRangeAsync(experience, cancellationToken);
             var result = await _context.SaveChangesAsync(cancellationToken);
 
-            return result>0 ? Result.Success() : Result.Failure(PorfileErrors.ExperienceNotFound);   
+            return result > 0 ? Result.Success() : Result.Failure(PorfileErrors.ExperienceNotFound);
 
-        
+
         }
 
 
@@ -191,14 +191,14 @@ namespace GraduationProject.Service
             await _context.SaveChangesAsync(cancellationToken);
             return Result.Success();
         }
-        
+
 
         public async Task<Result> DeleteEducation(DeleteRequest request, CancellationToken cancellationToken)
         {
             var education = await _context.Education
             .FirstOrDefaultAsync(e => e.Id == request.Id && e.userProfileId == request.userId, cancellationToken);
 
-            if(education is null) {return Result.Failure(PorfileErrors.EducationNotFound); }
+            if (education is null) { return Result.Failure(PorfileErrors.EducationNotFound); }
 
             _context.Education.Remove(education);
             await _context.SaveChangesAsync(cancellationToken);
@@ -209,7 +209,7 @@ namespace GraduationProject.Service
         public async Task<Result> DeleteExperience(DeleteRequest request, CancellationToken cancellationToken)
         {
             var experience = await _context.Experience.Where(e => e.Id == request.Id && e.userProfileId == request.userId)
-            .FirstOrDefaultAsync (cancellationToken);
+            .FirstOrDefaultAsync(cancellationToken);
 
             if (experience is null) { return Result.Failure(PorfileErrors.ExperienceNotFound); }
 
@@ -218,28 +218,28 @@ namespace GraduationProject.Service
             return Result.Success();
         }
 
-        public async Task<Result> DeleteProject(DeleteRequest request, CancellationToken cancellationToken=default)
+        public async Task<Result> DeleteProject(DeleteRequest request, CancellationToken cancellationToken = default)
         {
-           
-                var project = await _context.Projects
-                    .FirstOrDefaultAsync(e => e.Id == request.Id && e.userProfileId == request.userId, cancellationToken);
 
-                if (project is null) { return Result.Failure(PorfileErrors.ProjectNotFound); }
+            var project = await _context.Projects
+                .FirstOrDefaultAsync(e => e.Id == request.Id && e.userProfileId == request.userId, cancellationToken);
 
-                _context.Projects.Remove(project);
-                await _context.SaveChangesAsync(cancellationToken);
+            if (project is null) { return Result.Failure(PorfileErrors.ProjectNotFound); }
 
-                return Result.Success();
-            
-                
-            
+            _context.Projects.Remove(project);
+            await _context.SaveChangesAsync(cancellationToken);
+
+            return Result.Success();
+
+
+
         }
 
-        
 
-        public async Task<Result> UpdateBio(UpdateBioRequest request,CancellationToken cancellationToken )
+
+        public async Task<Result> UpdateBio(UpdateBioRequest request, CancellationToken cancellationToken)
         {
-            var user =await  _context.UserProfile.Where(x => x.userId == request.Id).FirstOrDefaultAsync();
+            var user = await _context.UserProfile.Where(x => x.userId == request.Id).FirstOrDefaultAsync();
             //var user= await _userManager.Users
             //    .Where(x=>x.Id==request.Id)
             //    .SingleOrDefaultAsync();
@@ -248,7 +248,7 @@ namespace GraduationProject.Service
                 return Result.Failure(UserErrors.EmailNotFound);
             }
             user.Bio = request.Bio;
-           _context.Update(user);
+            _context.Update(user);
             var result = await _context.SaveChangesAsync(cancellationToken);
 
             //var result= await _userManager.UpdateAsync(user);
@@ -261,7 +261,7 @@ namespace GraduationProject.Service
             //    return Result.Failure(UserErrors.InternalServerError);
             //}
             //return Result.Success(result);
-            
+
         }
 
         public async Task<Result> DeleteAccount(string userId, CancellationToken cancellationToken)
@@ -309,7 +309,7 @@ namespace GraduationProject.Service
             //var user = await _userManager.Users.FirstOrDefaultAsync(x=>x.Id==request.userId,cancellationToken);
             user.Skills = request.Skills;
             _context.Update(user);
-            var result=await _context.SaveChangesAsync(cancellationToken);
+            var result = await _context.SaveChangesAsync(cancellationToken);
             //var result =await _userManager.UpdateAsync(user);
             return result > 0 ? Result.Success() : Result.Failure(PorfileErrors.InvalidSkillsUpdate);
             //if (!result.Succeeded)
@@ -323,24 +323,24 @@ namespace GraduationProject.Service
         public async Task<Result> UpdateExperience(UpdateExperienceRequest request, CancellationToken cancellationToken)
         {
 
-            var experience = await _context.Experience.FindAsync(request.id) ;
+            var experience = await _context.Experience.FindAsync(request.id);
             if (experience is null)
             {
                 return Result.Failure(PorfileErrors.ExperienceNotFound);
             }
-            experience.CompanyName=request.CompanyName;
+            experience.CompanyName = request.CompanyName;
             experience.StillWorkingThere = request.StillWorkingThere;
-            experience.JobTitle=request.JobTitle;
-            experience.StartDate=request.StartDate;
-            experience.EndDate=request.EndDate;
-                 
+            experience.JobTitle = request.JobTitle;
+            experience.StartDate = request.StartDate;
+            experience.EndDate = request.EndDate;
+
             var result = await _context.SaveChangesAsync();
-            return Result.Success() ;
+            return Result.Success();
         }
 
         public async Task<Result> UpdateEducation(UpdateEducationRequest request, CancellationToken cancellationToken)
         {
-           
+
             var education = await _context.Education.Where(x => x.Id == request.id).FirstOrDefaultAsync();
             if (education is null)
             {
@@ -351,7 +351,7 @@ namespace GraduationProject.Service
             education.Degree = request.Degree;
             education.StartDate = request.StartDate;
             education.EndDate = request.EndDate;
-            education.IsUnderGraduate= request.IsUnderGraduate;
+            education.IsUnderGraduate = request.IsUnderGraduate;
             _context.Update(education);
             var result = await _context.SaveChangesAsync();
             return Result.Success();
@@ -413,7 +413,7 @@ namespace GraduationProject.Service
             {
                 Name = p.name,
                 Level = p.level,
-                userProfileId= request.userId
+                userProfileId = request.userId
             }).ToList();
             await _context.Language.AddRangeAsync(languages, cancellationToken);
             var result = await _context.SaveChangesAsync(cancellationToken);
@@ -433,7 +433,7 @@ namespace GraduationProject.Service
             return Result.Success();
         }
 
-        
+
 
         public async Task<Result<List<GetAllJobsResponse>>> GetAllJobs(CancellationToken cancellationToken)
         {
@@ -446,11 +446,11 @@ namespace GraduationProject.Service
                     j.Company.user.UserName!,
                     j.Location,
                     j.ReleaseDate
-                    
+
                 )).Distinct()
                 .ToListAsync();
             return Result.Success(jobs);
-            
+
         }
 
         public async Task<Result> ApplyToJob(ApplyToJobRequest request, CancellationToken cancellationToken)
@@ -470,7 +470,7 @@ namespace GraduationProject.Service
                 userProfileId = request.userId,
                 jobId = request.jobId
             }, cancellationToken);
-            var response= await _context.SaveChangesAsync();
+            var response = await _context.SaveChangesAsync();
             return Result.Success();
         }
 
@@ -479,56 +479,55 @@ namespace GraduationProject.Service
             var interview = new Interview
             {
                 userProfileId = request.userProfileId,
-                Topic=request.Topic
-                
+                Topic = request.Topic
+
             };
             _context.Interview.Add(interview);
-            var result =await _context.SaveChangesAsync(cancellationToken); 
-            
-            return Result.Success(new ConductInterviewResponse( interview.Id));
+            var result = await _context.SaveChangesAsync(cancellationToken);
+
+            return Result.Success(new ConductInterviewResponse(interview.Id));
         }
 
         public async Task<Result> AddInterViewData(AddInterviewDataRequest request, CancellationToken cancellationToken)
         {
             var interviewExists = await _context.Interview
                 .AnyAsync(x => x.Id == request.interviewId, cancellationToken);
-            if(!interviewExists)
+            if (!interviewExists)
             { return Result.Failure(UserErrors.InterviewNotFound); }
             //var questionExists = await _context.Q_A
             //    .AnyAsync(x => x.InterviewId == request.interviewId && x.QuestionNumber == request.questionNumber, cancellationToken);
             //if(!questionExists)
             //    return Result.Failure(UserErrors.)
-            var interview=
-                await _context.Interview.SingleOrDefaultAsync(x=>x.Id == request.interviewId, cancellationToken);
+            var interview =
+                await _context.Interview.SingleOrDefaultAsync(x => x.Id == request.interviewId, cancellationToken);
             //insert general interview data
 
-            interview.videoPath=request.videoPath;
-            interview.Warnings = request.warnings;
-            interview.AverageConfidenceScore = request.AverageConfidenceScore;
-            interview.AverageTensionScore = request.AverageTensionScore;
-            interview.CheatTimes = request.cheatTimes;
-            interview.IsCompleted = request.isCompleted;
+            //interview.videoPath = request.videoPath;
+            //interview.Warnings = request.warnings;
+            //interview.AverageConfidenceScore = request.AverageConfidenceScore;
+            //interview.AverageTensionScore = request.AverageTensionScore;
+            //interview.CheatTimes = request.cheatTimes;
+            //interview.IsCompleted = request.isCompleted;
 
 
             var questions = request.questions.Select(q => new Q_A
             {
                 InterviewId = request.interviewId,
                 QuestionNumber = q.questionNumber,
-                Question=q.Question,
-                Answer=q.Answer,
-                userAnswer=q.userAnswer,
-                Links=q.Links,
-                Score=q.Score,
-                ScoreExplanation=q.ScoreExplanation,
-                Topic = q.Topic,
-                AverageConfidenceScore=q.confidenceScore,
-                AverageTensionScore=q.tensionScore
-               
-            }).ToList();
+                Question = q.Question,
+                Answer = q.Answer,
+                userAnswer = q.userAnswer,
+                Links = q.Links,
+                Score = q.Score,
+                ScoreExplanation = q.ScoreExplanation,
+                Topic = q.Topic
                 
+
+            }).ToList();
+
             _context.Interview.Update(interview);
             await _context.Q_A.AddRangeAsync(questions);
-            var result =await _context.SaveChangesAsync(cancellationToken);
+            var result = await _context.SaveChangesAsync(cancellationToken);
             return result > 0 ? Result.Success() : Result.Failure(UserErrors.InterviewDataNotAdded);
         }
 
@@ -536,9 +535,9 @@ namespace GraduationProject.Service
         {
             var interview = await _context.Interview
                 .FirstOrDefaultAsync(x => x.Id == request.interviewId, cancellationToken);
-            if (interview==null)
+            if (interview == null)
             { return Result.Failure(UserErrors.InterviewNotFound); }
-            
+
             {
                 interview.AverageConfidenceScore = request.interviewAverageConfidenceScore;
                 interview.AverageTensionScore = request.interviewAverageTensionScore;
@@ -547,18 +546,10 @@ namespace GraduationProject.Service
                 interview.IsCompleted = request.isCompleted;
                 interview.CheatTimes = request.cheatTimes;
             }
-            var vision = request.Data.Select(d => new Q_A
-            {
-                QuestionNumber = d.questionNumber,
-                AverageTensionScore = d.averageTensionScore,
-                AverageConfidenceScore = d.averageConfidenceScore,
-                InterviewId = request.interviewId
-            }).ToList();
-
+            
             _context.Update(interview);
-            _context.Q_A.UpdateRange(vision);
-            var result = await _context.SaveChangesAsync(cancellationToken);    
-            return result>0? Result.Success() : Result.Failure(UserErrors.InterviewVisionDataNotAdded);
+            var result = await _context.SaveChangesAsync(cancellationToken);
+            return result > 0 ? Result.Success() : Result.Failure(UserErrors.InterviewVisionDataNotAdded);
         }
         public async Task<Result<GetAllInterviewsResponse>> GetAllInterviews(GetAllInterviewsRequest request, CancellationToken cancellationToken)
         {
@@ -598,8 +589,8 @@ namespace GraduationProject.Service
             {
                 return Result.Failure<GetInterViewResponse>(UserErrors.UserNotFound);
             }
-                var interviewExists = await _context.Interview
-                .AnyAsync(x => x.Id == request.interviewId, cancellationToken);
+            var interviewExists = await _context.Interview
+            .AnyAsync(x => x.Id == request.interviewId, cancellationToken);
             if (!interviewExists)
             {
                 return Result.Failure<GetInterViewResponse>(UserErrors.InterviewNotFound);
@@ -626,10 +617,25 @@ namespace GraduationProject.Service
                         q.Links,
                         q.Score,
                         q.ScoreExplanation,
-                        q.Topic,
-                        q.AverageConfidenceScore,
-                        q.AverageTensionScore
+                        q.Topic
+                   
+                    )).ToList(),
+                    i.softSkills.Select(s => new SoftSkillsDataResponse
+                    (
+                        s.Question,
+                        s.targetSkill,
+                        s.answer,
+                        s.Level,
+                        s.Clarity,
+                        s.exampleQuality,
+                        s.Structure,
+                        s.Outcome,
+                        s.Score,
+                        s.Strength,
+                        s.Weakness,
+                        s.Feedback
                     )).ToList()
+                   
                     )
                 )
 
@@ -638,5 +644,38 @@ namespace GraduationProject.Service
             return Result.Success(interview);
         }
 
+        public async Task<Result> AddSoftSkills(AddSoftSkillsRequest request, CancellationToken cancellationToken)
+        {
+            var user = await _context.UserProfile
+                .Where(x => x.userId == request.userProfileId)
+                .SingleOrDefaultAsync(cancellationToken);
+            if (user is null)
+            {
+                return Result.Failure(PorfileErrors.AccountNotFound);
+            }
+
+            var softSkills = request.softSkillsList.Select(s => new SoftSkills
+            {
+                interviewId = request.interviewId,
+                questionNumber = s.questionNumber,
+                exampleQuality = s.exampleQuality,
+                Feedback = s.Feedback,
+                Level = s.Level,
+                Outcome = s.Outcome,
+                Clarity = s.Clarity,
+                Question = s.Question,
+                Score = s.Score,
+                Strength = s.Strength,
+                Structure = s.Structure,
+                targetSkill = s.targetSkill,
+                Weakness = s.Weakness,
+                answer = s.Answer
+
+            }).ToList();
+            await _context.SoftSkills.AddRangeAsync(softSkills, cancellationToken);
+            var result = await _context.SaveChangesAsync(cancellationToken);
+
+            return Result.Success();
+        }
     }
 }

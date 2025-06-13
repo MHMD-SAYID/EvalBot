@@ -23,7 +23,7 @@ namespace GraduationProject.Entities
         public DbSet<UserProfile> UserProfile { get; set; }
         public DbSet<CompanyProfile> CompanyProfile { get; set; }
         public DbSet<JobUserProfile> JobUserProfiles { get; set; }
-
+        public DbSet<SoftSkills> SoftSkills { get; set; }
         public DbSet<Q_A> Q_A { get; set; }
         
 
@@ -34,11 +34,7 @@ namespace GraduationProject.Entities
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            //builder.Entity<Interview>()
-            //    .HasOne(i => i.track) // Interview has one Track
-            //    .WithOne(t => t.interview) // Track has one Interview
-            //    .HasForeignKey<Interview>(i => i.TracksId);
-            //    base.OnModelCreating(builder);
+            
 
             builder.Entity<IdentityUserLogin<string>>()
                 .HasKey(l => new { l.LoginProvider, l.ProviderKey });
